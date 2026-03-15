@@ -793,42 +793,38 @@
 
   <script data-cfasync="false" src="shops-data.js"></script>
   <script data-cfasync="false" src="script.js"></script>
-  <script>
-    // Render all shops grid on index page
-    document.addEventListener('DOMContentLoaded', () => {
-      const grid = document.getElementById('allShopsGrid');
-      if (!grid || !window.SHOPS_DATA) return;
-      const entries = Object.entries(window.SHOPS_DATA);
-      grid.innerHTML = entries.map(([id, s]) => `
-        <a href="shop.html?id=${encodeURIComponent(id)}" class="all-shop-card fade-in" data-shop-id="${id}">
-          <div class="all-shop-img" style="background-image:url('${s.gallery && s.gallery[0] ? s.gallery[0] : s.heroImage}')"></div>
-          <div class="all-shop-body">
-            <span class="all-shop-flag">${s.flag}</span>
-            <div class="all-shop-info">
-              <h4>${s.name}</h4>
-              <p>${s.city} / ${s.type}</p>
-            </div>
-          </div>
-        </a>
-      `).join('');
-      // observe fade-in
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+  <script data-cfasync="false">
+    // Render all shops grid - retry until SHOPS_DATA is available
+    function initShopsGrid() {
+      var grid = document.getElementById('allShopsGrid');
+      if (!grid) return;
+      if (!window.SHOPS_DATA) {
+        setTimeout(initShopsGrid, 100);
+        return;
+      }
+      var entries = Object.entries(window.SHOPS_DATA);
+      grid.innerHTML = entries.map(function(entry) {
+        var id = entry[0], s = entry[1];
+        return '<a href="shop.html?id=' + encodeURIComponent(id) + '" class="all-shop-card fade-in" data-shop-id="' + id + '">' +
+          '<div class="all-shop-img" style="background-image:url(\'' + (s.gallery && s.gallery[0] ? s.gallery[0] : s.heroImage) + '\')"></div>' +
+          '<div class="all-shop-body">' +
+          '<span class="all-shop-flag">' + s.flag + '</span>' +
+          '<div class="all-shop-info">' +
+          '<h4>' + s.name + '</h4>' +
+          '<p>' + s.city + ' / ' + s.type + '</p>' +
+          '</div></div></a>';
+      }).join('');
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
       }, { threshold: 0.1 });
-      grid.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-    });
+      grid.querySelectorAll('.fade-in').forEach(function(el) { obs.observe(el); });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initShopsGrid);
+    } else {
+      initShopsGrid();
+    }
   </script>
-<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").catch(()=>{})})}</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('SHOPS_DATA:', typeof window.SHOPS_DATA);
-  console.log('allShopsGrid:', document.getElementById('allShopsGrid'));
-  const cards = document.querySelectorAll('.all-shop-card');
-  console.log('shop cards count:', cards.length);
-  cards.forEach(card => {
-    console.log('card href:', card.href);
-  });
-});
-</script>
+  <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>
