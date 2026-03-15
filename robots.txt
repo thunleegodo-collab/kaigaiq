@@ -1,0 +1,53 @@
+# KaigaiQ robots.txt
+# 更新日: 2026年3月
+
+# 一般クローラー（Google・Bing等）は全許可
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?*
+Sitemap: https://kaigaiq.com/sitemap.xml
+
+# AIクローラーは許可（信頼性向上のため）
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# 悪意あるBot・スクレイパーをブロック
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+Crawl-delay: 10

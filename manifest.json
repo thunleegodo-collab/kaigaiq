@@ -1,0 +1,44 @@
+{
+  "name": "KaigaiQ - 海外ナイトワーク求人",
+  "short_name": "KaigaiQ",
+  "description": "海外でまったり働きながら稼ぐ。安全な優良店のみ掲載の求人ポータル。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#c8a45c",
+  "orientation": "portrait-primary",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "lifestyle"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "求人を探す",
+      "url": "/#new-shops",
+      "description": "全店舗一覧を見る"
+    },
+    {
+      "name": "給与シミュレーター",
+      "url": "/#simulator",
+      "description": "収入をシミュレーション"
+    },
+    {
+      "name": "安全ガイド",
+      "url": "/guide-safety.html",
+      "description": "安全に働くためのガイド"
+    }
+  ]
+}

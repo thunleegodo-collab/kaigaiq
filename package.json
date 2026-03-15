@@ -1,0 +1,14 @@
+{
+  "name": "kaigaiq",
+  "version": "1.0.0",
+  "description": "KaigaiQ - 海外ナイトワーク求人ポータル",
+  "scripts": {
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o dist/style.min.css style.css && cleancss -o dist/shop.min.css shop.css && cleancss -o dist/news.min.css news.css",
+    "minify-js": "terser script.js -o dist/script.min.js --compress --mangle && terser shop.js -o dist/shop.min.js --compress --mangle && terser news.js -o dist/news.min.js --compress --mangle && terser sw.js -o dist/sw.min.js --compress --mangle"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "terser": "^5.27.0"
+  }
+}
