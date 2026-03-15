@@ -819,5 +819,16 @@
     });
   </script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").catch(()=>{})})}</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('SHOPS_DATA:', typeof window.SHOPS_DATA);
+  console.log('allShopsGrid:', document.getElementById('allShopsGrid'));
+  const cards = document.querySelectorAll('.all-shop-card');
+  console.log('shop cards count:', cards.length);
+  cards.forEach(card => {
+    console.log('card href:', card.href);
+  });
+});
+</script>
 </body>
 </html>
