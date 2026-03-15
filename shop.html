@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">店舗情報 - KaigaiQ</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#c8a45c">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KaigaiQ">
+  <link rel="apple-touch-icon" href="/icons/icon-192.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">K</span>
+        <span class="logo-text">KaigaiQ</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#areas" class="nav-link">エリアから探す</a>
+        <a href="index.html#pickup" class="nav-link">ピックアップ求人</a>
+        <a href="index.html#news" class="nav-link">ショップニュース</a>
+        <a href="index.html#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <a href="#shop-contact" class="header-cta">LINE相談</a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <div class="mobile-nav-content">
+      <a href="index.html" class="mobile-nav-link">トップページ</a>
+      <a href="index.html#areas" class="mobile-nav-link">エリアから探す</a>
+      <a href="index.html#pickup" class="mobile-nav-link">ピックアップ求人</a>
+      <a href="#shop-contact" class="mobile-nav-link cta">LINE相談する</a>
+    </div>
+  </div>
+
+  <!-- Shop Hero -->
+  <section class="shop-hero" id="shopHero">
+    <div class="shop-hero-bg" id="shopHeroBg"></div>
+    <div class="shop-hero-overlay"></div>
+    <div class="shop-hero-content">
+      <div class="shop-breadcrumb">
+        <a href="index.html">TOP</a>
+        <span>/</span>
+        <a href="index.html#areas" id="shopRegionLink">エリア</a>
+        <span>/</span>
+        <span id="shopNameBreadcrumb">店舗名</span>
+      </div>
+      <div class="shop-hero-badge" id="shopBadge">キャバクラ</div>
+      <h1 class="shop-hero-title" id="shopName">店舗名</h1>
+      <p class="shop-hero-area" id="shopArea">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>エリア名</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Shop Content -->
+  <div class="shop-content">
+    <div class="container">
+      <div class="shop-layout">
+
+        <!-- Main Content -->
+        <div class="shop-main">
+
+          <!-- Concept -->
+          <section class="shop-section" id="shopConcept">
+            <div class="shop-section-header">
+              <span class="shop-section-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </span>
+              <h2>コンセプト</h2>
+            </div>
+            <div class="shop-section-body">
+              <p id="shopConceptText">店舗のコンセプト説明文がここに入ります。</p>
+            </div>
+          </section>
+
+          <!-- Gallery -->
+          <section class="shop-section" id="shopGallery">
+            <div class="shop-section-header">
+              <span class="shop-section-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </span>
+              <h2>店内写真</h2>
+            </div>
+            <div class="shop-gallery-grid" id="shopGalleryGrid">
+              <!-- Dynamic gallery images -->
+            </div>
+          </section>
+
+          <!-- Salary -->
+          <section class="shop-section" id="shopSalary">
+            <div class="shop-section-header">
+              <span class="shop-section-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </span>
+              <h2>給与・バックシステム</h2>
+            </div>
+            <div class="shop-section-body">
+              <div class="salary-highlight" id="salaryHighlight">
+                <div class="salary-main">
+                  <span class="salary-label">日給保証</span>
+                  <span class="salary-value" id="salaryDaily">お問い合わせください</span>
+                </div>
+                <div class="salary-sub" id="salaryMonthly"></div>
+              </div>
+              <div class="back-system" id="backSystem">
+                <!-- Dynamic back system items -->
+              </div>
+            </div>
+          </section>
+
+          <!-- Benefits -->
+          <section class="shop-section" id="shopBenefits">
+            <div class="shop-section-header">
+              <span class="shop-section-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <h2>待遇・サポート</h2>
+            </div>
+            <div class="shop-section-body">
+              <div class="benefits-grid" id="benefitsGrid">
+                <!-- Dynamic benefits -->
+              </div>
+            </div>
+          </section>
+
+          <!-- Housing -->
+          <section class="shop-section" id="shopHousing">
+            <div class="shop-section-header">
+              <span class="shop-section-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </span>
+              <h2>寮情報</h2>
+            </div>
+            <div class="shop-section-body">
+              <div class="housing-features" id="housingFeatures">
+                <!-- Dynamic housing info -->
+              </div>
+            </div>
+          </section>
+
+          <!-- Visa -->
+          <section class="shop-section" id="shopVisa">
+            <div class="shop-section-header">
+              <span class="shop-section-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </span>
+              <h2>ビザサポート</h2>
+            </div>
+            <div class="shop-section-body">
+              <div class="visa-info" id="visaInfo">
+                <!-- Dynamic visa info -->
+              </div>
+            </div>
+          </section>
+
+          <!-- Price System -->
+          <section class="shop-section" id="shopPrice">
+            <div class="shop-section-header">
+              <span class="shop-section-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </span>
+              <h2>料金システム</h2>
+            </div>
+            <div class="shop-section-body">
+              <div class="price-table" id="priceTable">
+                <!-- Dynamic price info -->
+              </div>
+            </div>
+          </section>
+
+          <!-- Notes -->
+          <section class="shop-section" id="shopNotes">
+            <div class="shop-section-header">
+              <span class="shop-section-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              <h2>注意事項</h2>
+            </div>
+            <div class="shop-section-body">
+              <ul class="notes-list" id="notesList">
+                <!-- Dynamic notes -->
+              </ul>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="shop-sidebar">
+
+          <!-- Quick Info Card -->
+          <div class="sidebar-card sticky">
+            <h3>店舗情報</h3>
+            <div class="sidebar-info-list">
+              <div class="sidebar-info-item">
+                <span class="sidebar-info-label">業種</span>
+                <span class="sidebar-info-value" id="sidebarType">-</span>
+              </div>
+              <div class="sidebar-info-item">
+                <span class="sidebar-info-label">エリア</span>
+                <span class="sidebar-info-value" id="sidebarArea">-</span>
+              </div>
+              <div class="sidebar-info-item">
+                <span class="sidebar-info-label">営業時間</span>
+                <span class="sidebar-info-value" id="sidebarHours">-</span>
+              </div>
+              <div class="sidebar-info-item">
+                <span class="sidebar-info-label">住所</span>
+                <span class="sidebar-info-value small" id="sidebarAddress">-</span>
+              </div>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <h3>お問い合わせ</h3>
+            <div class="sidebar-contact" id="shopContact">
+              <div class="contact-item" id="contactLine" style="display:none">
+                <span class="contact-label">LINE ID</span>
+                <div class="contact-line-row">
+                  <span class="contact-value" id="contactLineId">-</span>
+                  <button class="copy-btn" id="copyLineBtn" title="コピー">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="contact-item" id="contactPhone" style="display:none">
+                <span class="contact-label">電話番号</span>
+                <span class="contact-value" id="contactPhoneNum">-</span>
+              </div>
+              <div class="contact-item" id="contactEmail" style="display:none">
+                <span class="contact-label">メール</span>
+                <span class="contact-value small" id="contactEmailAddr">-</span>
+              </div>
+            </div>
+
+            <a href="#" class="sidebar-cta-btn line-btn" id="sidebarLineBtn" target="_blank" rel="noopener noreferrer" style="display:none">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+              LINEで問い合わせ
+            </a>
+            <a href="#" class="sidebar-cta-btn phone-btn" id="sidebarPhoneBtn" style="display:none">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              電話で問い合わせ
+            </a>
+            <a href="#" class="sidebar-cta-btn email-btn" id="sidebarEmailBtn" style="display:none">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              メールで問い合わせ
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Map Section -->
+  <section class="shop-map-section" id="shopMapSection">
+    <div class="container">
+      <div class="shop-section-header centered">
+        <span class="shop-section-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+        </span>
+        <h2>アクセス</h2>
+      </div>
+      <div class="shop-map-container" id="shopMap">
+        <div class="map-placeholder">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p id="mapAddress">住所がここに表示されます</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">K</span>
+            <span class="logo-text">KaigaiQ</span>
+          </a>
+          <p>海外ナイトワーク求人の総合ポータルサイト。世界中の厳選されたお店情報と求人を掲載しています。</p>
+        </div>
+        <div class="footer-links">
+          <h4>エリア</h4>
+          <a href="index.html#areas">アジア</a>
+          <a href="index.html#areas">北アメリカ</a>
+          <a href="index.html#areas">ヨーロッパ</a>
+          <a href="index.html#areas">オセアニア</a>
+          <a href="index.html#areas">中東</a>
+        </div>
+        <div class="footer-links">
+          <h4>コンテンツ</h4>
+          <a href="index.html#pickup">ピックアップ求人</a>
+          <a href="index.html#news">ショップニュース</a>
+          <a href="index.html#new-shops">新規掲載店</a>
+          <a href="index.html#faq">よくある質問</a>
+        </div>
+        <div class="footer-links">
+          <h4>インフォメーション</h4>
+          <a href="#">運営会社</a>
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">利用規約</a>
+          <a href="#">お問い合わせ</a>
+        </div>
+      </div>
+      <div class="footer-legal">
+          <p>運営：サンリー合同会社</p>
+          <p>お問い合わせ：<a href="#contact">LINEまたはメールにてご連絡ください</a></p>
+        </div>
+        <div class="footer-bottom">
+        <p>&copy; 2026 KaigaiQ / サンリー合同会社. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="トップに戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Image Modal -->
+  <div class="image-modal" id="imageModal">
+    <button class="image-modal-close" id="imageModalClose">&times;</button>
+    <img id="imageModalImg" src="" alt="">
+    <div class="image-modal-nav">
+      <button class="image-modal-prev" id="imageModalPrev">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="image-modal-next" id="imageModalNext">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Copy Toast -->
+  <div class="copy-toast" id="copyToast">LINE IDをコピーしました</div>
+
+  <script src="shops-data.js"></script>
+  <script src="shop.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://kaigaiq.com/"},{"@type":"ListItem","position":2,"name":"店舗一覧","item":"https://kaigaiq.com/#new-shops"},{"@type":"ListItem","position":3,"name":"店舗詳細","item":"https://kaigaiq.com/shop.html"}]}</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").catch(()=>{})})}</script>
+</body>
+</html>

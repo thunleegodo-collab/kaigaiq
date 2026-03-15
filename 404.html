@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ページが見つかりません | KaigaiQ</title>
+  <meta name="description" content="お探しのページが見つかりませんでした。">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#c8a45c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KaigaiQ">
+  <link rel="apple-touch-icon" href="/icons/icon-192.svg">
+</head>
+<body>
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="/" class="logo"><span class="logo-icon">K</span><span class="logo-text">KaigaiQ</span></a>
+      <nav class="nav" id="nav">
+        <a href="/about.html" class="nav-link">KaigaiQとは</a>
+        <a href="/#areas" class="nav-link">エリアから探す</a>
+        <a href="/#cast-guide" class="nav-link">キャストガイド</a>
+        <a href="/apply.html" class="nav-link" style="color:#c8a45c;font-weight:600;">掲載申し込み</a>
+        <a href="/#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <a href="/#contact" class="header-cta">LINE相談</a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <div class="mobile-nav-content">
+      <a href="/" class="mobile-nav-link">トップページ</a>
+      <a href="/#cast-guide" class="mobile-nav-link">キャストガイド</a>
+      <a href="/apply.html" class="mobile-nav-link" style="color:#c8a45c;font-weight:600;">掲載申し込み</a>
+      <a href="/#contact" class="mobile-nav-link cta">LINE相談する</a>
+    </div>
+  </div>
+
+  <section class="error-section">
+    <div class="container">
+      <div class="error-content">
+        <div class="error-code">404</div>
+        <h1 class="error-title">ページが見つかりません</h1>
+        <p class="error-message">
+          お探しのページは移動・削除されたか、<br>
+          URLが間違っている可能性があります。
+        </p>
+        <div class="error-actions">
+          <a href="/" class="cta-btn cta-btn-line">トップページへ戻る</a>
+          <a href="/guide-safety.html" class="cta-btn cta-btn-secondary">安全ガイドを見る</a>
+        </div>
+        <div class="error-links">
+          <p>よく見られているページ</p>
+          <ul>
+            <li><a href="/guide-visa.html">渡航・ビザガイド</a></li>
+            <li><a href="/guide-salary.html">給与・バック解説</a></li>
+            <li><a href="/guide-safety.html">安全に働くためのガイド</a></li>
+            <li><a href="/apply.html">掲載申し込み</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo"><span class="logo-icon">K</span><span class="logo-text">KaigaiQ</span></a><p>海外ナイトワーク求人の総合ポータルサイト。世界中の厳選されたお店情報と求人を掲載しています。</p></div>
+        <div class="footer-links"><h4>キャストガイド</h4><a href="/guide-visa.html">渡航・ビザ</a><a href="/guide-salary.html">給与・バック</a><a href="/guide-housing.html">寮・住居</a><a href="/guide-safety.html">安全ガイド</a><a href="/guide-legal.html">法律・税務</a><a href="/guide-stories.html">体験談</a></div>
+        <div class="footer-links"><h4>インフォメーション</h4><a href="/about.html">KaigaiQについて</a><a href="/apply.html">掲載申し込み</a></div>
+      </div>
+      <div class="footer-legal"><p>運営：サンリー合同会社</p><p>お問い合わせ：<a href="/#contact">LINEまたはメールにてご連絡ください</a></p></div>
+      <div class="footer-bottom"><p>&copy; 2026 KaigaiQ / サンリー合同会社. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="backToTop" aria-label="トップに戻る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg></button>
+  <script>
+    document.getElementById('hamburger').addEventListener('click',function(){this.classList.toggle('active');document.getElementById('mobileNav').classList.toggle('active');document.body.style.overflow=document.getElementById('mobileNav').classList.contains('active')?'hidden':''});
+    document.querySelectorAll('.mobile-nav-link').forEach(l=>l.addEventListener('click',()=>{document.getElementById('hamburger').classList.remove('active');document.getElementById('mobileNav').classList.remove('active');document.body.style.overflow=''}));
+    const backToTop=document.getElementById('backToTop');window.addEventListener('scroll',()=>{backToTop.classList.toggle('visible',window.scrollY>500)});backToTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})});
+  </script>
+  <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{})})}</script>
+</body>
+</html>

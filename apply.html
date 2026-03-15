@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>掲載申し込み | KaigaiQ - 海外ナイトワーク求人ポータル</title>
+  <meta property="og:title" content="掲載申し込み - KaigaiQ">
+  <meta property="og:description" content="KaigaiQに店舗を掲載して日本人キャストを集めましょう。FREE・STANDARD・PREMIUMプランをご用意。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KaigaiQ">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#c8a45c">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KaigaiQ">
+  <link rel="apple-touch-icon" href="/icons/icon-192.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="apply.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">K</span>
+        <span class="logo-text">KaigaiQ</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#areas" class="nav-link">エリアから探す</a>
+        <a href="index.html#pickup" class="nav-link">ピックアップ求人</a>
+        <a href="index.html#news" class="nav-link">ショップニュース</a>
+        <a href="apply.html" class="nav-link" style="color:#c8a45c;font-weight:600;">掲載申し込み</a>
+        <a href="index.html#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+      <a href="index.html#contact" class="header-cta">LINE相談</a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav">
+    <div class="mobile-nav-content">
+      <a href="index.html" class="mobile-nav-link">トップページ</a>
+      <a href="index.html#areas" class="mobile-nav-link">エリアから探す</a>
+      <a href="index.html#pickup" class="mobile-nav-link">ピックアップ求人</a>
+      <a href="apply.html" class="mobile-nav-link" style="color:#c8a45c;font-weight:600;">掲載申し込み</a>
+      <a href="index.html#contact" class="mobile-nav-link cta">LINE相談する</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="apply-hero">
+    <div class="container">
+      <span class="section-tag">LISTING</span>
+      <h1>掲載申し込み</h1>
+      <p>KaigaiQに店舗を掲載して、日本人キャストを集めましょう。<br>
+      まずはプランを選んでお申し込みください。</p>
+    </div>
+  </section>
+
+  <nav class="breadcrumb" aria-label="パンくずリスト"><div class="container"><ol class="breadcrumb-list"><li><a href="/">ホーム</a></li><li aria-current="page">掲載申し込み</li></ol></div></nav>
+
+  <!-- プラン比較テーブル -->
+  <section class="plans-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">PLANS</span>
+        <h2 class="section-title">掲載プラン</h2>
+        <p class="section-sub">店舗の規模や目標に合わせてお選びください</p>
+      </div>
+
+      <div class="plans-grid">
+
+        <!-- FREE -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <span class="plan-tier free">FREE</span>
+            <div class="plan-price">
+              <span class="plan-amount">¥0</span>
+              <span class="plan-period">/ 月</span>
+            </div>
+            <p class="plan-desc">まずは試してみたい店舗様向け</p>
+          </div>
+          <ul class="plan-features">
+            <li class="yes">基本店舗情報の掲載</li>
+            <li class="yes">エリア検索への表示</li>
+            <li class="yes">LINEリンク掲載</li>
+            <li class="no">ピックアップ求人への掲載</li>
+            <li class="no">認定バッジの取得</li>
+            <li class="no">ショップニュース投稿</li>
+            <li class="no">優先表示</li>
+            <li class="no">月次レポート</li>
+          </ul>
+          <a href="#apply-form" class="plan-btn plan-btn-free"
+             onclick="selectPlan('FREE')">無料で掲載する</a>
+        </div>
+
+        <!-- STANDARD -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <span class="plan-tier standard">STANDARD</span>
+            <div class="plan-price">
+              <span class="plan-amount">¥19,800</span>
+              <span class="plan-period">/ 月</span>
+            </div>
+            <p class="plan-desc">本格的に採用強化したい店舗様向け</p>
+          </div>
+          <ul class="plan-features">
+            <li class="yes">基本店舗情報の掲載</li>
+            <li class="yes">エリア検索への表示</li>
+            <li class="yes">LINEリンク掲載</li>
+            <li class="yes">ピックアップ求人への掲載（月4枠）</li>
+            <li class="yes">安全認定バッジの取得資格</li>
+            <li class="yes">ショップニュース投稿（月2回）</li>
+            <li class="no">優先表示（検索上位固定）</li>
+            <li class="no">月次レポート</li>
+          </ul>
+          <a href="#apply-form" class="plan-btn plan-btn-standard"
+             onclick="selectPlan('STANDARD')">スタンダードで始める</a>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="plan-card plan-card-featured">
+          <div class="plan-badge-recommended">おすすめ</div>
+          <div class="plan-header">
+            <span class="plan-tier premium">PREMIUM</span>
+            <div class="plan-price">
+              <span class="plan-amount">¥49,800</span>
+              <span class="plan-period">/ 月</span>
+            </div>
+            <p class="plan-desc">最大限の露出と信頼を得たい店舗様向け</p>
+          </div>
+          <ul class="plan-features">
+            <li class="yes">基本店舗情報の掲載</li>
+            <li class="yes">エリア検索への表示</li>
+            <li class="yes">LINEリンク掲載</li>
+            <li class="yes">ピックアップ求人への掲載（常時掲載）</li>
+            <li class="yes">全認定バッジの取得資格</li>
+            <li class="yes">ショップニュース投稿（無制限）</li>
+            <li class="yes">優先表示（検索上位固定）</li>
+            <li class="yes">月次アクセスレポート</li>
+          </ul>
+          <a href="#apply-form" class="plan-btn plan-btn-premium"
+             onclick="selectPlan('PREMIUM')">プレミアムで始める</a>
+        </div>
+
+      </div>
+
+      <!-- 成果報酬オプション -->
+      <div class="performance-option">
+        <div class="perf-icon">+</div>
+        <div class="perf-body">
+          <h3>成果報酬オプション（全プラン追加可）</h3>
+          <p>LINEへの問い合わせが発生した場合のみ課金。
+          固定費ゼロで始められるオプションです。</p>
+          <span class="perf-price">1リード あたり ¥2,000〜3,000</span>
+        </div>
+        <a href="#apply-form" class="perf-btn" onclick="selectPlan('PERFORMANCE')">
+          詳細を見る
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 申し込みフォーム -->
+  <section class="section" id="apply-form">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">APPLY</span>
+        <h2 class="section-title">申し込みフォーム</h2>
+        <p class="section-sub">内容確認後、担当者よりLINEにてご連絡いたします</p>
+      </div>
+
+      <div class="apply-form-wrap">
+        <div class="selected-plan-display" id="selectedPlanDisplay">
+          プランを上から選択してください
+        </div>
+
+        <form class="apply-form" id="applyForm">
+          <div class="form-row">
+            <div class="form-field">
+              <label>店舗名 <span class="required">必須</span></label>
+              <input type="text" placeholder="例：CLUB PREMIER バンコク" required>
+            </div>
+            <div class="form-field">
+              <label>都市・国 <span class="required">必須</span></label>
+              <select required>
+                <option value="">選択してください</option>
+                <option>バンコク（タイ）</option>
+                <option>シンガポール</option>
+                <option>ホーチミン（ベトナム）</option>
+                <option>プノンペン（カンボジア）</option>
+                <option>香港</option>
+                <option>ドバイ（UAE）</option>
+                <option>ロサンゼルス（アメリカ）</option>
+                <option>デュッセルドルフ（ドイツ）</option>
+                <option>その他</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label>店舗種別 <span class="required">必須</span></label>
+              <select required>
+                <option value="">選択してください</option>
+                <option>キャバクラ</option>
+                <option>ラウンジ</option>
+                <option>ガールズバー</option>
+                <option>スナック</option>
+                <option>KTV</option>
+                <option>その他</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>希望プラン <span class="required">必須</span></label>
+              <select id="planSelect" required>
+                <option value="">選択してください</option>
+                <option value="FREE">FREE（無料）</option>
+                <option value="STANDARD">STANDARD（¥19,800/月）</option>
+                <option value="PREMIUM">PREMIUM（¥49,800/月）</option>
+                <option value="PERFORMANCE">成果報酬オプション</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label>担当者名 <span class="required">必須</span></label>
+              <input type="text" placeholder="例：田中 太郎">
+            </div>
+            <div class="form-field">
+              <label>LINE ID <span class="required">必須</span></label>
+              <input type="text" placeholder="例：@kaigaiq_shop">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>店舗紹介・アピールポイント</label>
+            <textarea rows="4"
+              placeholder="店舗の特徴、待遇、寮情報など自由にご記入ください"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label>現在の月間採用人数（目安）</label>
+            <select>
+              <option>1〜3名</option>
+              <option>4〜10名</option>
+              <option>11名以上</option>
+              <option>これから採用開始</option>
+            </select>
+          </div>
+
+          <button type="submit" class="apply-submit-btn">
+            申し込み内容を送信する
+          </button>
+          <p class="apply-note">
+            送信後、通常24時間以内にLINEにてご連絡いたします。<br>
+            掲載開始まで最短3営業日。秘密厳守でご対応いたします。
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">掲載に関するよくある質問</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>掲載審査はありますか？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>はい、簡単な審査があります。反社会的勢力との関係がないこと、
+            実在する店舗であることを確認させていただきます。
+            通常1〜2営業日で審査結果をご連絡します。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>認定バッジはどうすれば取得できますか？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>STANDARDプラン以上でご契約後、担当者がヒアリングを実施します。
+            安全認定・高収入認定・快適環境の3種類があり、
+            基準を満たした店舗に付与されます。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>途中でプランを変更できますか？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>はい、いつでもアップグレード・ダウングレードが可能です。
+            変更は翌月から適用されます。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>支払い方法は？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p>銀行振込、クレジットカード（VISA・Mastercard）、
+            Wise送金に対応しています。海外からのお支払いも歓迎です。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">K</span>
+            <span class="logo-text">KaigaiQ</span>
+          </a>
+          <p>海外ナイトワーク求人の総合ポータルサイト。世界中の厳選されたお店情報と求人を掲載しています。</p>
+        </div>
+        <div class="footer-links">
+          <h4>エリア</h4>
+          <a href="index.html#areas">アジア</a>
+          <a href="index.html#areas">北アメリカ</a>
+          <a href="index.html#areas">ヨーロッパ</a>
+          <a href="index.html#areas">オセアニア</a>
+          <a href="index.html#areas">中東</a>
+        </div>
+        <div class="footer-links">
+          <h4>コンテンツ</h4>
+          <a href="index.html#pickup">ピックアップ求人</a>
+          <a href="index.html#news">ショップニュース</a>
+          <a href="index.html#new-shops">新規掲載店</a>
+          <a href="index.html#faq">よくある質問</a>
+        </div>
+        <div class="footer-links">
+          <h4>インフォメーション</h4>
+          <a href="#">運営会社</a>
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">利用規約</a>
+          <a href="apply.html">掲載申し込み</a>
+        </div>
+      </div>
+      <div class="footer-legal">
+          <p>運営：サンリー合同会社</p>
+          <p>お問い合わせ：<a href="#contact">LINEまたはメールにてご連絡ください</a></p>
+        </div>
+        <div class="footer-bottom">
+        <p>&copy; 2026 KaigaiQ / サンリー合同会社. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="トップに戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+  <script>
+    function selectPlan(plan) {
+      const labels = {
+        FREE: '無料プラン（FREE）を選択中',
+        STANDARD: 'スタンダードプラン（¥19,800/月）を選択中',
+        PREMIUM: 'プレミアムプラン（¥49,800/月）を選択中',
+        PERFORMANCE: '成果報酬オプションの詳細を希望'
+      };
+      const display = document.getElementById('selectedPlanDisplay');
+      if (display) {
+        display.textContent = labels[plan] || '';
+        display.className = 'selected-plan-display active plan-' + plan.toLowerCase();
+      }
+      const select = document.getElementById('planSelect');
+      if (select) select.value = plan;
+      setTimeout(() => {
+        document.getElementById('apply-form')
+          ?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+
+    document.getElementById('applyForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('送信ありがとうございます。24時間以内にLINEにてご連絡いたします。');
+    });
+
+    // FAQ accordion for apply page
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const answer = item.querySelector('.faq-answer');
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Back to top
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 500);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://kaigaiq.com/"},{"@type":"ListItem","position":2,"name":"掲載申し込み","item":"https://kaigaiq.com/apply.html"}]}</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").catch(()=>{})})}</script>
+</body>
+</html>
