@@ -167,10 +167,14 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     // Update header
-    const allShopsHeader = grid.previousElementSibling;
-    if (allShopsHeader) {
-      const titleEl = allShopsHeader.querySelector('.section-title');
-      const subEl = allShopsHeader.querySelector('.section-sub');
+    const allShopsHeader = grid.closest('section, .container')
+      ?.querySelector('.section-header')
+      || grid.parentElement?.querySelector('.section-header');
+    if (!allShopsHeader) return;
+
+    const titleEl = allShopsHeader.querySelector('.section-title');
+    const subEl = allShopsHeader.querySelector('.section-sub');
+    if (titleEl && subEl) {
       if (matched.length > 0) {
         titleEl.textContent = `${cityName} の店舗一覧`;
         subEl.innerHTML = `${matched.length}件の店舗が見つかりました <button id="resetCityFilter" style="margin-left:12px;padding:4px 14px;background:rgba(200,164,92,0.15);border:1px solid rgba(200,164,92,0.3);border-radius:6px;color:#e6c97a;font-size:0.82rem;cursor:pointer;font-family:inherit;">すべて表示</button>`;
