@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
           s.city.includes(cityName) || cityName.includes(s.city)
         );
         if (matched.length === 1) {
-          window.location.href = 'shop.html?id=' + encodeURIComponent(matched[0][0]);
+          window.location.href = '/shop?id=' + encodeURIComponent(matched[0][0]);
           return;
         }
       }
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.renderShopGrid = function(grid, entries) {
     grid.innerHTML = entries.map(([id, s]) => `
-      <a href="shop.html?id=${encodeURIComponent(id)}" class="all-shop-card fade-in visible">
+      <a href="/shop?id=${encodeURIComponent(id)}" class="all-shop-card fade-in visible">
         <div class="all-shop-img" style="background-image:url('${s.gallery && s.gallery[0] ? s.gallery[0] : s.heroImage}')"></div>
         <div class="all-shop-body">
           <span class="all-shop-flag">${s.flag}</span>
