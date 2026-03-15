@@ -167,9 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     // Update header
-    const allShopsHeader = grid.closest('section, .container')
-      ?.querySelector('.section-header')
-      || grid.parentElement?.querySelector('.section-header');
+    const allShopsHeader = document.getElementById('allShopsHeader');
     if (!allShopsHeader) return;
 
     const titleEl = allShopsHeader.querySelector('.section-title');
