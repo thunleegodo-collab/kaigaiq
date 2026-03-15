@@ -139,10 +139,20 @@ document.addEventListener('DOMContentLoaded', () => {
     filterShopsByCity(cityName);
   }
 
-  // --- Area card click -> show city shops ---
+  // --- Area card click -> show city shops or go to shop page ---
   areaCards.forEach(card => {
     card.addEventListener('click', () => {
       const cityName = card.querySelector('h3').textContent;
+      // 都市の店舗が1つだけなら直接shop.htmlへ遷移
+      if (window.SHOPS_DATA) {
+        const matched = Object.entries(window.SHOPS_DATA).filter(([id, s]) =>
+          s.city.includes(cityName) || cityName.includes(s.city)
+        );
+        if (matched.length === 1) {
+          window.location.href = 'shop.html?id=' + encodeURIComponent(matched[0][0]);
+          return;
+        }
+      }
       filterShopsByCity(cityName);
     });
   });
