@@ -201,9 +201,13 @@ document.addEventListener('DOMContentLoaded', () => {
     renderShopGrid(grid, matched.length > 0 ? matched : entries);
 
     // Scroll to grid
-    const offset = 80;
-    const top = (allShopsHeader || grid).getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top, behavior: 'smooth' });
+    setTimeout(() => {
+      const grid = document.getElementById('allShopsGrid');
+      if (grid) {
+        const top = grid.getBoundingClientRect().top + window.pageYOffset - 100;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    }, 100);
 
     // Highlight the area card
     areaCards.forEach(c => {
