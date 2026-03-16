@@ -416,3 +416,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 })();
+
+// Lazy load background images
+(function() {
+  var lazyBgs = document.querySelectorAll('.lazy-bg');
+  if ('IntersectionObserver' in window) {
+    var bgObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var bg = el.dataset.bg;
+          if (bg) el.style.backgroundImage = "url('" + bg + "')";
+          bgObserver.unobserve(el);
+        }
+      });
+    }, { rootMargin: '200px' });
+    lazyBgs.forEach(function(el) { bgObserver.observe(el); });
+  } else {
+    lazyBgs.forEach(function(el) {
+      var bg = el.dataset.bg;
+      if (bg) el.style.backgroundImage = "url('" + bg + "')";
+    });
+  }
+})();
