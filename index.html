@@ -807,24 +807,8 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
   </button>
 
-  <script>
-  // shops-data.js を遅延読み込み
-  function loadShopsData() {
-    var s1 = document.createElement('script');
-    s1.src = '/shops-data.js';
-    s1.onload = function() {
-      var s2 = document.createElement('script');
-      s2.src = '/script.js';
-      document.body.appendChild(s2);
-    };
-    document.body.appendChild(s1);
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadShopsData);
-  } else {
-    loadShopsData();
-  }
-  </script>
+  <script src="/shops-data.js" defer></script>
+  <script src="/script.js" defer></script>
   <script data-cfasync="false">
     // Render all shops grid - retry until SHOPS_DATA is available
     function initShopsGrid() {
