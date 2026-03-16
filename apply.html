@@ -417,42 +417,45 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
   </button>
 
-  <script data-cfasync="false" src="script.js"></script>
   <script>
     function selectPlan(plan) {
-      const labels = {
+      var labels = {
         FREE: '無料プラン（FREE）を選択中',
         STANDARD: 'スタンダードプラン（¥19,800/月）を選択中',
         PREMIUM: 'プレミアムプラン（¥49,800/月）を選択中',
         PERFORMANCE: '成果報酬オプションの詳細を希望'
       };
-      const display = document.getElementById('selectedPlanDisplay');
+      var display = document.getElementById('selectedPlanDisplay');
       if (display) {
         display.textContent = labels[plan] || '';
         display.className = 'selected-plan-display active plan-' + plan.toLowerCase();
       }
-      const select = document.getElementById('planSelect');
+      var select = document.getElementById('planSelect');
       if (select) select.value = plan;
-      setTimeout(() => {
-        document.getElementById('apply-form')
-          ?.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(function() {
+        var el = document.getElementById('apply-form');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     }
 
-    // Web3Forms送信完了メッセージ（?success=true で戻ってきた場合）
+    // Web3Forms送信完了メッセージ
     if (window.location.search.includes('success=true')) {
-      document.getElementById('successMessage').style.display = 'block';
-      document.getElementById('applyForm').style.display = 'none';
-      window.scrollTo(0, document.getElementById('apply-form').offsetTop - 100);
+      var msg = document.getElementById('successMessage');
+      var form = document.getElementById('applyForm');
+      if (msg) msg.style.display = 'block';
+      if (form) form.style.display = 'none';
+      var section = document.getElementById('apply-form');
+      if (section) window.scrollTo(0, section.offsetTop - 100);
     }
 
     // FAQ accordion for apply page
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const answer = item.querySelector('.faq-answer');
-        const isActive = item.classList.contains('active');
-        document.querySelectorAll('.faq-item').forEach(i => {
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var item = btn.parentElement;
+        var answer = item.querySelector('.faq-answer');
+        var isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(i) {
           i.classList.remove('active');
           i.querySelector('.faq-answer').style.maxHeight = null;
         });
@@ -463,30 +466,34 @@
       });
     });
 
-    // Back to top
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      backToTop.classList.toggle('visible', window.scrollY > 500);
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Hamburger
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      mobileNav.classList.toggle('active');
-      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-    });
-    document.querySelectorAll('.mobile-nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        mobileNav.classList.remove('active');
-        document.body.style.overflow = '';
+    // Hamburger menu
+    var hamburger = document.getElementById('hamburger');
+    var mobileNav = document.getElementById('mobileNav');
+    if (hamburger && mobileNav) {
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+        document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
       });
-    });
+      document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          mobileNav.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // Back to top
+    var backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+      window.addEventListener('scroll', function() {
+        backToTop.classList.toggle('visible', window.scrollY > 500);
+      });
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
   </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://kaigaiq.com/"},{"@type":"ListItem","position":2,"name":"掲載申し込み","item":"https://kaigaiq.com/apply.html"}]}</script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").catch(()=>{})})}</script>
