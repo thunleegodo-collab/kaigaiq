@@ -197,15 +197,20 @@
           プランを上から選択してください
         </div>
 
-        <form class="apply-form" id="applyForm">
+        <form class="apply-form" id="applyForm"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST">
+          <input type="hidden" name="_subject" value="【KaigaiQ】新規掲載申し込み">
+          <input type="hidden" name="_next" value="https://kaigaiq.com/apply.html?sent=1">
+          <input type="hidden" name="_language" value="ja">
           <div class="form-row">
             <div class="form-field">
               <label>店舗名 <span class="required">必須</span></label>
-              <input type="text" placeholder="例：CLUB PREMIER バンコク" required>
+              <input type="text" name="shop_name" placeholder="例：CLUB PREMIER バンコク" required>
             </div>
             <div class="form-field">
               <label>都市・国 <span class="required">必須</span></label>
-              <select required>
+              <select name="city" required>
                 <option value="">選択してください</option>
                 <option>バンコク（タイ）</option>
                 <option>シンガポール</option>
@@ -223,7 +228,7 @@
           <div class="form-row">
             <div class="form-field">
               <label>店舗種別 <span class="required">必須</span></label>
-              <select required>
+              <select name="shop_type" required>
                 <option value="">選択してください</option>
                 <option>キャバクラ</option>
                 <option>ラウンジ</option>
@@ -235,7 +240,7 @@
             </div>
             <div class="form-field">
               <label>希望プラン <span class="required">必須</span></label>
-              <select id="planSelect" required>
+              <select name="plan" id="planSelect" required>
                 <option value="">選択してください</option>
                 <option value="FREE">FREE（無料）</option>
                 <option value="STANDARD">STANDARD（¥19,800/月）</option>
@@ -248,23 +253,28 @@
           <div class="form-row">
             <div class="form-field">
               <label>担当者名 <span class="required">必須</span></label>
-              <input type="text" placeholder="例：田中 太郎">
+              <input type="text" name="contact_name" placeholder="例：田中 太郎" required>
             </div>
             <div class="form-field">
               <label>LINE ID <span class="required">必須</span></label>
-              <input type="text" placeholder="例：@kaigaiq_shop">
+              <input type="text" name="line_id" placeholder="例：@kaigaiq_shop" required>
             </div>
           </div>
 
           <div class="form-field">
+            <label>メールアドレス</label>
+            <input type="email" name="email" placeholder="例：shop@example.com">
+          </div>
+
+          <div class="form-field">
             <label>店舗紹介・アピールポイント</label>
-            <textarea rows="4"
+            <textarea rows="4" name="message"
               placeholder="店舗の特徴、待遇、寮情報など自由にご記入ください"></textarea>
           </div>
 
           <div class="form-field">
             <label>現在の月間採用人数（目安）</label>
-            <select>
+            <select name="hiring_volume">
               <option>1〜3名</option>
               <option>4〜10名</option>
               <option>11名以上</option>
@@ -421,10 +431,20 @@
       }, 100);
     }
 
-    document.getElementById('applyForm')?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('送信ありがとうございます。24時間以内にLINEにてご連絡いたします。');
-    });
+    // 送信完了メッセージ（?sent=1 で戻ってきた場合）
+    if (window.location.search.includes('sent=1')) {
+      const formWrap = document.querySelector('.apply-form-wrap');
+      if (formWrap) {
+        formWrap.innerHTML = '<div style="text-align:center;padding:60px 20px;">' +
+          '<div style="font-size:3rem;margin-bottom:16px;">✅</div>' +
+          '<h2 style="color:#fff;font-size:1.4rem;margin-bottom:12px;">送信ありがとうございます</h2>' +
+          '<p style="color:rgba(255,255,255,0.5);font-size:0.95rem;line-height:1.8;margin-bottom:24px;">' +
+          '24時間以内にLINEにてご連絡いたします。<br>掲載開始まで最短3営業日。秘密厳守でご対応いたします。</p>' +
+          '<a href="index.html" style="display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#c8a45c,#f0d080);color:#1a1208;font-weight:700;border-radius:8px;text-decoration:none;">トップページへ戻る</a>' +
+          '</div>';
+        formWrap.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
 
     // FAQ accordion for apply page
     document.querySelectorAll('.faq-question').forEach(btn => {
