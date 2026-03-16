@@ -3,18 +3,35 @@
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Get shop ID from URL params
-  const params = new URLSearchParams(window.location.search);
-  const shopId = params.get('id');
+  // ナビゲーションは常に初期化（SHOPS_DATAの読み込み状況に関わらず）
+  initInteractions();
 
-  if (!shopId || !window.SHOPS_DATA || !window.SHOPS_DATA[shopId]) {
-    document.querySelector('.shop-hero-title').textContent = '店舗が見つかりません';
-    return;
+  // 店舗データの読み込みを待ってからレンダリング
+  function initShopPage() {
+    const params = new URLSearchParams(window.location.search);
+    const shopId = params.get('id');
+
+    if (!shopId) {
+      document.querySelector('.shop-hero-title').textContent = '店舗が見つかりません';
+      return;
+    }
+
+    if (!window.SHOPS_DATA) {
+      // Rocket Loader等でSHOPS_DATAがまだ読み込まれていない場合リトライ
+      setTimeout(initShopPage, 200);
+      return;
+    }
+
+    if (!window.SHOPS_DATA[shopId]) {
+      document.querySelector('.shop-hero-title').textContent = '店舗が見つかりません';
+      return;
+    }
+
+    const shop = window.SHOPS_DATA[shopId];
+    renderShop(shop);
   }
 
-  const shop = window.SHOPS_DATA[shopId];
-  renderShop(shop);
-  initInteractions();
+  initShopPage();
 });
 
 function renderShop(shop) {
