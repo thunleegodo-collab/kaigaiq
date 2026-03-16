@@ -2,7 +2,7 @@
 // KaigaiQ - Interactive Features
 // ========================================
 
-document.addEventListener('DOMContentLoaded', () => {
+function initKaigaiQ() {
 
   // --- Header scroll effect ---
   const header = document.getElementById('header');
@@ -307,7 +307,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-});
+}
+
+// Run initKaigaiQ - works whether DOMContentLoaded already fired or not
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initKaigaiQ);
+} else {
+  initKaigaiQ();
+}
 
 // ===== 給与シミュレーター =====
 (function() {
@@ -343,13 +350,18 @@ document.addEventListener('DOMContentLoaded', () => {
       days + '日間勤務・' + ['未経験','経験1年未満','経験1〜3年','経験3年以上'][exp] + 'の場合の参考値';
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  function initSim() {
     ['simCity','simExp','simDays'].forEach(id => {
-      document.getElementById(id)?.addEventListener('change', calc);
-      document.getElementById(id)?.addEventListener('input', calc);
+      var el = document.getElementById(id);
+      if (el) { el.addEventListener('change', calc); el.addEventListener('input', calc); }
     });
     calc();
-  });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSim);
+  } else {
+    initSim();
+  }
 })();
 
 // ===== 待遇フィルター =====
@@ -405,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (countEl) countEl.textContent = visibleCount;
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  function initBenefitFilter() {
     document.querySelectorAll('.benefit-tag').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.benefit-tag')
@@ -414,7 +426,12 @@ document.addEventListener('DOMContentLoaded', () => {
         applyFilter(btn.dataset.benefit);
       });
     });
-  });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBenefitFilter);
+  } else {
+    initBenefitFilter();
+  }
 })();
 
 // Lazy load background images
