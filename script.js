@@ -6,9 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Header scroll effect ---
   const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-  });
+  if (header) {
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  }
 
   // --- Mobile hamburger menu ---
   const hamburger = document.getElementById('hamburger');
@@ -84,56 +86,61 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('searchInput');
   const suggestionsEl = document.getElementById('searchSuggestions');
 
-  const cities = [
-    'ホーチミン', '香港', 'シンガポール', 'バンコク', 'プノンペン',
-    'ハノイ', '台北', '上海', '韓国', 'ロサンゼルス',
-    'デュッセルドルフ', 'ドバイ'
-  ];
+  if (searchInput && suggestionsEl) {
+    const cities = [
+      'ホーチミン', '香港', 'シンガポール', 'バンコク', 'プノンペン',
+      'ハノイ', '台北', '上海', '韓国', 'ロサンゼルス',
+      'デュッセルドルフ', 'ドバイ'
+    ];
 
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value.trim();
-    if (!query) {
-      suggestionsEl.classList.remove('active');
-      return;
-    }
-
-    const matches = cities.filter(c => c.includes(query));
-    if (matches.length === 0) {
-      suggestionsEl.classList.remove('active');
-      return;
-    }
-
-    suggestionsEl.innerHTML = matches.map(c =>
-      `<div class="search-suggestion">${c}</div>`
-    ).join('');
-    suggestionsEl.classList.add('active');
-
-    suggestionsEl.querySelectorAll('.search-suggestion').forEach(item => {
-      item.addEventListener('click', () => {
-        searchInput.value = item.textContent;
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim();
+      if (!query) {
         suggestionsEl.classList.remove('active');
-        scrollToArea(item.textContent);
+        return;
+      }
+
+      const matches = cities.filter(c => c.includes(query));
+      if (matches.length === 0) {
+        suggestionsEl.classList.remove('active');
+        return;
+      }
+
+      suggestionsEl.innerHTML = matches.map(c =>
+        `<div class="search-suggestion">${c}</div>`
+      ).join('');
+      suggestionsEl.classList.add('active');
+
+      suggestionsEl.querySelectorAll('.search-suggestion').forEach(item => {
+        item.addEventListener('click', () => {
+          searchInput.value = item.textContent;
+          suggestionsEl.classList.remove('active');
+          scrollToArea(item.textContent);
+        });
       });
     });
-  });
 
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.hero-search')) {
-      suggestionsEl.classList.remove('active');
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.hero-search')) {
+        suggestionsEl.classList.remove('active');
+      }
+    });
+
+    const searchBtn = document.getElementById('searchBtn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', () => {
+        const query = searchInput.value.trim();
+        if (query) scrollToArea(query);
+      });
     }
-  });
 
-  document.getElementById('searchBtn').addEventListener('click', () => {
-    const query = searchInput.value.trim();
-    if (query) scrollToArea(query);
-  });
-
-  searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      const query = searchInput.value.trim();
-      if (query) scrollToArea(query);
-    }
-  });
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const query = searchInput.value.trim();
+        if (query) scrollToArea(query);
+      }
+    });
+  }
 
   function scrollToArea(cityName) {
     filterShopsByCity(cityName);
@@ -261,12 +268,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Back to top ---
   const backToTop = document.getElementById('backToTop');
-  window.addEventListener('scroll', () => {
-    backToTop.classList.toggle('visible', window.scrollY > 500);
-  });
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 500);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   // --- Scroll fade-in animation ---
   const fadeEls = document.querySelectorAll(
