@@ -206,12 +206,12 @@ window.SHOPS_DATA = {
     flag: "🇭🇰",
     region: "アジア",
     city: "香港",
-    heroImage: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "香港の銅鑼湾に新しくオープンした日本人向けラウンジ。8年の経験を持つ評判の良い香港人マネージャーと日本人スタッフが在籍しており、初心者でも落ち着いて利用できる環境。",
     gallery: [
-      "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
