@@ -10,12 +10,12 @@ window.SHOPS_DATA = {
     flag: "🇭🇰",
     region: "アジア",
     city: "香港",
-    heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本の東京銀座、札幌、函館、千葉と海外ではシンガポール、バンコク、ベトナムで展開するシティーグループの香港店。香港でワンランク上の月給・バックシステムを実現。",
     gallery: [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1559386484-97dfc0e15539?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "1,000 HKD（保証給）",
