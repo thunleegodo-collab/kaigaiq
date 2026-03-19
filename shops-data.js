@@ -10,7 +10,7 @@ window.SHOPS_DATA = {
     flag: "🇭🇰",
     region: "アジア",
     city: "香港",
-    heroImage: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本の東京銀座、札幌、函館、千葉と海外ではシンガポール、バンコク、ベトナムで展開するシティーグループの香港店。香港でワンランク上の月給・バックシステムを実現。",
     gallery: [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
@@ -50,12 +50,12 @@ window.SHOPS_DATA = {
     flag: "🇻🇳",
     region: "アジア",
     city: "ホーチミン",
-    heroImage: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本の東京銀座、札幌、函館、千葉と海外ではシンガポール、バンコク、香港で展開するシティーグループのベトナム店。豪華内装と広々とした店内で、ベトナム最多の席数と最多在籍を誇る日本人キャバクラ。",
     gallery: [
-      "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1555921015-5532091f6026?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "250万 VND",
@@ -88,12 +88,12 @@ window.SHOPS_DATA = {
     flag: "🇸🇬",
     region: "アジア",
     city: "シンガポール",
-    heroImage: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "お店の名前に（寿限無）じゅげむを付けた理由はご来店頂いたお客様に寿（めでたい）事が限り無く続きますようにという思いを込めてつけさせて頂きました。",
     gallery: [
-      "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -129,12 +129,12 @@ window.SHOPS_DATA = {
     flag: "🇸🇬",
     region: "アジア",
     city: "シンガポール",
-    heroImage: "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "東京銀座、札幌、函館、千葉 海外ではシンガポール、バンコク、香港、ベトナムで展開。「1番稼げる給料システムと寮完備、低価格寮費が特徴」",
     gallery: [
-      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "$200〜$1,000",
@@ -164,12 +164,12 @@ window.SHOPS_DATA = {
     flag: "🇹🇭",
     region: "アジア",
     city: "バンコク",
-    heroImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本の東京銀座、札幌、函館、千葉 海外ではシンガポール、香港、ベトナムでキャバクラ、飲食店を展開するシティーグループのバンコク店。",
     gallery: [
-      "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "3,500 THB以上",
@@ -206,11 +206,11 @@ window.SHOPS_DATA = {
     flag: "🇭🇰",
     region: "アジア",
     city: "香港",
-    heroImage: "https://images.unsplash.com/photo-1506970845246-18f21d533b20?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "香港の銅鑼湾に新しくオープンした日本人向けラウンジ。8年の経験を持つ評判の良い香港人マネージャーと日本人スタッフが在籍しており、初心者でも落ち着いて利用できる環境。",
     gallery: [
-      "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
@@ -244,12 +244,12 @@ window.SHOPS_DATA = {
     flag: "🇦🇪",
     region: "中東",
     city: "ドバイ",
-    heroImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "シンガポールの有名ママ×札幌すすきのNo.1ニュークラブグループBARCELONAのドバイ初ラウンジ。",
     gallery: [
       "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1527261834078-9b37d35a4a32?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -287,7 +287,7 @@ window.SHOPS_DATA = {
     gallery: [
       "https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1527261834078-9b37d35a4a32?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -317,12 +317,12 @@ window.SHOPS_DATA = {
     flag: "🇻🇳",
     region: "アジア",
     city: "ハノイ",
-    heroImage: "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "ガールズバーとスナックの中間のような雰囲気で、日本の最新カラオケ完備。客層の9割は日本人で語学不要。",
     gallery: [
-      "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1555921015-5532091f6026?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "時給 300,000 VND〜",
@@ -356,12 +356,12 @@ window.SHOPS_DATA = {
     flag: "🇹🇼",
     region: "アジア",
     city: "台北",
-    heroImage: "https://images.unsplash.com/photo-1470004914212-05527e49370b?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1578736641330-3155e606cd40?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日式スナック。マネージャーが優しくサポート。スタッフ間の雰囲気が良く、ビジネスオーナーや良識あるお客さんが多い。働きやすい環境。",
     gallery: [
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1527261834078-9b37d35a4a32?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1470004914212-05527e49370b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1578736641330-3155e606cd40?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "350元",
@@ -397,12 +397,12 @@ window.SHOPS_DATA = {
     flag: "🇸🇬",
     region: "アジア",
     city: "シンガポール",
-    heroImage: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "ラウンジとガールズバーの良さを兼ね備えた、居心地の良い空間。",
     gallery: [
-      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -438,12 +438,12 @@ window.SHOPS_DATA = {
     flag: "🇨🇳",
     region: "アジア",
     city: "上海",
-    heroImage: "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "中国上海の日本人街古北にあるお店。1階はカウンター席でバーテンダーと会話しながら楽しめ、2階はカラオケ機器と映画鑑賞が可能な完全個室。",
     gallery: [
-      "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1527261834078-9b37d35a4a32?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "300元",
@@ -473,11 +473,11 @@ window.SHOPS_DATA = {
     flag: "🇹🇭",
     region: "アジア",
     city: "バンコク",
-    heroImage: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "アットホームな日本人向けスナックバー。タイ語学習希望者、未経験者、30歳以上も歓迎。高額バック・手当充実で稼ぎやすく、上下関係なくストレスフリーな環境。",
     gallery: [
-      "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
@@ -509,9 +509,9 @@ window.SHOPS_DATA = {
     heroImage: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "鰻料理と和食の優雅な融合とキャバクラエンターテイメントが織りなす世界初の体験。",
     gallery: [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -545,12 +545,12 @@ window.SHOPS_DATA = {
     flag: "🇺🇸",
     region: "北アメリカ",
     city: "ロサンゼルス",
-    heroImage: "https://images.unsplash.com/photo-1534190760961-74e8c1c5c3da?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1549497538-303791108f95?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "ロサンゼルスで唯一のメンバーズ制クラブ。外キャバを見たお客様のみ会員として扱う。",
     gallery: [
-      "https://images.unsplash.com/photo-1580655653885-65763b2597d0?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1515896769750-31548aa180ed?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1549497538-303791108f95?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -579,12 +579,12 @@ window.SHOPS_DATA = {
     flag: "🇰🇭",
     region: "アジア",
     city: "プノンペン",
-    heroImage: "https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本人客が海外カンボジアで安心して楽しめるキャバクラ。全キャストが日本人女性。",
     gallery: [
       "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -623,11 +623,11 @@ window.SHOPS_DATA = {
     flag: "🇰🇭",
     region: "アジア",
     city: "プノンペン",
-    heroImage: "https://images.unsplash.com/photo-1548013146-72479768bada?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "純日本式スタイルで異国でも日本を感じてもらえるお店。BOX席、カラオケ付きVIPルーム、カウンターバーを完備。",
     gallery: [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
@@ -665,12 +665,12 @@ window.SHOPS_DATA = {
     flag: "🇩🇪",
     region: "ヨーロッパ",
     city: "デュッセルドルフ",
-    heroImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "接待時、仲間内で楽しむ時、お一人様で軽く一杯などその場に合わせて楽しめる。最新カラオケ機器導入。",
     gallery: [
-      "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -701,12 +701,12 @@ window.SHOPS_DATA = {
     flag: "🇸🇬",
     region: "アジア",
     city: "シンガポール",
-    heroImage: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本人オーナーママが経営する安心できるアットホームな店。温かく親しみやすい空間づくりを大切にしている。2025年3月に新店舗へ移転、リニューアルオープン。",
     gallery: [
-      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "$300",
@@ -744,12 +744,12 @@ window.SHOPS_DATA = {
     flag: "🇻🇳",
     region: "アジア",
     city: "ホーチミン",
-    heroImage: "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "シンガポールでの出店実績を持つepicグループがホーチミンに2026年3月出店。ダーツやカラオケ施設あり。日本人顧客メイン。高級コンドミニアムでホスピタリティ充実。物価は日本の約1/3。",
     gallery: [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1555921015-5532091f6026?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -780,11 +780,11 @@ window.SHOPS_DATA = {
     flag: "🇰🇭",
     region: "アジア",
     city: "プノンペン",
-    heroImage: "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "銀座のような格式と安心をプノンペンで。完全一見さんお断りの高級ラウンジ。",
     gallery: [
-      "https://images.unsplash.com/photo-1548013146-72479768bada?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
@@ -815,12 +815,12 @@ window.SHOPS_DATA = {
     flag: "🇰🇷",
     region: "アジア",
     city: "韓国・江陵",
-    heroImage: "https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "韓国屈指の観光地。店舗の目の前には海が広がり、新鮮な海産物と観光都市として有名。",
     gallery: [
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1515896769750-31548aa180ed?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1533577116850-9cc66cad8a9b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1559386484-97dfc0e15539?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "20,000円（最低保証）",
@@ -851,12 +851,12 @@ window.SHOPS_DATA = {
     flag: "🇰🇭",
     region: "アジア",
     city: "プノンペン",
-    heroImage: "https://images.unsplash.com/photo-1533577116850-9cc66cad8a9b?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1559386484-97dfc0e15539?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本人のサービスを提供するメンバーシップバー。従業員は日本人女性の紹介制プライベートバー。",
     gallery: [
-      "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1548013146-72479768bada?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -886,12 +886,12 @@ window.SHOPS_DATA = {
     flag: "🇻🇳",
     region: "アジア",
     city: "ホーチミン",
-    heroImage: "https://images.unsplash.com/photo-1555921015-5532091f6026?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "カラオケとお酒を飲んで楽しみながらワイワイできるお店。",
     gallery: [
-      "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "250万 VND",
@@ -993,9 +993,9 @@ window.SHOPS_DATA = {
     heroImage: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクの高級ラウンジ。洗練されたサービスと豪華な空間を提供。高収入を目指せる環境。",
     gallery: [
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -1020,12 +1020,12 @@ window.SHOPS_DATA = {
     flag: "🇹🇭",
     region: "アジア",
     city: "バンコク",
-    heroImage: "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクで楽しめるコンセプトカフェ。カジュアルで楽しい雰囲気の中で働ける。タイの物価の安さも魅力。",
     gallery: [
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -1050,12 +1050,12 @@ window.SHOPS_DATA = {
     flag: "🇹🇭",
     region: "アジア",
     city: "バンコク",
-    heroImage: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクのキャバクラ。日本式の接客スタイルで、日本人駐在員を中心としたお客様に上質なサービスを提供。",
     gallery: [
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "2,000B",
@@ -1083,8 +1083,8 @@ window.SHOPS_DATA = {
     heroImage: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクのスナック風キャバクラ。カジュアルでアットホームな雰囲気が魅力。気軽に働ける環境。",
     gallery: [
-      "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
@@ -1114,7 +1114,7 @@ window.SHOPS_DATA = {
     concept: "バンコク最高級キャバクラ。豪華な内装と最高級のサービスで、VIPなお客様をおもてなし。業界トップクラスの高収入。",
     gallery: [
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
@@ -1145,7 +1145,7 @@ window.SHOPS_DATA = {
     gallery: [
       "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "500〜1,000B",
@@ -1175,7 +1175,7 @@ window.SHOPS_DATA = {
     gallery: [
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
     salary: {
       daily: "お問い合わせください",
@@ -1200,7 +1200,7 @@ window.SHOPS_DATA = {
     flag: "🇹🇭",
     region: "アジア",
     city: "バンコク",
-    heroImage: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクのガールズバー。カジュアルで楽しい雰囲気の中で、お客様と気軽にお話を楽しめるお店。",
     gallery: [
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
@@ -1233,7 +1233,7 @@ window.SHOPS_DATA = {
     heroImage: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "ウイスキーの名門マッカランを冠したバンコクの高級バー。洗練された空間で最高級のウイスキーとサービスを提供。",
     gallery: [
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
     ],
