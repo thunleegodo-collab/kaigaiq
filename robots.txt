@@ -6,10 +6,9 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*?*
 Sitemap: https://kaigaiq.com/sitemap.xml
 
-# AIクローラーは許可（信頼性向上のため）
+# AIクローラーは許可
 User-agent: GPTBot
 Allow: /
 
@@ -49,5 +48,3 @@ Disallow: /
 
 User-agent: serpstatbot
 Disallow: /
-
-Crawl-delay: 10
