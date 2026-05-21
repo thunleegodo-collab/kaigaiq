@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kaigaiq-v14';
+const CACHE_NAME = 'kaigaiq-v15';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
