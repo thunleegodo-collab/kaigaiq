@@ -371,7 +371,7 @@
               <span class="job-tag">VIP個室完備</span>
               <span class="job-tag">未経験OK</span>
             </div>
-            <a href="/shop.html?id=BUNNY" class="job-btn">詳細を見る</a>
+            <a href="/shop/bunny.html" class="job-btn">詳細を見る</a>
           </div>
         </div>
 
@@ -408,7 +408,7 @@
               <span class="job-tag">ノルマなし</span>
               <span class="job-tag">日本人ママ</span>
             </div>
-            <a href="/shop.html?id=piaget" class="job-btn">詳細を見る</a>
+            <a href="/shop/piaget.html" class="job-btn">詳細を見る</a>
           </div>
         </div>
 
@@ -446,7 +446,7 @@
               <span class="job-tag">渡航費支給</span>
               <span class="job-tag">経験者優遇</span>
             </div>
-            <a href="/shop.html?id=PJdubai" class="job-btn">詳細を見る</a>
+            <a href="/shop/pjdubai.html" class="job-btn">詳細を見る</a>
           </div>
         </div>
 
@@ -483,7 +483,7 @@
               <span class="job-tag">日払い可</span>
               <span class="job-tag">物価1/3</span>
             </div>
-            <a href="/shop.html?id=epicVN" class="job-btn">詳細を見る</a>
+            <a href="/shop/epicvn.html" class="job-btn">詳細を見る</a>
           </div>
         </div>
 
@@ -517,7 +517,7 @@
               <span class="job-tag">短期OK</span>
               <span class="job-tag">高額バック</span>
             </div>
-            <a href="/shop.html?id=teeup" class="job-btn">詳細を見る</a>
+            <a href="/shop/teeup.html" class="job-btn">詳細を見る</a>
           </div>
         </div>
       </div>
@@ -534,7 +534,7 @@
       </div>
 
       <div class="news-grid">
-        <a href="/shop.html?id=Rashell" class="news-card" style="text-decoration:none;color:inherit;">
+        <a href="/shop/rashell.html" class="news-card" style="text-decoration:none;color:inherit;">
           <div class="news-card-img lazy-bg" data-bg="https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3175-1.jpg"></div>
           <div class="news-card-body">
             <div class="news-meta">
@@ -603,7 +603,7 @@
             <p>🇭🇰 香港 ・ ラウンジ</p>
             <span class="new-shop-date">2026.05.21 掲載</span>
           </div>
-          <a href="/shop.html?id=Rashell" class="new-shop-btn">詳細</a>
+          <a href="/shop/rashell.html" class="new-shop-btn">詳細</a>
         </div>
         <div class="new-shop-item">
           <div class="new-shop-rank">02</div>
@@ -613,7 +613,7 @@
             <p>🇹🇭 バンコク ・ スナック</p>
             <span class="new-shop-date">2026.03.03 掲載</span>
           </div>
-          <a href="/shop.html?id=TWENTY%20FOUR%20Bangkok" class="new-shop-btn">詳細</a>
+          <a href="/shop/twenty-four-bangkok.html" class="new-shop-btn">詳細</a>
         </div>
         <div class="new-shop-item">
           <div class="new-shop-rank">03</div>
@@ -623,7 +623,7 @@
             <p>🇻🇳 ホーチミン ・ ガールズバー</p>
             <span class="new-shop-date">2026.03.01 掲載</span>
           </div>
-          <a href="/shop.html?id=epicVN" class="new-shop-btn">詳細</a>
+          <a href="/shop/epicvn.html" class="new-shop-btn">詳細</a>
         </div>
         <div class="new-shop-item">
           <div class="new-shop-rank">04</div>
@@ -633,7 +633,7 @@
             <p>🇺🇸 ロサンゼルス ・ キャバクラ</p>
             <span class="new-shop-date">2026.02.28 掲載</span>
           </div>
-          <a href="/shop.html?id=teeup" class="new-shop-btn">詳細</a>
+          <a href="/shop/teeup.html" class="new-shop-btn">詳細</a>
         </div>
       </div>
 
@@ -918,12 +918,14 @@
         var bp = b[1].premium ? 1 : 0;
         return bp - ap;
       });
+      function slugify(id) { return id.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, ''); }
       grid.innerHTML = entries.map(function(entry) {
         var id = entry[0], s = entry[1];
+        var slug = slugify(id);
         var premiumBadge = s.premium ? '<span class="all-shop-premium-badge">PREMIUM</span>' : '';
         var premiumClass = s.premium ? ' all-shop-card-premium' : '';
         var ariaLabel = s.name + '（' + s.flag + ' ' + s.city + '・' + s.type + '）の店舗写真';
-        return '<a href="/shop.html?id=' + encodeURIComponent(id) + '" class="all-shop-card fade-in' + premiumClass + '" data-shop-id="' + id + '" aria-label="' + s.name + ' の店舗ページへ">' +
+        return '<a href="/shop/' + slug + '.html" class="all-shop-card fade-in' + premiumClass + '" data-shop-id="' + id + '" aria-label="' + s.name + ' の店舗ページへ">' +
           '<div class="all-shop-img" role="img" aria-label="' + ariaLabel + '" style="background-image:url(\'' + (s.gallery && s.gallery[0] ? s.gallery[0] : s.heroImage) + '\')">' + premiumBadge + '</div>' +
           '<div class="all-shop-body">' +
           '<span class="all-shop-flag">' + s.flag + '</span>' +

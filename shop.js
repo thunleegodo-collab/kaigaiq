@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 店舗データの読み込みを待ってからレンダリング
   function initShopPage() {
     const params = new URLSearchParams(window.location.search);
-    const shopId = params.get('id');
+    const shopId = params.get('id') || window.SHOP_ID || '';
 
     if (!shopId) {
       document.querySelector('.shop-hero-title').textContent = '店舗が見つかりません';
@@ -39,13 +39,16 @@ function renderShop(shop) {
   const shopId = params.get('id') || '';
 
   // SEO meta injection
-  const salary = (shop.salary && (shop.salary.monthly || shop.salary.daily)) || '未経験OK・寮完備';
+  let rawSalary = (shop.salary && (shop.salary.monthly || shop.salary.daily)) || '';
+  rawSalary = String(rawSalary).replace(/^(月収|月給|日給)\s*/, '');
+  const isPlaceholder = !rawSalary || /問い合わせ|相談|お問合せ/.test(rawSalary);
+  const salaryClause = isPlaceholder ? '未経験OK・寮完備' : `月収${rawSalary}`;
   const benefitsTop = (shop.benefits && shop.benefits.length > 0)
     ? shop.benefits.slice(0, 3).join('・')
     : 'サポート充実';
   const conceptShort = (shop.concept || '').slice(0, 60);
-  const title = `${shop.name}｜${shop.city}${shop.type}求人 - 月収${salary} | KaigaiQ`;
-  const desc = `${shop.flag} ${shop.city}の${shop.type}「${shop.name}」のキャスト求人情報。${conceptShort}。月収${salary}、${benefitsTop}。`;
+  const title = `${shop.name}｜${shop.city}${shop.type}求人 - ${salaryClause} | KaigaiQ`;
+  const desc = `${shop.flag} ${shop.city}の${shop.type}「${shop.name}」のキャスト求人情報。${conceptShort}。${salaryClause}、${benefitsTop}。`;
   const canonicalUrl = `https://kaigaiq.com/shop.html?id=${encodeURIComponent(shopId)}`;
   const ogImage = shop.heroImage || (shop.gallery && shop.gallery[0]) || 'https://kaigaiq.com/icons/icon-512.svg';
 
