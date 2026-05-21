@@ -118,11 +118,25 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
   }
 
-  // Attach click to all clickable articles
+  // Attach click to all clickable articles — prefer dedicated article page for SEO
+  let articleIndex = null;
+  fetch('/news-article-index.json')
+    .then(r => r.ok ? r.json() : null)
+    .then(idx => { articleIndex = idx; })
+    .catch(() => {});
+
   document.querySelectorAll('.news-clickable').forEach(article => {
     article.style.cursor = 'pointer';
     article.addEventListener('click', (e) => {
       e.preventDefault();
+      const title = article.dataset.title;
+      if (articleIndex) {
+        const found = articleIndex.find(a => a.title === title);
+        if (found && found.urlPath) {
+          window.location.href = found.urlPath;
+          return;
+        }
+      }
       openArticle(article);
     });
   });
