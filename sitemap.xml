@@ -6,11 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kaigaiq.com/shop.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://kaigaiq.com/news.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -55,40 +50,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Shop Pages -->
-  <url><loc>https://kaigaiq.com/shop.html?id=PremiereHK</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=PremiereVN</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=JUGEMU</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=Premier</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=Laputa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=Nyx</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=PJdubai</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=dolcenotte</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=GION</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=Salon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=TORIKO</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=PlusOne</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=TWENTY%20FOUR%20Bangkok</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=KYOTO</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=teeup</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=clubys</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=clubl</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=nozomi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=piaget</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=epicVN</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=Villa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=Ozl</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=Room282</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=UNIVERSE</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=BARON</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=Leone</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=alco</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=BUNNY</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=banksy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=emperorclub</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=Bell</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=CPB</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=doors</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=barrail</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop.html?id=Rashell</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Shop Pages (pre-rendered SSG) -->
+  <url><loc>https://kaigaiq.com/shop/rashell.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaigaiq.com/shop/bunny.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kaigaiq.com/shop/premierehk.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/premierevn.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/jugemu.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/premier.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/laputa.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/nyx.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/pjdubai.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/dolcenotte.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/gion.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/salon.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/toriko.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/plusone.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/twenty-four-bangkok.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/kyoto.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/teeup.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/clubys.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/clubl.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/nozomi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/piaget.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/epicvn.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/villa.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/ozl.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/room282.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/universe.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/baron.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/leone.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/alco.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/banksy.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/emperorclub.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/bell.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/cpb.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/doors.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/shop/barrail.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
