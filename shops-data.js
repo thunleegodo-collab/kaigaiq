@@ -1051,12 +1051,15 @@ window.SHOPS_DATA = {
     region: "アジア",
     city: "バンコク",
     premium: true,
-    heroImage: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    heroImage: "https://clubline23-bangkok.com/images/interior/interior2.webp",
     concept: "バンコク・Asok／スクンビットSoi23の日本人経営プレミアムカラオケラウンジ。10年以上の実績、VIP個室・多言語スタッフ常駐・正式領収書発行可。日本式の接客スタイルで、日本人駐在員を中心としたお客様に上質なサービスを提供。",
     gallery: [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "https://clubline23-bangkok.com/images/interior/interior1.webp",
+      "https://clubline23-bangkok.com/images/interior/interior3.webp",
+      "https://clubline23-bangkok.com/images/interior/interior4.webp",
+      "https://clubline23-bangkok.com/images/interior/interior5.webp",
+      "https://clubline23-bangkok.com/images/others/others1.webp",
+      "https://clubline23-bangkok.com/images/others/others4.webp"
     ],
     salary: {
       daily: "2,000B",
