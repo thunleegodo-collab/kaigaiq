@@ -1058,7 +1058,7 @@ window.SHOPS_DATA = {
       "https://clubline23-bangkok.com/images/interior/interior3.webp",
       "https://clubline23-bangkok.com/images/interior/interior4.webp",
       "https://clubline23-bangkok.com/images/interior/interior5.webp",
-      "https://clubline23-bangkok.com/images/others/others1.webp",
+      "https://clubline23-bangkok.com/images/interior/interior6.webp",
       "https://clubline23-bangkok.com/images/others/others4.webp"
     ],
     salary: {
