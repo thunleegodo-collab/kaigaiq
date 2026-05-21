@@ -232,7 +232,25 @@ function renderShop(shop) {
   }
 
   // Map
-  document.getElementById('mapAddress').textContent = shop.address || (shop.contact && shop.contact.address) || '住所情報なし';
+  const address = shop.address || (shop.contact && shop.contact.address) || '';
+  const mapContainer = document.getElementById('shopMap');
+  if (address && mapContainer) {
+    const primaryAddress = address.split(/\s*\/\s*/)[0];
+    const query = encodeURIComponent(primaryAddress);
+    const mapsLink = `https://www.google.com/maps/search/?api=1&query=${query}`;
+    mapContainer.innerHTML =
+      `<div class="map-embed-wrap">` +
+        `<iframe src="https://maps.google.com/maps?q=${query}&hl=ja&z=16&output=embed" ` +
+          `loading="lazy" referrerpolicy="no-referrer-when-downgrade" ` +
+          `allowfullscreen title="${shop.name} 地図"></iframe>` +
+      `</div>` +
+      `<div class="map-meta">` +
+        `<p class="map-meta-address">${address}</p>` +
+        `<a href="${mapsLink}" target="_blank" rel="noopener noreferrer" class="map-open-btn">Google Mapで開く &rarr;</a>` +
+      `</div>`;
+  } else if (mapContainer) {
+    mapContainer.innerHTML = `<div class="map-placeholder"><p>住所情報なし</p></div>`;
+  }
 }
 
 function initInteractions() {
