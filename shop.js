@@ -238,6 +238,20 @@ function renderShop(shop) {
         urlEl.innerHTML = `<a href="${shop.contact.website}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">${displayUrl}</a>`;
       }
     }
+    if (shop.contact.instagram) {
+      const igEl = document.getElementById('contactInstagram');
+      if (igEl) {
+        igEl.style.display = '';
+        const urlEl = document.getElementById('contactInstagramUrl');
+        const raw = shop.contact.instagram;
+        const isUrl = raw.startsWith('http');
+        const handle = isUrl
+          ? '@' + raw.replace(/^https?:\/\/(www\.)?instagram\.com\//, '').replace(/\/$/, '').replace(/^@?/, '')
+          : (raw.startsWith('@') ? raw : '@' + raw);
+        const href = isUrl ? raw : `https://www.instagram.com/${raw.replace(/^@/, '')}/`;
+        urlEl.innerHTML = `<a href="${href}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">${handle}</a>`;
+      }
+    }
   }
 
   // Map
