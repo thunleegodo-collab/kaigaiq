@@ -234,9 +234,13 @@ function renderShop(shop) {
   // Map
   const address = shop.address || (shop.contact && shop.contact.address) || '';
   const mapContainer = document.getElementById('shopMap');
-  if (address && mapContainer) {
+  if ((address || shop.name) && mapContainer) {
     const primaryAddress = address.split(/\s*\/\s*/)[0];
-    const query = encodeURIComponent(primaryAddress);
+    const isCityOnly = primaryAddress.length < 15;
+    const queryStr = isCityOnly
+      ? `${shop.name} ${primaryAddress || shop.city || ''}`.trim()
+      : `${shop.name} ${primaryAddress}`.trim();
+    const query = encodeURIComponent(queryStr);
     const mapsLink = `https://www.google.com/maps/search/?api=1&query=${query}`;
     mapContainer.innerHTML =
       `<div class="map-embed-wrap">` +
@@ -245,7 +249,7 @@ function renderShop(shop) {
           `allowfullscreen title="${shop.name} 地図"></iframe>` +
       `</div>` +
       `<div class="map-meta">` +
-        `<p class="map-meta-address">${address}</p>` +
+        `<p class="map-meta-address">${address || shop.city || ''}</p>` +
         `<a href="${mapsLink}" target="_blank" rel="noopener noreferrer" class="map-open-btn">Google Mapで開く &rarr;</a>` +
       `</div>`;
   } else if (mapContainer) {
