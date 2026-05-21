@@ -35,8 +35,36 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function renderShop(shop) {
-  // Page title
-  document.getElementById('pageTitle').textContent = `${shop.name} - KaigaiQ`;
+  const params = new URLSearchParams(window.location.search);
+  const shopId = params.get('id') || '';
+
+  // SEO meta injection
+  const salary = (shop.salary && (shop.salary.monthly || shop.salary.daily)) || '未経験OK・寮完備';
+  const benefitsTop = (shop.benefits && shop.benefits.length > 0)
+    ? shop.benefits.slice(0, 3).join('・')
+    : 'サポート充実';
+  const conceptShort = (shop.concept || '').slice(0, 60);
+  const title = `${shop.name}｜${shop.city}${shop.type}求人 - 月収${salary} | KaigaiQ`;
+  const desc = `${shop.flag} ${shop.city}の${shop.type}「${shop.name}」のキャスト求人情報。${conceptShort}。月収${salary}、${benefitsTop}。`;
+  const canonicalUrl = `https://kaigaiq.com/shop.html?id=${encodeURIComponent(shopId)}`;
+  const ogImage = shop.heroImage || (shop.gallery && shop.gallery[0]) || 'https://kaigaiq.com/icons/icon-512.svg';
+
+  document.getElementById('pageTitle').textContent = title;
+  const setMeta = (id, val) => { const el = document.getElementById(id); if (el) el.setAttribute('content', val); };
+  setMeta('metaDesc', desc);
+  setMeta('ogTitle', `${shop.name}（${shop.flag} ${shop.city}・${shop.type}）| KaigaiQ`);
+  setMeta('ogDesc', desc);
+  setMeta('ogImage', ogImage);
+  setMeta('twTitle', `${shop.name}（${shop.flag} ${shop.city}・${shop.type}）`);
+  setMeta('twDesc', desc);
+  setMeta('twImage', ogImage);
+  const canonical = document.getElementById('canonicalLink');
+  if (canonical) canonical.setAttribute('href', canonicalUrl);
+  const ogUrl = document.getElementById('ogUrl');
+  if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+
+  // Inject JSON-LD: LocalBusiness + BreadcrumbList + JobPosting
+  injectShopJsonLd(shop, shopId, canonicalUrl);
 
   // Hero
   document.getElementById('shopHeroBg').style.backgroundImage = `url('${shop.heroImage}')`;
@@ -278,6 +306,102 @@ function renderShop(shop) {
   } else if (mapContainer) {
     mapContainer.innerHTML = `<div class="map-placeholder"><p>住所情報なし</p></div>`;
   }
+}
+
+function injectShopJsonLd(shop, shopId, canonicalUrl) {
+  const head = document.head;
+  ['ldLocalBusiness', 'ldBreadcrumb', 'ldJobPosting'].forEach(id => {
+    const old = document.getElementById(id);
+    if (old) old.remove();
+  });
+
+  const typeMap = {
+    'キャバクラ': 'NightClub',
+    'ラウンジ': 'NightClub',
+    'ガールズバー': 'BarOrPub',
+    'スナック': 'BarOrPub',
+    'Bar': 'BarOrPub',
+    'コンカフェ': 'CafeOrCoffeeShop',
+    '高級会員制ラウンジ': 'NightClub',
+    'KTV': 'NightClub'
+  };
+  const schemaType = typeMap[shop.type] || 'LocalBusiness';
+
+  const address = shop.address || (shop.contact && shop.contact.address) || '';
+  const primaryAddress = address.split(/\s*\/\s*/)[0];
+
+  const localBusiness = {
+    '@context': 'https://schema.org',
+    '@type': schemaType,
+    'name': shop.name,
+    'url': canonicalUrl,
+    'image': shop.heroImage,
+    'description': shop.concept,
+    'address': {
+      '@type': 'PostalAddress',
+      'addressLocality': shop.city,
+      'streetAddress': primaryAddress
+    },
+    'areaServed': shop.city
+  };
+  if (shop.contact && shop.contact.phone) localBusiness.telephone = shop.contact.phone;
+  if (shop.contact && shop.contact.email) localBusiness.email = shop.contact.email;
+  if (shop.contact && shop.contact.website) localBusiness.sameAs = [shop.contact.website];
+  if (shop.hours) localBusiness.openingHours = shop.hours;
+
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'ホーム', 'item': 'https://kaigaiq.com/' },
+      { '@type': 'ListItem', 'position': 2, 'name': shop.region, 'item': 'https://kaigaiq.com/#areas' },
+      { '@type': 'ListItem', 'position': 3, 'name': shop.city, 'item': 'https://kaigaiq.com/#areas' },
+      { '@type': 'ListItem', 'position': 4, 'name': shop.name, 'item': canonicalUrl }
+    ]
+  };
+
+  const monthlySalary = shop.salary && shop.salary.monthly ? String(shop.salary.monthly) : '';
+  const jobPosting = {
+    '@context': 'https://schema.org',
+    '@type': 'JobPosting',
+    'title': `${shop.name} キャスト募集（${shop.city}・${shop.type}）`,
+    'description': `${shop.concept || ''}${shop.benefits ? '\n\n【待遇】\n' + shop.benefits.join('\n') : ''}${shop.housing ? '\n\n【住居】\n' + (Array.isArray(shop.housing) ? shop.housing.join('\n') : shop.housing) : ''}`,
+    'identifier': { '@type': 'PropertyValue', 'name': 'KaigaiQ', 'value': shopId },
+    'datePosted': '2026-05-21',
+    'employmentType': ['FULL_TIME', 'PART_TIME', 'TEMPORARY'],
+    'hiringOrganization': {
+      '@type': 'Organization',
+      'name': shop.name,
+      'sameAs': canonicalUrl
+    },
+    'jobLocation': {
+      '@type': 'Place',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': shop.city,
+        'streetAddress': primaryAddress
+      }
+    },
+    'directApply': false,
+    'url': canonicalUrl
+  };
+  if (monthlySalary) {
+    jobPosting.baseSalary = {
+      '@type': 'MonetaryAmount',
+      'value': { '@type': 'QuantitativeValue', 'value': monthlySalary, 'unitText': 'MONTH' }
+    };
+  }
+
+  const append = (id, data) => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = id;
+    script.textContent = JSON.stringify(data);
+    head.appendChild(script);
+  };
+  append('ldLocalBusiness', localBusiness);
+  append('ldBreadcrumb', breadcrumb);
+  append('ldJobPosting', jobPosting);
 }
 
 function initInteractions() {
