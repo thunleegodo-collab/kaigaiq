@@ -229,6 +229,15 @@ function renderShop(shop) {
         emailBtn.href = `mailto:${shop.contact.email}`;
       }
     }
+    if (shop.contact.website) {
+      const wsEl = document.getElementById('contactWebsite');
+      if (wsEl) {
+        wsEl.style.display = '';
+        const urlEl = document.getElementById('contactWebsiteUrl');
+        const displayUrl = shop.contact.website.replace(/^https?:\/\//, '').replace(/\/$/, '');
+        urlEl.innerHTML = `<a href="${shop.contact.website}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">${displayUrl}</a>`;
+      }
+    }
   }
 
   // Map
