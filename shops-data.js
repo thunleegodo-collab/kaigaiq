@@ -1252,6 +1252,38 @@ window.SHOPS_DATA = {
     },
     priceSystem: [],
     notes: ["詳細は店舗にお問い合わせください"]
+  },
+
+  "Rashell": {
+    name: "Rashell",
+    type: "ラウンジ",
+    flag: "🇭🇰",
+    region: "アジア",
+    city: "香港",
+    heroImage: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    concept: "香港・銅鑼湾（コーズウェイベイ）に2店舗を構える日本人キャスト在籍のジャパニーズバー。世界中のVIPが集まる香港で、現地で外国語を学びながら将来の夢の実現に向けた資金作りが可能。近隣諸国への旅行も楽しめる環境。在籍キャストはほぼ100%日本人女性。",
+    gallery: [
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+    ],
+    salary: {
+      daily: "時給制＋バック制",
+      monthly: "月給 HK$35,000〜",
+      backs: ["ドリンクバック", "本指名", "場内指名", "同伴", "小計", "アフター", "シャンパン・ワインバック"]
+    },
+    benefits: ["給与前渡しOK", "未経験者対応", "お酒飲めなくてもOK", "語学不問（英語・中国語話者優遇）", "ノルマ・罰金なし", "シフト調整可能", "短期勤務OK（1週間〜）", "食事代支給（出勤日HK$60）", "渡航費支給（1ヶ月以上で片道、3ヶ月以上で往復HK$3,000まで）"],
+    housing: ["寮完備（店舗から徒歩5分のプライベートルーム）", "共用バス・トイレ・キッチン", "サービスアパートメント相談可"],
+    visa: ["渡航・アパート案内サポートあり"],
+    hours: "20:30〜3:00（日曜定休）",
+    address: "16F Circle Plaza, 499 Hennessy Road, Causeway Bay, Hong Kong / 11F Allways Center, 468 Jaffe Road, Causeway Bay, Hong Kong",
+    contact: {
+      line: "tomohide.saka",
+      phone: "+852 9769 0733",
+      email: "shalom.hkxx@gmail.com"
+    },
+    priceSystem: [],
+    notes: ["募集年齢：18歳〜33歳", "勤務時の服装：ワンピース／ドレス／ハイヒール", "在籍国籍比率：ほぼ100%日本人女性", "客層：日本人客が中心で語学不要", "担当：とも／TOMO", "詳細は店舗お問い合わせフォームより確認推奨"]
   }
 
 };
