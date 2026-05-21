@@ -46,7 +46,7 @@ function renderShop(shop) {
   const benefitsTop = (shop.benefits && shop.benefits.length > 0)
     ? shop.benefits.slice(0, 3).join('・')
     : 'サポート充実';
-  const conceptShort = (shop.concept || '').slice(0, 60);
+  const conceptShort = (shop.conceptMeta || shop.concept || '').slice(0, 140);
   const title = `${shop.name}｜${shop.city}${shop.type}求人 - ${salaryClause} | KaigaiQ`;
   const desc = `${shop.flag} ${shop.city}の${shop.type}「${shop.name}」のキャスト求人情報。${conceptShort}。${salaryClause}、${benefitsTop}。`;
   const canonicalUrl = `https://kaigaiq.com/shop.html?id=${encodeURIComponent(shopId)}`;
@@ -342,7 +342,7 @@ function injectShopJsonLd(shop, shopId, canonicalUrl) {
     'name': shop.name,
     'url': canonicalUrl,
     'image': shop.heroImage,
-    'description': shop.concept,
+    'description': shop.conceptMeta || shop.concept,
     'address': {
       '@type': 'PostalAddress',
       'addressLocality': shop.city,
