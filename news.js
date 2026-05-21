@@ -4,6 +4,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- Image aria-label injection (a11y + SEO) ---
+  document.querySelectorAll('.news-featured-img, .news-article-img').forEach(el => {
+    const card = el.closest('.news-featured, .news-article-card');
+    const title = card?.dataset.title || card?.querySelector('h2, h3')?.textContent.trim() || '';
+    const cat = card?.dataset.cat || '';
+    el.setAttribute('role', 'img');
+    el.setAttribute('aria-label', title ? `${cat ? '[' + cat + '] ' : ''}${title} の記事サムネイル` : 'KaigaiQ ニュース記事サムネイル');
+  });
+
   // --- Header scroll effect ---
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {

@@ -922,8 +922,9 @@
         var id = entry[0], s = entry[1];
         var premiumBadge = s.premium ? '<span class="all-shop-premium-badge">PREMIUM</span>' : '';
         var premiumClass = s.premium ? ' all-shop-card-premium' : '';
-        return '<a href="/shop.html?id=' + encodeURIComponent(id) + '" class="all-shop-card fade-in' + premiumClass + '" data-shop-id="' + id + '">' +
-          '<div class="all-shop-img" style="background-image:url(\'' + (s.gallery && s.gallery[0] ? s.gallery[0] : s.heroImage) + '\')">' + premiumBadge + '</div>' +
+        var ariaLabel = s.name + '（' + s.flag + ' ' + s.city + '・' + s.type + '）の店舗写真';
+        return '<a href="/shop.html?id=' + encodeURIComponent(id) + '" class="all-shop-card fade-in' + premiumClass + '" data-shop-id="' + id + '" aria-label="' + s.name + ' の店舗ページへ">' +
+          '<div class="all-shop-img" role="img" aria-label="' + ariaLabel + '" style="background-image:url(\'' + (s.gallery && s.gallery[0] ? s.gallery[0] : s.heroImage) + '\')">' + premiumBadge + '</div>' +
           '<div class="all-shop-body">' +
           '<span class="all-shop-flag">' + s.flag + '</span>' +
           '<div class="all-shop-info">' +

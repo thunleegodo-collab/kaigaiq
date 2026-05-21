@@ -67,7 +67,10 @@ function renderShop(shop) {
   injectShopJsonLd(shop, shopId, canonicalUrl);
 
   // Hero
-  document.getElementById('shopHeroBg').style.backgroundImage = `url('${shop.heroImage}')`;
+  const heroEl = document.getElementById('shopHeroBg');
+  heroEl.style.backgroundImage = `url('${shop.heroImage}')`;
+  heroEl.setAttribute('role', 'img');
+  heroEl.setAttribute('aria-label', `${shop.name}（${shop.flag} ${shop.city}・${shop.type}）のヒーロー画像`);
   document.getElementById('shopName').textContent = shop.name;
   document.getElementById('shopNameBreadcrumb').textContent = shop.name;
   document.getElementById('shopBadge').textContent = shop.type;
@@ -81,7 +84,7 @@ function renderShop(shop) {
   const galleryGrid = document.getElementById('shopGalleryGrid');
   if (shop.gallery && shop.gallery.length > 0) {
     galleryGrid.innerHTML = shop.gallery.map((img, i) =>
-      `<div class="gallery-item" style="background-image: url('${img}')" data-index="${i}"></div>`
+      `<div class="gallery-item" data-index="${i}"><img src="${img}" alt="${shop.name} 店内写真 ${i + 1}枚目（${shop.city}・${shop.type}）" loading="lazy" decoding="async"></div>`
     ).join('');
   } else {
     document.getElementById('shopGallery').style.display = 'none';
@@ -440,15 +443,20 @@ function initInteractions() {
   const galleryItems = document.querySelectorAll('.gallery-item');
   let currentIndex = 0;
 
-  const galleryUrls = Array.from(galleryItems).map(item => {
-    const bg = item.style.backgroundImage;
-    return bg.slice(5, -2);
+  const galleryData = Array.from(galleryItems).map(item => {
+    const img = item.querySelector('img');
+    return img ? { src: img.src, alt: img.alt } : { src: '', alt: '' };
   });
+
+  const setModalImage = (idx) => {
+    modalImg.src = galleryData[idx].src;
+    modalImg.alt = galleryData[idx].alt;
+  };
 
   galleryItems.forEach((item) => {
     item.addEventListener('click', () => {
       currentIndex = parseInt(item.dataset.index);
-      modalImg.src = galleryUrls[currentIndex];
+      setModalImage(currentIndex);
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
     });
@@ -461,26 +469,26 @@ function initInteractions() {
 
   document.getElementById('imageModalPrev').addEventListener('click', (e) => {
     e.stopPropagation();
-    currentIndex = (currentIndex - 1 + galleryUrls.length) % galleryUrls.length;
-    modalImg.src = galleryUrls[currentIndex];
+    currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+    setModalImage(currentIndex);
   });
 
   document.getElementById('imageModalNext').addEventListener('click', (e) => {
     e.stopPropagation();
-    currentIndex = (currentIndex + 1) % galleryUrls.length;
-    modalImg.src = galleryUrls[currentIndex];
+    currentIndex = (currentIndex + 1) % galleryData.length;
+    setModalImage(currentIndex);
   });
 
   document.addEventListener('keydown', (e) => {
     if (!modal.classList.contains('active')) return;
     if (e.key === 'Escape') closeModal();
     if (e.key === 'ArrowLeft') {
-      currentIndex = (currentIndex - 1 + galleryUrls.length) % galleryUrls.length;
-      modalImg.src = galleryUrls[currentIndex];
+      currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+      setModalImage(currentIndex);
     }
     if (e.key === 'ArrowRight') {
-      currentIndex = (currentIndex + 1) % galleryUrls.length;
-      modalImg.src = galleryUrls[currentIndex];
+      currentIndex = (currentIndex + 1) % galleryData.length;
+      setModalImage(currentIndex);
     }
   });
 

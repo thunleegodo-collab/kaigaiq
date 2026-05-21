@@ -277,6 +277,40 @@ function initKaigaiQ() {
     });
   }
 
+  // --- Image alt / aria-label auto-injection (SEO + a11y) ---
+  const labelBg = (selector, getLabel) => {
+    document.querySelectorAll(selector).forEach(el => {
+      const label = getLabel(el);
+      if (label) {
+        el.setAttribute('role', 'img');
+        el.setAttribute('aria-label', label);
+      }
+    });
+  };
+  labelBg('.area-card-img.lazy-bg', el => {
+    const card = el.closest('.area-card');
+    const flag = card?.querySelector('.area-card-flag')?.textContent.trim() || '';
+    const name = card?.querySelector('h3')?.textContent.trim() || '';
+    return name ? `${flag} ${name} エリアのイメージ写真` : '';
+  });
+  labelBg('.new-shop-img.lazy-bg', el => {
+    const card = el.closest('.new-shop-item');
+    const name = card?.querySelector('.new-shop-info h3')?.textContent.trim() || '';
+    const meta = card?.querySelector('.new-shop-info p')?.textContent.trim() || '';
+    return name ? `${name}（${meta}）の店舗写真` : '';
+  });
+  labelBg('.job-card-img.lazy-bg', el => {
+    const card = el.closest('.job-card');
+    const name = card?.querySelector('.job-name')?.textContent.trim() || '';
+    const area = card?.querySelector('.job-area')?.textContent.trim() || '';
+    return name ? `${name}（${area}）の求人イメージ` : '';
+  });
+  labelBg('.news-card-img.lazy-bg', el => {
+    const card = el.closest('.news-card');
+    const title = card?.querySelector('h3')?.textContent.trim() || '';
+    return title ? `${title} の記事サムネイル` : 'KaigaiQ ショップニュース';
+  });
+
   // --- Scroll fade-in animation ---
   const fadeEls = document.querySelectorAll(
     '.area-card, .job-card, .news-card, .new-shop-item, .faq-item'
