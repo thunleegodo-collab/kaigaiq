@@ -12,6 +12,7 @@ window.SHOPS_DATA = {
     city: "香港",
     heroImage: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本の東京銀座、札幌、函館、千葉と海外ではシンガポール、バンコク、ベトナムで展開するシティーグループの香港店。香港でワンランク上の月給・バックシステムを実現。",
+    conceptMeta: "香港・銅鑼湾の日系キャバクラ。月収45,000〜200,000HKD（約90〜400万円）の高水準バックシステム、日本人スタッフ常駐・就労ビザ申請代行無料で未経験から海外で稼げる環境。",
     gallery: [
       "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -52,6 +53,7 @@ window.SHOPS_DATA = {
     city: "ホーチミン",
     heroImage: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本の東京銀座、札幌、函館、千葉と海外ではシンガポール、バンコク、香港で展開するシティーグループのベトナム店。豪華内装と広々とした店内で、ベトナム最多の席数と最多在籍を誇る日本人キャバクラ。",
+    conceptMeta: "ホーチミン1区・Le Thanh Ton通りの日系キャバクラ。月収8,100万〜24,000万VND（約50〜150万円）、日払い制度・往復航空券支給・寮完備で短期勤務もOK。",
     gallery: [
       "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -90,6 +92,7 @@ window.SHOPS_DATA = {
     city: "シンガポール",
     heroImage: "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "お店の名前に（寿限無）じゅげむを付けた理由はご来店頂いたお客様に寿（めでたい）事が限り無く続きますようにという思いを込めてつけさせて頂きました。",
+    conceptMeta: "シンガポール・Cuppage Plazaの日系キャバクラ「寿限無」。月収90万円〜、ドリンク／アフターバック制、就労ビザ申請代行・往復航空券支給・プール/ジム完備の個室寮で生活面も充実。",
     gallery: [
       "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -131,6 +134,7 @@ window.SHOPS_DATA = {
     city: "シンガポール",
     heroImage: "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "東京銀座、札幌、函館、千葉 海外ではシンガポール、バンコク、香港、ベトナムで展開。「1番稼げる給料システムと寮完備、低価格寮費が特徴」",
+    conceptMeta: "シンガポール・Orchard地区Cuppage Plazaの日系キャバクラ。月収8,000〜40,000SGD（約93〜400万円）。ノルマ・罰金なし、ワーキングホリデー対応で未経験からチャレンジ可能。",
     gallery: [
       "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -166,6 +170,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本の東京銀座、札幌、函館、千葉 海外ではシンガポール、香港、ベトナムでキャバクラ、飲食店を展開するシティーグループのバンコク店。",
+    conceptMeta: "バンコク・スクンビットSoi53の日系キャバクラ。月収12〜35万バーツ（約50〜150万円）、日給保証3,500B〜、最大70%スライドバック制。日本人スタッフ常駐・寮完備で短期勤務もOK。",
     gallery: [
       "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -208,6 +213,7 @@ window.SHOPS_DATA = {
     city: "香港",
     heroImage: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "香港の銅鑼湾に新しくオープンした日本人向けラウンジ。8年の経験を持つ評判の良い香港人マネージャーと日本人スタッフが在籍しており、初心者でも落ち着いて利用できる環境。",
+    conceptMeta: "香港・銅鑼湾Circle Plaza19階の日本人向けラウンジ。月収35,000HKD以上、日払いOK・交通費支給・往復航空券支給、客層7割が日本人で外国語不要。初心者でも安心の環境。",
     gallery: [
       "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -246,6 +252,7 @@ window.SHOPS_DATA = {
     city: "ドバイ",
     heroImage: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "シンガポールの有名ママ×札幌すすきのNo.1ニュークラブグループBARCELONAのドバイ初ラウンジ。",
+    conceptMeta: "ドバイ・Sheraton Dubai Creek併設の日系ラウンジ。3ヶ月600万円・6ヶ月700万円・12ヶ月800万円の円建て保証額、寮（プール・ジム・サウナ）・送迎・レンタル衣装付きで未経験者も対応。",
     gallery: [
       "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -284,6 +291,7 @@ window.SHOPS_DATA = {
     city: "香港",
     heroImage: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "香港の中心部、尖沙咀で10年以上お客様に愛されてる日系ラウンジです。ネイビーと木彫を基調とした上品なBOX席、カウンターバーをご用意しており最新のカラオケもございます。",
+    conceptMeta: "香港・尖沙咀（チムサーチョイ）の日系ラウンジ。月収約40,000HKD以上（約75万円）、最新カラオケ完備。寮は店舗徒歩5分・家賃無料、往復航空券支給・未経験歓迎・お酒飲めなくてもOK。",
     gallery: [
       "https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -319,6 +327,7 @@ window.SHOPS_DATA = {
     city: "ハノイ",
     heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "ガールズバーとスナックの中間のような雰囲気で、日本の最新カラオケ完備。客層の9割は日本人で語学不要。",
+    conceptMeta: "ハノイ・Ba Dinhの日系ガールズバー＆スナック。客層9割が日本人で語学不要、時給300,000VND〜、日払いOK、寮無料キャンペーン中、45日未満はVISA不要で即勤務可能。",
     gallery: [
       "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -358,6 +367,7 @@ window.SHOPS_DATA = {
     city: "台北",
     heroImage: "https://images.unsplash.com/photo-1578736641330-3155e606cd40?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日式スナック。マネージャーが優しくサポート。スタッフ間の雰囲気が良く、ビジネスオーナーや良識あるお客さんが多い。働きやすい環境。",
+    conceptMeta: "台北・中山區林森北路の日式スナック。日給350元保証、ドリンク1杯100元・テキーラ300元バック。住居サポート・台湾労働ビザ取得支援、未経験・体験入店（給与支給）OK。",
     gallery: [
       "https://images.unsplash.com/photo-1527261834078-9b37d35a4a32?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -399,6 +409,7 @@ window.SHOPS_DATA = {
     city: "シンガポール",
     heroImage: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "ラウンジとガールズバーの良さを兼ね備えた、居心地の良い空間。",
+    conceptMeta: "シンガポール・Orchard Plazaの日系キャバクラ＆ラウンジ。月収90万円〜、平均年齢28歳・未経験率40%。就労ビザ申請代行・往復航空券支給で安心して渡航可能。",
     gallery: [
       "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -440,6 +451,7 @@ window.SHOPS_DATA = {
     city: "上海",
     heroImage: "https://images.unsplash.com/photo-1560624052-449f5ddf0c31?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "中国上海の日本人街古北にあるお店。1階はカウンター席でバーテンダーと会話しながら楽しめ、2階はカラオケ機器と映画鑑賞が可能な完全個室。",
+    conceptMeta: "中国上海・長寧区古北の日本人街にある日系キャバクラ。月収20万円以上、ボトルバック20〜30%、寮費無料・送迎無料・毎日食事付き、3週間以上で片道航空券支給。",
     gallery: [
       "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1527261834078-9b37d35a4a32?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -475,6 +487,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "アットホームな日本人向けスナックバー。タイ語学習希望者、未経験者、30歳以上も歓迎。高額バック・手当充実で稼ぎやすく、上下関係なくストレスフリーな環境。",
+    conceptMeta: "バンコク・Watthanaの日本人向けスナックバー（旧名）。日給2,000バーツ〜、各種バック充実、タイ語学習希望者・未経験・30歳以上歓迎、コンドミニアム寮完備。",
     gallery: [
       "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -508,6 +521,7 @@ window.SHOPS_DATA = {
     city: "プノンペン",
     heroImage: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "鰻料理と和食の優雅な融合とキャバクラエンターテイメントが織りなす世界初の体験。",
+    conceptMeta: "プノンペン・BKK1地区の日系キャバクラ。月収$2,000〜$7,200、ボトル・シャンパンバック10〜20%、完全個室の高級コンド寮、航空券支給・空港迎え・1年VISA無料。",
     gallery: [
       "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -547,6 +561,7 @@ window.SHOPS_DATA = {
     city: "ロサンゼルス",
     heroImage: "https://images.unsplash.com/photo-1549497538-303791108f95?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "ロサンゼルスで唯一のメンバーズ制クラブ。外キャバを見たお客様のみ会員として扱う。",
+    conceptMeta: "ロサンゼルス・Figueroa Streetのメンバーズ制日系キャバクラ。月収30〜100万円、初回20万円のお礼金付き。キャスト専用寮・無料送迎・ドレス貸出あり、お酒飲めなくてもOK。",
     gallery: [
       "https://images.unsplash.com/photo-1549497538-303791108f95?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -581,6 +596,7 @@ window.SHOPS_DATA = {
     city: "プノンペン",
     heroImage: "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本人客が海外カンボジアで安心して楽しめるキャバクラ。全キャストが日本人女性。",
+    conceptMeta: "プノンペン・Doun Penhの日系キャバクラ。全キャスト日本人女性、月収$2,000〜（過去最高$8,000）、シャンパンバック20%、寮完備・往復航空券支給・VISA手当あり。",
     gallery: [
       "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -625,6 +641,7 @@ window.SHOPS_DATA = {
     city: "プノンペン",
     heroImage: "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "純日本式スタイルで異国でも日本を感じてもらえるお店。BOX席、カラオケ付きVIPルーム、カウンターバーを完備。",
+    conceptMeta: "プノンペン・BKK1の純日本式キャバクラ。月収$2,000〜$6,000、日払い制度あり、ボトル10%・シャンパン/ワイン20%バック、寮完備（1人1部屋・ジム・プール）。",
     gallery: [
       "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -667,6 +684,7 @@ window.SHOPS_DATA = {
     city: "デュッセルドルフ",
     heroImage: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "接待時、仲間内で楽しむ時、お一人様で軽く一杯などその場に合わせて楽しめる。最新カラオケ機器導入。",
+    conceptMeta: "ドイツ・デュッセルドルフの日系キャバクラ。月収約100万円（週末中心勤務）、最新カラオケ機器導入、寮あり（最大2ヶ月無料キャンペーン）、ビザ申請料会社負担、未経験OK。",
     gallery: [
       "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -703,6 +721,7 @@ window.SHOPS_DATA = {
     city: "シンガポール",
     heroImage: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本人オーナーママが経営する安心できるアットホームな店。温かく親しみやすい空間づくりを大切にしている。2025年3月に新店舗へ移転、リニューアルオープン。",
+    conceptMeta: "シンガポール・Cuppage Plazaの日系ラウンジ「Emerald ピアジェ」。月収$8,000〜$15,000以上、就労ビザ申請代行・往復航空券・海外旅行保険会社負担、高級寮完備。2025年3月リニューアル。",
     gallery: [
       "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -746,6 +765,7 @@ window.SHOPS_DATA = {
     city: "ホーチミン",
     heroImage: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "シンガポールでの出店実績を持つepicグループがホーチミンに2026年3月出店。ダーツやカラオケ施設あり。日本人顧客メイン。高級コンドミニアムでホスピタリティ充実。物価は日本の約1/3。",
+    conceptMeta: "ホーチミン1区の日系ガールズバー（2026年3月オープン）。月収50万円、ドリンク・指名・ボトル・同伴バック、日払いOK、1人部屋高級コンド（ジム・プール・サウナ）、物価は日本の1/3。",
     gallery: [
       "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -782,6 +802,7 @@ window.SHOPS_DATA = {
     city: "プノンペン",
     heroImage: "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "銀座のような格式と安心をプノンペンで。完全一見さんお断りの高級ラウンジ。",
+    conceptMeta: "プノンペン・Chatomukの完全会員制高級ラウンジ。月収US$4,000〜US$15,000、初月保証$2,000/月〜、語学手当$100/月、有給2日/月（3ヶ月以上勤務）、寮支給。",
     gallery: [
       "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -817,6 +838,7 @@ window.SHOPS_DATA = {
     city: "韓国・江陵",
     heroImage: "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "韓国屈指の観光地。店舗の目の前には海が広がり、新鮮な海産物と観光都市として有名。",
+    conceptMeta: "韓国・江陵市の海前ラウンジ。日給20,000円の最低保証、観光地立地で海産物・観光も楽しめる海外生活。送迎・寮・往復航空券支給・ビザ申請料会社負担、自由出勤OK。",
     gallery: [
       "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -853,6 +875,7 @@ window.SHOPS_DATA = {
     city: "プノンペン",
     heroImage: "https://images.unsplash.com/photo-1559386484-97dfc0e15539?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本人のサービスを提供するメンバーシップバー。従業員は日本人女性の紹介制プライベートバー。",
+    conceptMeta: "プノンペン・Boeung Keng Kang Iの日本人紹介制プライベートバー。月収$1,500 USD〜、ドリンク50%シェア・同伴10%・海外指名15%バック。コンド家賃無料、20歳以上。",
     gallery: [
       "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -888,6 +911,7 @@ window.SHOPS_DATA = {
     city: "ホーチミン",
     heroImage: "https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "カラオケとお酒を飲んで楽しみながらワイワイできるお店。",
+    conceptMeta: "ホーチミン1区Le Thanh Ton通りの日系ガールズバー。月収80万円以上、ベトナム最大条件、6日休日・柔軟な休暇制度・高額バック・日払い制度・渡航費完全支給。",
     gallery: [
       "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -927,6 +951,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=800&h=500&fit=crop&fm=webp&q=75&auto=format",
     concept: "スクンビット33に位置する日本式Members Lounge & BAR。日本人女性50％・タイ人美女50％のハイブリッドスタイルで、バンコクに暮らす日本人のオアシスとして人気。1階カウンターのGirls Bar、2階ダーツ＆ソファラウンジ（カラオケ完備）、3階完全個室VIPルームの3フロア構成。会員制BARとしても展開しており、接待利用にも対応。領収書発行可能、会員様には無料配車サービスあり。2周年を迎えた実績あるラウンジ。",
+    conceptMeta: "バンコク・スクンビット33の日本式メンバーズラウンジ＆BAR。月収10〜30万バーツ以上、3フロア構成（Girls Bar/ダーツラウンジ/VIP個室）、高級タワマン寮（プール・サウナ・ジム）。",
     gallery: [
       "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
@@ -992,6 +1017,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクの高級ラウンジ。洗練されたサービスと豪華な空間を提供。高収入を目指せる環境。",
+    conceptMeta: "バンコクの日系高級ラウンジ。月収150,000〜300,000バーツ（約70〜140万円）、未経験者歓迎、日本人スタッフ常駐で外国語不要、ノルマなし、寮完備・ビザサポートあり。",
     gallery: [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -1022,6 +1048,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクで楽しめるコンセプトカフェ。カジュアルで楽しい雰囲気の中で働ける。タイの物価の安さも魅力。",
+    conceptMeta: "バンコクの日系コンセプトカフェ。月収5〜60,000バーツ、未経験者歓迎の少人数体制、タイの物価の安さも魅力。コンカフェスタイルでマイペース勤務可能。",
     gallery: [
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -1053,6 +1080,7 @@ window.SHOPS_DATA = {
     premium: true,
     heroImage: "https://clubline23-bangkok.com/images/interior/interior2.webp",
     concept: "バンコク・Asok／スクンビットSoi23の日本人経営プレミアムカラオケラウンジ。10年以上の実績、VIP個室・多言語スタッフ常駐・正式領収書発行可。日本式の接客スタイルで、日本人駐在員を中心としたお客様に上質なサービスを提供。",
+    conceptMeta: "バンコク・Asok／スクンビットSoi23の日本人経営プレミアムカラオケラウンジ。10年以上の実績、VIP個室・多言語スタッフ常駐・正式領収書発行可。寮完備・日本人スタッフ常駐・ノルマなし・ビザサポート充実。",
     gallery: [
       "https://clubline23-bangkok.com/images/interior/interior1.webp",
       "https://clubline23-bangkok.com/images/interior/interior3.webp",
@@ -1089,6 +1117,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクのスナック風キャバクラ。カジュアルでアットホームな雰囲気が魅力。気軽に働ける環境。",
+    conceptMeta: "バンコクのスナック風キャバクラ。日給2,000バーツ〜、未経験者歓迎・ノルマなし、ドリンク・指名バックあり、初海外ナイトワークにも適した少人数制。",
     gallery: [
       "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -1119,6 +1148,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコク最高級キャバクラ。豪華な内装と最高級のサービスで、VIPなお客様をおもてなし。業界トップクラスの高収入。",
+    conceptMeta: "バンコクの大型日系キャバクラ。日給3,500B〜30,000B+の高水準給与体系、ドリンク・指名・同伴・ボトルバック充実、未経験歓迎・日本人スタッフ常駐・ノルマ/ペナルティなし、高級寮完備。",
     gallery: [
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -1149,6 +1179,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクのカジュアルなキャバクラ。未経験からでも気軽に始められる環境。",
+    conceptMeta: "バンコクのカジュアルな日系キャバクラ。日給500〜1,000B、ドリンクバックあり、未経験から気軽に始められる雰囲気、少人数制で初海外ナイトワークの導入店としても適した環境。",
     gallery: [
       "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -1179,6 +1210,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "サイバーパンクをコンセプトにした近未来的なバンコクのキャバクラ。ユニークな内装と雰囲気が特徴。",
+    conceptMeta: "バンコクの近未来サイバーパンクをコンセプトにした日系キャバクラ。ユニークな内装と雰囲気が特徴、未経験者歓迎、コンセプト店特有の演出も楽しみながら働ける新感覚店舗。",
     gallery: [
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -1209,6 +1241,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクのガールズバー。カジュアルで楽しい雰囲気の中で、お客様と気軽にお話を楽しめるお店。",
+    conceptMeta: "バンコクのカジュアルな日系ガールズバー。日給2,000バーツ〜、ドリンクバックあり、お客様と気軽にお話を楽しめる雰囲気、未経験者歓迎・ノルマなし、初海外ナイトワークにも適した環境。",
     gallery: [
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -1239,6 +1272,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "ウイスキーの名門マッカランを冠したバンコクの高級バー。洗練された空間で最高級のウイスキーとサービスを提供。",
+    conceptMeta: "バンコクの高級ウイスキーバー。スコッチウイスキーの名門マッカランを冠した洗練された空間、月収500,000THBの高水準給与、ウイスキーに精通したスタッフが在籍する大人向けバー。",
     gallery: [
       "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -1269,6 +1303,7 @@ window.SHOPS_DATA = {
     city: "香港",
     heroImage: "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3175-1.jpg",
     concept: "香港・銅鑼湾（コーズウェイベイ）に2店舗を構える日本人キャスト在籍のジャパニーズバー。世界中のVIPが集まる香港で、現地で外国語を学びながら将来の夢の実現に向けた資金作りが可能。近隣諸国への旅行も楽しめる環境。在籍キャストはほぼ100%日本人女性。",
+    conceptMeta: "香港・銅鑼湾の日本人キャスト在籍のジャパニーズバー。月給HK$35,000〜、ノルマ・罰金なし、ドリンク／本指名／場内指名／同伴／シャンパン・ワインバック。寮完備、客層は日本人50%／香港人40%／外国人10%。",
     gallery: [
       "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3175-1.jpg",
       "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3164.jpg",
