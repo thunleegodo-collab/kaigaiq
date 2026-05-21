@@ -1270,6 +1270,7 @@ window.SHOPS_DATA = {
     heroImage: "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3175-1.jpg",
     concept: "香港・銅鑼湾（コーズウェイベイ）に2店舗を構える日本人キャスト在籍のジャパニーズバー。世界中のVIPが集まる香港で、現地で外国語を学びながら将来の夢の実現に向けた資金作りが可能。近隣諸国への旅行も楽しめる環境。在籍キャストはほぼ100%日本人女性。",
     gallery: [
+      "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3175-1.jpg",
       "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3164.jpg",
       "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3165.jpg",
       "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3167.jpg",
