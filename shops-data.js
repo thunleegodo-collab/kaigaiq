@@ -1045,13 +1045,14 @@ window.SHOPS_DATA = {
   },
 
   "BUNNY": {
-    name: "Club LINE+a",
+    name: "Club LINE23 Bangkok",
     type: "キャバクラ",
     flag: "🇹🇭",
     region: "アジア",
     city: "バンコク",
+    premium: true,
     heroImage: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
-    concept: "バンコクのキャバクラ。日本式の接客スタイルで、日本人駐在員を中心としたお客様に上質なサービスを提供。",
+    concept: "バンコク・Asok／スクンビットSoi23の日本人経営プレミアムカラオケラウンジ。10年以上の実績、VIP個室・多言語スタッフ常駐・正式領収書発行可。日本式の接客スタイルで、日本人駐在員を中心としたお客様に上質なサービスを提供。",
     gallery: [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -1066,12 +1067,15 @@ window.SHOPS_DATA = {
     housing: ["寮完備"],
     visa: ["ビザサポートあり"],
     hours: "20:00〜1:00",
-    address: "バンコク",
+    address: "126, 4 Soi Sukhumvit 23, Khlong Toei Nuea, Watthana, Bangkok 10110",
     contact: {
-      phone: "+66-90-910-1839"
+      line: "@624xdwsf",
+      phone: "+66-92-830-2336",
+      website: "https://clubline23-bangkok.com/",
+      instagram: "@club_line23_bangkok"
     },
     priceSystem: [],
-    notes: ["詳細は店舗にお問い合わせください"]
+    notes: ["公式サイト：clubline23-bangkok.com", "10年以上の実績、VIP個室完備", "正式領収書発行可（接待・法人利用対応）", "詳細は店舗にお問い合わせください"]
   },
 
   "banksy": {
