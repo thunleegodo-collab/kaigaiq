@@ -1274,7 +1274,7 @@ window.SHOPS_DATA = {
       "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3164.jpg",
       "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3165.jpg",
       "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3167.jpg",
-      "https://rashell-japan-bar.com/wp-content/uploads/2023/03/AdobeStock_522373937-1-1024x681.jpeg",
+      "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3169-2.jpg",
       "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3171-2.jpg"
     ],
     salary: {
