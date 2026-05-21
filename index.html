@@ -279,6 +279,45 @@
       </div>
 
       <div class="job-grid">
+        <div class="job-card job-card-featured">
+          <div class="job-card-header">
+            <span class="job-badge premium">PREMIUM</span>
+            <span class="job-area">🇹🇭 バンコク</span>
+          </div>
+          <div class="job-card-img lazy-bg" data-bg="https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=500&h=300&fit=crop&fm=webp&q=75&auto=format">
+            <span class="tier-badge premium">PREMIUM</span>
+          </div>
+          <div class="job-card-body">
+            <h3 class="job-name">Club LINE23 Bangkok</h3>
+            <p class="job-type">キャバクラ・カラオケラウンジ</p>
+            <div class="job-details">
+              <div class="job-detail">
+                <span class="job-detail-label">日給</span>
+                <span class="job-detail-value highlight">2,000B〜</span>
+              </div>
+              <div class="job-detail">
+                <span class="job-detail-label">寮</span>
+                <span class="job-detail-value">完備</span>
+              </div>
+              <div class="job-detail">
+                <span class="job-detail-label">ビザ</span>
+                <span class="job-detail-value">サポート有</span>
+              </div>
+            </div>
+            <div class="cert-badges" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">
+              <span class="cert-badge safe">✓ 安全認定</span>
+              <span class="cert-badge comfort">✓ 快適環境</span>
+              <span class="cert-badge income">✓ 10年実績</span>
+            </div>
+            <div class="job-tags">
+              <span class="job-tag">スクンビットSoi23</span>
+              <span class="job-tag">VIP個室完備</span>
+              <span class="job-tag">未経験OK</span>
+            </div>
+            <a href="/shop.html?id=BUNNY" class="job-btn">詳細を見る</a>
+          </div>
+        </div>
+
         <div class="job-card">
           <div class="job-card-header">
             <span class="job-badge hot">HOT</span>
@@ -819,10 +858,17 @@
         return;
       }
       var entries = Object.entries(window.SHOPS_DATA);
+      entries.sort(function(a, b) {
+        var ap = a[1].premium ? 1 : 0;
+        var bp = b[1].premium ? 1 : 0;
+        return bp - ap;
+      });
       grid.innerHTML = entries.map(function(entry) {
         var id = entry[0], s = entry[1];
-        return '<a href="/shop.html?id=' + encodeURIComponent(id) + '" class="all-shop-card fade-in" data-shop-id="' + id + '">' +
-          '<div class="all-shop-img" style="background-image:url(\'' + (s.gallery && s.gallery[0] ? s.gallery[0] : s.heroImage) + '\')"></div>' +
+        var premiumBadge = s.premium ? '<span class="all-shop-premium-badge">PREMIUM</span>' : '';
+        var premiumClass = s.premium ? ' all-shop-card-premium' : '';
+        return '<a href="/shop.html?id=' + encodeURIComponent(id) + '" class="all-shop-card fade-in' + premiumClass + '" data-shop-id="' + id + '">' +
+          '<div class="all-shop-img" style="background-image:url(\'' + (s.gallery && s.gallery[0] ? s.gallery[0] : s.heroImage) + '\')">' + premiumBadge + '</div>' +
           '<div class="all-shop-body">' +
           '<span class="all-shop-flag">' + s.flag + '</span>' +
           '<div class="all-shop-info">' +

@@ -99,7 +99,7 @@
             <span class="plan-tier free">FREE</span>
             <div class="plan-price">
               <span class="plan-amount">¥0</span>
-              <span class="plan-period">/ 月</span>
+              <span class="plan-period">/ 年</span>
             </div>
             <p class="plan-desc">まずは試してみたい店舗様向け</p>
           </div>
@@ -123,7 +123,7 @@
             <span class="plan-tier standard">STANDARD</span>
             <div class="plan-price">
               <span class="plan-amount">¥19,800</span>
-              <span class="plan-period">/ 月</span>
+              <span class="plan-period">/ 年</span>
             </div>
             <p class="plan-desc">本格的に採用強化したい店舗様向け</p>
           </div>
@@ -148,7 +148,7 @@
             <span class="plan-tier premium">PREMIUM</span>
             <div class="plan-price">
               <span class="plan-amount">¥49,800</span>
-              <span class="plan-period">/ 月</span>
+              <span class="plan-period">/ 年</span>
             </div>
             <p class="plan-desc">最大限の露出と信頼を得たい店舗様向け</p>
           </div>
@@ -251,8 +251,8 @@
               <select name="希望プラン" id="planSelect" required>
                 <option value="">選択してください</option>
                 <option value="FREE">FREE（無料）</option>
-                <option value="STANDARD">STANDARD（¥19,800/月）</option>
-                <option value="PREMIUM">PREMIUM（¥49,800/月）</option>
+                <option value="STANDARD">STANDARD（¥19,800/年）</option>
+                <option value="PREMIUM">PREMIUM（¥49,800/年）</option>
                 <option value="PERFORMANCE">成果報酬オプション</option>
               </select>
             </div>
@@ -421,8 +421,8 @@
     function selectPlan(plan) {
       var labels = {
         FREE: '無料プラン（FREE）を選択中',
-        STANDARD: 'スタンダードプラン（¥19,800/月）を選択中',
-        PREMIUM: 'プレミアムプラン（¥49,800/月）を選択中',
+        STANDARD: 'スタンダードプラン（¥19,800/年）を選択中',
+        PREMIUM: 'プレミアムプラン（¥49,800/年）を選択中',
         PERFORMANCE: '成果報酬オプションの詳細を希望'
       };
       var display = document.getElementById('selectedPlanDisplay');
