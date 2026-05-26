@@ -859,6 +859,7 @@ window.SHOPS_DATA = {
     visa: ["ビザ申請料会社負担", "往復航空券支給"],
     hours: "20時〜3時（シフトにより早上がりOK）",
     address: "6F, 14 Sindaehak-gil, Gangneung, Gangwon-do, South Korea",
+    mapQuery: "14 Sindaehak-gil, Gangneung, Gangwon-do, South Korea",
     contact: {
       line: "dotehi",
       phone: "+821057802173",
