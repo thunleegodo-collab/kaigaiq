@@ -11,6 +11,10 @@
 /guide-stories /guide-stories.html 200
 /404 /404.html 200
 
+# 旧店舗URLリダイレクト
+/shop/ozl.html /shop/okinawa.html 301
+/shop/ozl /shop/okinawa.html 301
+
 # www → non-www
 https://www.kaigaiq.com/* https://kaigaiq.com/:splat 301!
 
