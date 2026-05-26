@@ -830,19 +830,24 @@ window.SHOPS_DATA = {
     notes: ["25:00以降は残業扱い", "連れ出し不可", "在籍国籍比率: 日本人100%", "客層: 日本人1:9多国籍", "完全会員制", "身元確認のとれた紳士のみ"]
   },
 
-  "Ozl": {
-    name: "Lounge Ozl",
+  "Okinawa": {
+    name: "Lounge OKINAWA",
     type: "ラウンジ",
     flag: "🇰🇷",
     region: "アジア",
     city: "韓国・江陵",
-    heroImage: "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
-    concept: "韓国屈指の観光地。店舗の目の前には海が広がり、新鮮な海産物と観光都市として有名。",
-    conceptMeta: "韓国・江陵市の海前ラウンジ。日給20,000円の最低保証、観光地立地で海産物・観光も楽しめる海外生活。送迎・寮・往復航空券支給・ビザ申請料会社負担、自由出勤OK。",
+    heroImage: "/shop-images/okinawa/hero.jpg",
+    concept: "韓国屈指の観光地・江陵にあるカラオケラウンジ「Lounge OKINAWA」。CUBIC・SAPPHIRE・RUBY・SILVER・ROXなど複数の個室を備え、観光地立地で海産物・観光も楽しめる海外生活。",
+    conceptMeta: "韓国・江陵市のカラオケラウンジ「Lounge OKINAWA」（旧Ozl）。日給20,000円の最低保証、複数個室完備、観光地立地で海産物・観光も楽しめる海外生活。送迎・寮・往復航空券支給・ビザ申請料会社負担、自由出勤OK。",
     gallery: [
-      "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1559386484-97dfc0e15539?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "/shop-images/okinawa/01-entrance.jpg",
+      "/shop-images/okinawa/02-main-room.jpg",
+      "/shop-images/okinawa/03-cubic-room.jpg",
+      "/shop-images/okinawa/04-sapphire-room.jpg",
+      "/shop-images/okinawa/05-ruby-room.jpg",
+      "/shop-images/okinawa/06-silver-room.jpg",
+      "/shop-images/okinawa/07-rox-room.jpg",
+      "/shop-images/okinawa/08-hallway.jpg"
     ],
     salary: {
       daily: "20,000円（最低保証）",
