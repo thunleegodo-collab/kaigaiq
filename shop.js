@@ -294,9 +294,11 @@ function renderShop(shop) {
   if ((address || shop.name) && mapContainer) {
     const primaryAddress = address.split(/\s*\/\s*/)[0];
     const isCityOnly = primaryAddress.length < 15;
-    const queryStr = isCityOnly
-      ? `${shop.name} ${primaryAddress || shop.city || ''}`.trim()
-      : `${shop.name} ${primaryAddress}`.trim();
+    const queryStr = shop.mapQuery
+      ? shop.mapQuery
+      : (isCityOnly
+        ? `${shop.name} ${primaryAddress || shop.city || ''}`.trim()
+        : `${shop.name} ${primaryAddress}`.trim());
     const query = encodeURIComponent(queryStr);
     const mapsLink = `https://www.google.com/maps/search/?api=1&query=${query}`;
     mapContainer.innerHTML =
