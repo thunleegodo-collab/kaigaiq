@@ -873,6 +873,86 @@ window.SHOPS_DATA = {
     notes: ["料金システムは急遽変更される場合あり", "日本の携帯から電話を推奨", "チャージ料金10%割引クーポンあり"]
   },
 
+  "epicSG": {
+    name: "epic Singapore",
+    type: "ガールズバー",
+    flag: "🇸🇬",
+    region: "アジア",
+    city: "シンガポール",
+    heroImage: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    concept: "2025年2月OPEN、シンガポール初の大型ガールズBAR。バーカウンター・3個室・ソファー・ダーツ・カラオケステージを完備した広々空間で、自由な服装で楽しく働ける。",
+    conceptMeta: "シンガポール・Cuppage Plaza 5Fの大型ガールズBAR「epic Singapore」（2025年2月OPEN）。自由な服装OK・ノルマなし・指名制度なし・未経験OK。日本人スタッフ複数在籍、株式会社EPIC運営。",
+    gallery: [
+      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+    ],
+    salary: {
+      daily: "お問い合わせください",
+      monthly: "お問い合わせください",
+      backs: []
+    },
+    benefits: ["自由な服装OK（カジュアル可）", "ノルマなし", "ブッキング・指名制度なし", "未経験OK", "短期OK"],
+    housing: ["お問い合わせください"],
+    visa: ["お問い合わせください"],
+    hours: "お問い合わせください",
+    address: "5 KOEK ROAD, #05-01, Cuppage Plaza, Singapore 228796",
+    mapQuery: "5 Koek Road, Cuppage Plaza, Singapore 228796",
+    contact: {
+      website: "https://epic-sg.com/",
+      instagram: "@epic_sg1"
+    },
+    priceSystem: [
+      { item: "バーカウンター（60分）", price: "$50チャージ" },
+      { item: "ソファー席（60分）", price: "$80チャージ" },
+      { item: "VIPルーム（60分）", price: "$80 + $150/室" },
+      { item: "指名料", price: "$30" },
+      { item: "同伴料", price: "$50" },
+      { item: "サービスチャージ", price: "+15%" }
+    ],
+    notes: ["料金システムは急遽変更される場合あり", "支払いは現金・クレジットカード（VISA/Master/Amex）・PayNow対応", "詳細はLINE/Instagramよりお問い合わせください"]
+  },
+
+  "Usagi": {
+    name: "Lounge Usagi Singapore",
+    type: "ラウンジ",
+    flag: "🇸🇬",
+    region: "アジア",
+    city: "シンガポール",
+    heroImage: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    concept: "シンガポール金融街Robinson Roadに位置する新しい日本人ラウンジ。お酒と歌を楽しめる居心地の良い空間。日本人スタッフ10名在籍、英語が苦手でも安心して働ける。",
+    conceptMeta: "シンガポール・金融街Robinson Rd Oxley Tower 2Fの日系ラウンジ「Lounge Usagi」。日給$170+歩合、食事付き・往復航空券支給。日本人スタッフ10名、お客様の8割が日本人で英語不要、急募中。",
+    gallery: [
+      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+    ],
+    salary: {
+      daily: "$170 SGD（約20,000円）",
+      monthly: "歩合により変動",
+      backs: ["売上歩合"]
+    },
+    benefits: ["食事あり", "往復航空券支給", "労災保険", "入院保険", "未経験OK", "英語苦手OK", "急募中"],
+    housing: ["お問い合わせください"],
+    visa: ["お問い合わせください"],
+    hours: "21:00〜2:00（日曜定休）",
+    address: "138 Robinson Rd, #02-04 Oxley Tower 2, Singapore",
+    mapQuery: "138 Robinson Road, Oxley Tower, Singapore",
+    contact: {
+      line: "ayana-0330",
+      phone: "+65 81335007",
+      email: "dmnd-p@hotmail.com",
+      instagram: "@lounge_usagi__singapore"
+    },
+    priceSystem: [
+      { item: "1時間（飲み放題）", price: "$80" },
+      { item: "延長1時間", price: "$60" },
+      { item: "ボトル持ち込み", price: "$60/時間" },
+      { item: "サービス税", price: "+10%" }
+    ],
+    notes: ["在籍国籍比率: 日本人100%", "客層: 日本人8 / 多国籍2", "持ち帰り不可", "料金システムは急遽変更される場合あり"]
+  },
+
   "Room282": {
     name: "Room 282",
     type: "ラウンジ",
