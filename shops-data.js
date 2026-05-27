@@ -1406,7 +1406,7 @@ window.SHOPS_DATA = {
     ],
     salary: {
       daily: "お問い合わせください",
-      monthly: "500,000THB",
+      monthly: "100,000THB",
       backs: []
     },
     benefits: ["高収入", "高級店"],
