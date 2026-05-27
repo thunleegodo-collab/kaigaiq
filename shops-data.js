@@ -1396,13 +1396,14 @@ window.SHOPS_DATA = {
     flag: "🇹🇭",
     region: "アジア",
     city: "バンコク",
-    heroImage: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
-    concept: "ウイスキーの名門マッカランを冠したバンコクの高級バー。洗練された空間で最高級のウイスキーとサービスを提供。",
-    conceptMeta: "バンコクの高級ウイスキーバー。スコッチウイスキーの名門マッカランを冠した洗練された空間、月収500,000THBの高水準給与、ウイスキーに精通したスタッフが在籍する大人向けバー。",
+    heroImage: "/shop-images/barrail/hero.png",
+    concept: "ウイスキーの名門マッカランを冠したバンコク・プロンポンの高級バー。レンガ調の壁面に整然と並ぶウイスキーボトル棚、間接照明が照らす落ち着いたカウンター空間で最高級のウイスキーとサービスを提供。",
+    conceptMeta: "バンコク・プロンポンの高級ウイスキーバー「The Macallan Bar Rail」。スコッチウイスキーの名門マッカランを冠した洗練された空間、月収100,000THBの安定給与、ウイスキーに精通したスタッフが在籍する大人向けバー。1F カウンター、2-3F パーティスペース、4F カラオケ。",
     gallery: [
-      "https://images.unsplash.com/photo-1592861956120-e524fc739696?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+      "/shop-images/barrail/01-bottle-shelf.png",
+      "/shop-images/barrail/02-macallan-display.png",
+      "/shop-images/barrail/03-counter-postcard.png",
+      "/shop-images/barrail/04-bottles-collage.png"
     ],
     salary: {
       daily: "お問い合わせください",
