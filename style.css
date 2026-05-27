@@ -1246,6 +1246,12 @@ img {
   position: relative;
 }
 
+.job-badge.standard {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+}
+
 .job-badge.premium {
   background: linear-gradient(135deg, #c8a45c, #f0d080);
   color: #1a1208;
