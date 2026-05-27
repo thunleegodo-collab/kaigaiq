@@ -913,6 +913,46 @@ window.SHOPS_DATA = {
     notes: ["料金システムは急遽変更される場合あり", "支払いは現金・クレジットカード（VISA/Master/Amex）・PayNow対応", "詳細はLINE/Instagramよりお問い合わせください"]
   },
 
+  "VidaMia": {
+    name: "Vida Mia Piano Lounge",
+    type: "ラウンジ",
+    flag: "🇭🇰",
+    region: "アジア",
+    city: "香港",
+    heroImage: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
+    concept: "13年の歴史を持つ香港・コーズウェイベイの老舗ピアノラウンジ。ビジネスエグゼクティブ・紹介客中心の落ち着いた大人の空間で、日本人スタッフが9割。",
+    conceptMeta: "香港・コーズウェイベイの老舗日系ピアノラウンジ「Vida Mia」。月収30,000〜40,000HKD（60〜80万円）、寮無料（徒歩5分）・食事・往復航空券支給、ノルマなし。日本人9割スタッフ、紹介制で安心。",
+    gallery: [
+      "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
+      "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
+    ],
+    salary: {
+      daily: "日払いOK",
+      monthly: "月収 30,000〜40,000 HKD（約60〜80万円）",
+      backs: []
+    },
+    benefits: ["寮無料（徒歩5分）", "食事支給", "往復航空券支給", "ノルマなし", "未経験OK", "日払いOK"],
+    housing: ["寮無料", "店舗から徒歩5分"],
+    visa: ["お問い合わせください"],
+    hours: "20:00〜3:00（日曜定休）",
+    address: "13/F Shun Hei Causeway Bay Centre, 492 Lockhart Road, Hong Kong",
+    mapQuery: "492 Lockhart Road, Causeway Bay, Hong Kong",
+    contact: {
+      line: "stitchedarrow",
+      phone: "+852 2893 8848",
+      email: "vidamiapianolounge@gmail.com",
+      website: "http://vidamiapianolounge.wixsite.com/vidamiapianolounge",
+      instagram: "@VidaMiaPianoLg"
+    },
+    priceSystem: [
+      { item: "最初の2時間", price: "1,000 HKD" },
+      { item: "延長1時間", price: "400 HKD" },
+      { item: "サービスチャージ", price: "+10%" }
+    ],
+    notes: ["在籍国籍比率: 日本人9 / 多国籍1", "客層: 日本人8 / 多国籍2", "紹介制中心", "持ち帰り不可", "VISA/Master/AMEX/JCB対応"]
+  },
+
   "Usagi": {
     name: "Lounge Usagi Singapore",
     type: "ラウンジ",
