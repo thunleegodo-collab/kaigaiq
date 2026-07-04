@@ -37,6 +37,9 @@ const slugMap = {
   '【体験談】シンガポールのピアジェで働くCさんが語る海外生活の魅力': 'sg-piaget-experience',
   '【ベトナム】外国人労働者向け就労ビザの最新情報2026': 'vietnam-visa-2026',
   '海外キャバクラ市場2025年の振り返りと2026年の展望': '2025-recap-2026-outlook',
+  '円安162円時代の海外ナイトワーク：2026年上半期の振り返りと夏の展望': 'yen-162-h1-recap-2026',
+  '海外ナイトワークと税金の基礎知識：住民票・非居住者・確定申告はどうなる？': 'overseas-nightwork-tax-basics',
+  '雨季の東南アジア渡航ガイド：バンコク・ホーチミンの気候対策と体調管理': 'rainy-season-guide-sea',
 };
 
 const articles = [];
@@ -197,6 +200,7 @@ function buildArticlePage(article) {
     <p>© 2026 KaigaiQ - 海外ナイトワーク・リゾキャバ求人ポータル</p>
     <p style="margin-top: 8px;"><a href="/" style="color: #c8a45c;">トップへ戻る</a></p>
   </footer>
+<script src="/twemoji-init.js" defer></script>
 </body>
 </html>
 `;

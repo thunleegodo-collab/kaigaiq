@@ -52,8 +52,12 @@
   </url>
   <!-- News Articles -->
   <!-- News Articles -->
-  <url><loc>https://kaigaiq.com/news/2026-05-18-yen-tailwind-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- News Articles -->
+  <url><loc>https://kaigaiq.com/news/2026-07-04-yen-162-h1-recap-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/news/2026-06-24-overseas-nightwork-tax-basics.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/news/2026-06-12-rainy-season-guide-sea.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-05-21-rashell-hk-launch.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaigaiq.com/news/2026-05-18-yen-tailwind-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-04-20-currency-comparison-2026q2.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-03-04-asia-industry-trend.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-03-03-pj-dubai-renewal.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -72,6 +76,27 @@
   <url><loc>https://kaigaiq.com/news/2026-01-30-sg-piaget-experience.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-01-28-vietnam-visa-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-01-25-2025-recap-2026-outlook.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- Area Landing Pages -->
