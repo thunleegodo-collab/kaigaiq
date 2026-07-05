@@ -15,8 +15,52 @@ const SHOPS_DATA = sandbox.window.SHOPS_DATA;
 
 const template = fs.readFileSync(SHOP_TEMPLATE_PATH, 'utf8');
 
+// JobPosting用の給与構造化テーブル（Google for Jobs要件: currency + 数値value）
+// shops-data.js の給与文字列は表記が多様なため、確認済みの店のみ手動マッピング。
+// 除外（データ曖昧のため意図的に省略）: Okinawa(月給/日給の区別不明), epicSG(問い合わせ),
+// CPB(問い合わせ), Bell(日給500Bは時給の疑い), alco(「5〜60,000」表記曖昧), Salon(台湾元・時給の疑い)
+const DATE_POSTED = '2026-07-05';
+const VALID_THROUGH = '2026-12-31';
+const SALARY_STRUCT = {
+  PremiereHK: { currency: 'HKD', min: 45000, max: 200000, unit: 'MONTH' },
+  PremiereVN: { currency: 'VND', min: 81000000, max: 240000000, unit: 'MONTH' },
+  JUGEMU: { currency: 'JPY', min: 900000, unit: 'MONTH' },
+  Premier: { currency: 'SGD', min: 8000, max: 40000, unit: 'MONTH' },
+  Laputa: { currency: 'THB', min: 120000, max: 350000, unit: 'MONTH' },
+  Nyx: { currency: 'HKD', min: 35000, unit: 'MONTH' },
+  PJdubai: { currency: 'JPY', min: 8000000, unit: 'YEAR' },
+  dolcenotte: { currency: 'HKD', min: 40000, unit: 'MONTH' },
+  GION: { currency: 'VND', min: 300000, unit: 'HOUR' },
+  TORIKO: { currency: 'JPY', min: 900000, unit: 'MONTH' },
+  PlusOne: { currency: 'JPY', min: 200000, unit: 'MONTH' },
+  'TWENTY FOUR Bangkok': { currency: 'THB', min: 2000, unit: 'DAY' },
+  KYOTO: { currency: 'USD', min: 2000, max: 7200, unit: 'MONTH' },
+  teeup: { currency: 'JPY', min: 300000, max: 1000000, unit: 'MONTH' },
+  clubys: { currency: 'USD', min: 2000, unit: 'MONTH' },
+  clubl: { currency: 'USD', min: 2000, max: 6000, unit: 'MONTH' },
+  nozomi: { currency: 'JPY', min: 1000000, unit: 'MONTH' },
+  piaget: { currency: 'SGD', min: 8000, max: 15000, unit: 'MONTH' },
+  epicVN: { currency: 'JPY', min: 500000, unit: 'MONTH' },
+  Villa: { currency: 'USD', min: 4000, max: 15000, unit: 'MONTH' },
+  VidaMia: { currency: 'HKD', min: 30000, max: 40000, unit: 'MONTH' },
+  Usagi: { currency: 'SGD', min: 170, unit: 'DAY' },
+  Room282: { currency: 'USD', min: 1500, unit: 'MONTH' },
+  UNIVERSE: { currency: 'JPY', min: 800000, unit: 'MONTH' },
+  BARON: { currency: 'THB', min: 100000, max: 300000, unit: 'MONTH' },
+  Leone: { currency: 'THB', min: 150000, max: 300000, unit: 'MONTH' },
+  BUNNY: { currency: 'THB', min: 2000, unit: 'DAY' },
+  banksy: { currency: 'THB', min: 2000, unit: 'DAY' },
+  emperorclub: { currency: 'THB', min: 3500, max: 30000, unit: 'DAY' },
+  doors: { currency: 'THB', min: 2000, unit: 'DAY' },
+  barrail: { currency: 'THB', min: 100000, unit: 'MONTH' },
+  Rashell: { currency: 'HKD', min: 35000, unit: 'MONTH' },
+};
+
+// 既公開URLを維持するためのslug上書き（epic-sg.htmlは手動作成時代からの正URL。script.jsのSHOP_SLUG_OVERRIDESと同期すること）
+const SLUG_OVERRIDES = { epicSG: 'epic-sg' };
+
 function slugify(id) {
-  return id.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
+  return SLUG_OVERRIDES[id] || id.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
 }
 
 function escHtml(s) {
@@ -31,7 +75,7 @@ function buildHead(shop, id, slug) {
   const benefitsTop = (shop.benefits && shop.benefits.length > 0)
     ? shop.benefits.slice(0, 3).join('・')
     : 'サポート充実';
-  const conceptShort = (shop.conceptMeta || shop.concept || '').slice(0, 140);
+  const conceptShort = (shop.conceptMeta || shop.concept || '').slice(0, 140).replace(/。+$/, '');
   const title = `${shop.name}｜${shop.city}${shop.type}求人 - ${salaryClause} | KaigaiQ`;
   const desc = `${shop.flag} ${shop.city}の${shop.type}「${shop.name}」のキャスト求人情報。${conceptShort}。${salaryClause}、${benefitsTop}。`;
   const canonicalUrl = `https://kaigaiq.com/shop/${slug}.html`;
@@ -77,14 +121,14 @@ function buildHead(shop, id, slug) {
     ]
   };
 
-  const monthlySalary = shop.salary && shop.salary.monthly ? String(shop.salary.monthly) : '';
   const jobPosting = {
     '@context': 'https://schema.org',
     '@type': 'JobPosting',
     title: `${shop.name} キャスト募集（${shop.city}・${shop.type}）`,
     description: `${shop.concept || ''}${shop.benefits ? '\n\n【待遇】\n' + shop.benefits.join('\n') : ''}${shop.housing ? '\n\n【住居】\n' + (Array.isArray(shop.housing) ? shop.housing.join('\n') : shop.housing) : ''}`,
     identifier: { '@type': 'PropertyValue', name: 'KaigaiQ', value: id },
-    datePosted: '2026-05-21',
+    datePosted: DATE_POSTED,
+    validThrough: VALID_THROUGH,
     employmentType: ['FULL_TIME', 'PART_TIME', 'TEMPORARY'],
     hiringOrganization: { '@type': 'Organization', name: shop.name, sameAs: canonicalUrl },
     jobLocation: {
@@ -94,11 +138,12 @@ function buildHead(shop, id, slug) {
     directApply: false,
     url: canonicalUrl
   };
-  if (monthlySalary) {
-    jobPosting.baseSalary = {
-      '@type': 'MonetaryAmount',
-      value: { '@type': 'QuantitativeValue', value: monthlySalary, unitText: 'MONTH' }
-    };
+  const sal = SALARY_STRUCT[id];
+  if (sal) {
+    const qv = { '@type': 'QuantitativeValue', unitText: sal.unit };
+    if (sal.max) { qv.minValue = sal.min; qv.maxValue = sal.max; }
+    else { qv.value = sal.min; }
+    jobPosting.baseSalary = { '@type': 'MonetaryAmount', currency: sal.currency, value: qv };
   }
 
   return {

@@ -50,12 +50,12 @@ const CITIES = {
     keywords: 'ドバイ キャバクラ,ドバイ ラウンジ,中東 求人,UAE 日本人' }
 };
 
-const READ_LINK = (relUrl) => `<a href="${relUrl}" style="color:#e6c97a;">${relUrl.replace(/^\//, '').replace(/\.html$/, '')}</a>`;
+const READ_LINK = (relUrl, label) => `<a href="${relUrl}" style="color:#e6c97a;">${label || relUrl.replace(/^\//, '').replace(/\.html$/, '')}</a>`;
 
 function buildAreaPage(cityName, conf, shops) {
   const canonicalUrl = `https://kaigaiq.com/area/${conf.slug}.html`;
-  const title = `${cityName}のキャバクラ・ラウンジ求人【${shops.length}店掲載】月収相場・店舗一覧 | KaigaiQ`;
-  const desc = `${conf.flag} ${cityName}（${conf.en}）の海外キャバクラ・ラウンジ求人を${shops.length}店掲載。${conf.intro.slice(0, 80)}`;
+  const title = `${cityName}のキャバクラ・ラウンジ求人【${shops.length}店掲載】夜職の海外出稼ぎ・月収相場 | KaigaiQ`;
+  const desc = `${conf.flag} ${cityName}（${conf.en}）の海外キャバクラ・ラウンジ求人を${shops.length}店掲載。夜職・キャバ嬢の海外出稼ぎ先として人気のエリア。${conf.intro.slice(0, 70)}`;
   const ogImage = (shops[0] && shops[0].heroImage) || 'https://kaigaiq.com/icons/icon-512.svg';
 
   const shopCards = shops.map(s => {
@@ -189,6 +189,7 @@ function buildAreaPage(cityName, conf, shops) {
     <span class="area-hero-flag" aria-hidden="true">${conf.flag}</span>
     <h1>${cityName}のキャバクラ・ラウンジ求人</h1>
     <p class="area-hero-sub">${conf.intro}</p>
+    <p class="area-hero-sub" style="margin-top:8px;">${cityName}への夜職の出稼ぎを検討中のキャバ嬢・ナイトワーク経験者の方は、店舗一覧とあわせて<a href="/guide-dekasegi.html" style="color:#e6c97a;">海外出稼ぎ完全ガイド</a>もご覧ください。</p>
     <div class="area-stats">
       <div class="area-stat"><div class="area-stat-num">${shops.length}</div><div class="area-stat-label">掲載店舗</div></div>
       <div class="area-stat"><div class="area-stat-num">${conf.flag}</div><div class="area-stat-label">${conf.en}</div></div>
@@ -204,12 +205,13 @@ function buildAreaPage(cityName, conf, shops) {
   <section class="area-related">
     <h2>関連情報</h2>
     <ul>
-      <li>${READ_LINK('/guide-visa.html')}：${cityName}を含む海外渡航・ビザ取得ガイド</li>
-      <li>${READ_LINK('/guide-salary.html')}：給与・バックシステム完全解説</li>
-      <li>${READ_LINK('/guide-housing.html')}：寮・住居の実態と選び方</li>
-      <li>${READ_LINK('/guide-safety.html')}：海外で安全に働くためのガイド</li>
-      <li>${READ_LINK('/guide-stories.html')}：先輩キャストの体験談</li>
-      <li>${READ_LINK('/news.html')}：海外キャバクラ業界の最新ニュース</li>
+      <li>${READ_LINK('/guide-dekasegi.html', '海外出稼ぎ完全ガイド')}：夜職の海外出稼ぎの始め方・国別比較</li>
+      <li>${READ_LINK('/guide-visa.html', 'ビザ・渡航ガイド')}：${cityName}を含む海外渡航・ビザ取得ガイド</li>
+      <li>${READ_LINK('/guide-salary.html', '給与・バックシステム解説')}：給与・バックシステム完全解説</li>
+      <li>${READ_LINK('/guide-housing.html', '寮・住居ガイド')}：寮・住居の実態と選び方</li>
+      <li>${READ_LINK('/guide-safety.html', '安全対策ガイド')}：海外で安全に働くためのガイド</li>
+      <li>${READ_LINK('/guide-stories.html', '先輩キャストの体験談')}：未経験から海外で働いた先輩の体験談</li>
+      <li>${READ_LINK('/news.html', '業界ニュース一覧')}：海外キャバクラ業界の最新ニュース</li>
     </ul>
   </section>
 

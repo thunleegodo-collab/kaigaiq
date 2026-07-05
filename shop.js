@@ -2,6 +2,13 @@
 // Shop Detail Page - Dynamic Rendering
 // ========================================
 
+// 店舗ID → 静的ページURL（tools/build-shop-pages.js の slugify / SLUG_OVERRIDES と同期）
+const SHOP_SLUG_OVERRIDES = { epicSG: 'epic-sg' };
+function shopPageUrl(id) {
+  const slug = SHOP_SLUG_OVERRIDES[id] || id.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
+  return '/shop/' + slug + '.html';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // ナビゲーションは常に初期化（SHOPS_DATAの読み込み状況に関わらず）
   initInteractions();
@@ -28,6 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const shop = window.SHOPS_DATA[shopId];
+
+    // 旧URL (shop.html?id=X) は静的ページへリダイレクトして正規化
+    if (params.get('id') && /\/shop\.html$/.test(window.location.pathname)) {
+      window.location.replace(shopPageUrl(shopId));
+      return;
+    }
+
     renderShop(shop);
   }
 
@@ -36,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function renderShop(shop) {
   const params = new URLSearchParams(window.location.search);
-  const shopId = params.get('id') || '';
+  const shopId = params.get('id') || window.SHOP_ID || '';
 
   // SEO meta injection
   let rawSalary = (shop.salary && (shop.salary.monthly || shop.salary.daily)) || '';
@@ -46,10 +60,10 @@ function renderShop(shop) {
   const benefitsTop = (shop.benefits && shop.benefits.length > 0)
     ? shop.benefits.slice(0, 3).join('・')
     : 'サポート充実';
-  const conceptShort = (shop.conceptMeta || shop.concept || '').slice(0, 140);
+  const conceptShort = (shop.conceptMeta || shop.concept || '').slice(0, 140).replace(/。+$/, '');
   const title = `${shop.name}｜${shop.city}${shop.type}求人 - ${salaryClause} | KaigaiQ`;
   const desc = `${shop.flag} ${shop.city}の${shop.type}「${shop.name}」のキャスト求人情報。${conceptShort}。${salaryClause}、${benefitsTop}。`;
-  const canonicalUrl = `https://kaigaiq.com/shop.html?id=${encodeURIComponent(shopId)}`;
+  const canonicalUrl = `https://kaigaiq.com${shopPageUrl(shopId)}`;
   const ogImage = shop.heroImage || (shop.gallery && shop.gallery[0]) || 'https://kaigaiq.com/icons/icon-512.svg';
 
   document.getElementById('pageTitle').textContent = title;
