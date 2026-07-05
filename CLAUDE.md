@@ -6,10 +6,11 @@
 LINE公式：@637hamys
 
 ## 技術構成
-- Cloudflare Pages / GitHub Pages
+- GitHub Pages（legacy build）で配信。`_headers`/`_redirects` はCloudflare形式のため本番では無効
 - 静的HTML
-- GA4：G-L3F0B833S2
-- IndexNow APIキー設定済み
+- GA4：G-HP8686808M（全ページ統一。clublinebangkok@gmail.com のGoogleアカウント管理。旧記載のG-L3F0B833S2は不使用）
+- GSC：https://kaigaiq.com/ プロパティ。clublinebangkok@gmail.com（3月〜）＋ hironori.kondo側アカウント（2026-07-05所有権追加、確認ファイル google823549b64d1f975d.html は削除禁止）
+- IndexNow APIキー設定済み（キーファイルの所在は要確認）
 
 ## デザイン
 - ブランドカラー：ブラック×ゴールド

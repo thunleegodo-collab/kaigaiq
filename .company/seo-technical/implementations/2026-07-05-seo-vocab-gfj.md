@@ -36,7 +36,8 @@ based_on: audits/2026-07-05-followup-persona.md
 ### GSC所有権確認（新規）
 - ChromeログインアカウントにはGSCプロパティが未登録だった → HTMLファイル法（google823549b64d1f975d.html をリポジトリに追加）で https://kaigaiq.com/ の所有権確認完了
 - プロパティ自体は別アカウントで2026/03/16からsitemap送信済みの既存物（過去データ閲覧可）
-- 既存のmeta verification（bxECX...）とGA4（G-HP8686808M）は**別のGoogleアカウント**に紐づく（GA法の所有権確認は「関連付けられていない」で失敗）→ 正アカウントの特定はオーナー要確認
+- 既存のmeta verification（bxECX...）とGA4（G-HP8686808M）は**clublinebangkok@gmail.com** に紐づく（オーナー確認済み 2026-07-05）。GSCは現在2アカウント体制（clublinebangkok=旧・meta認証 / kondo側=新・HTMLファイル認証）
+- GSC実績バッジ: 28日クリック50達成(5/26)→60達成(6/27)→70まであと3クリック(7/5時点67)と加速中
 
 ### インデックス実測（最終更新 2026/06/30）
 - **登録済み 8 / 未登録 76**。未登録の内訳: 「検出 - インデックス未登録」73（=クロール待ち・最重要）、robots.txtブロック2、代替ページ(canonical)1
