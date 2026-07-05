@@ -21,6 +21,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kaigaiq.com/guide-dekasegi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kaigaiq.com/guide-visa.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -101,6 +106,7 @@
 
   <!-- Area Landing Pages -->
   <!-- Area Landing Pages -->
+  <!-- Area Landing Pages -->
   <url><loc>https://kaigaiq.com/area/hongkong.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kaigaiq.com/area/bangkok.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kaigaiq.com/area/singapore.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -113,6 +119,7 @@
   <url><loc>https://kaigaiq.com/area/losangeles.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kaigaiq.com/area/dusseldorf.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kaigaiq.com/area/dubai.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
 
 
   <!-- Shop Pages (pre-rendered SSG) -->

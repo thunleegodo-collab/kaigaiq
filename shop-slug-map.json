@@ -19,10 +19,11 @@
   "nozomi": "nozomi",
   "piaget": "piaget",
   "epicVN": "epicvn",
-  "epicSG": "epic-sg",
-  "Usagi": "usagi",
   "Villa": "villa",
   "Okinawa": "okinawa",
+  "epicSG": "epic-sg",
+  "VidaMia": "vidamia",
+  "Usagi": "usagi",
   "Room282": "room282",
   "UNIVERSE": "universe",
   "BARON": "baron",
@@ -35,6 +36,5 @@
   "CPB": "cpb",
   "doors": "doors",
   "barrail": "barrail",
-  "Rashell": "rashell",
-  "VidaMia": "vidamia"
+  "Rashell": "rashell"
 }

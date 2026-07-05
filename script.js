@@ -2,6 +2,13 @@
 // KaigaiQ - Interactive Features
 // ========================================
 
+// 店舗ID → 静的ページURL（tools/build-shop-pages.js の slugify / SLUG_OVERRIDES と同期）
+const SHOP_SLUG_OVERRIDES = { epicSG: 'epic-sg' };
+function shopPageUrl(id) {
+  const slug = SHOP_SLUG_OVERRIDES[id] || id.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
+  return '/shop/' + slug + '.html';
+}
+
 function initKaigaiQ() {
 
   // --- Header scroll effect ---
@@ -157,7 +164,7 @@ function initKaigaiQ() {
       s.city.includes(cityName) || cityName.includes(s.city)
     );
     if (matched.length === 1) {
-      window.location.href = '/shop.html?id=' + encodeURIComponent(matched[0][0]);
+      window.location.href = shopPageUrl(matched[0][0]);
       return;
     }
     filterShopsByCity(cityName);
@@ -232,7 +239,7 @@ function initKaigaiQ() {
 
   window.renderShopGrid = function(grid, entries) {
     grid.innerHTML = entries.map(([id, s]) => `
-      <a href="/shop.html?id=${encodeURIComponent(id)}" class="all-shop-card fade-in visible">
+      <a href="${shopPageUrl(id)}" class="all-shop-card fade-in visible">
         <div class="all-shop-img" style="background-image:url('${s.gallery && s.gallery[0] ? s.gallery[0] : s.heroImage}')"></div>
         <div class="all-shop-body">
           <span class="all-shop-flag">${s.flag}</span>
