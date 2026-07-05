@@ -20,7 +20,10 @@ const template = fs.readFileSync(SHOP_TEMPLATE_PATH, 'utf8');
 // 除外（データ曖昧のため意図的に省略）: Okinawa(月給/日給の区別不明), epicSG(問い合わせ),
 // CPB(問い合わせ), Bell(日給500Bは時給の疑い), alco(「5〜60,000」表記曖昧), Salon(台湾元・時給の疑い)
 const DATE_POSTED = '2026-07-05';
-const VALID_THROUGH = '2026-12-31';
+// validThroughはビルド実行日+6ヶ月を自動計算（期限切れでGoogle for Jobsから消えるのを防ぐ。
+// サイト更新でビルドが走るたびに自動延長される）
+const _vt = new Date(); _vt.setMonth(_vt.getMonth() + 6);
+const VALID_THROUGH = _vt.toISOString().slice(0, 10);
 const SALARY_STRUCT = {
   PremiereHK: { currency: 'HKD', min: 45000, max: 200000, unit: 'MONTH' },
   PremiereVN: { currency: 'VND', min: 81000000, max: 240000000, unit: 'MONTH' },
