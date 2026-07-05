@@ -97,6 +97,14 @@ function buildHead(shop, id, slug) {
   const schemaType = typeMap[shop.type] || 'LocalBusiness';
   const address = shop.address || (shop.contact && shop.contact.address) || '';
   const primaryAddress = address.split(/\s*\/\s*/)[0];
+  const countryMap = {
+    '香港': 'HK', 'バンコク': 'TH', 'シンガポール': 'SG', 'ホーチミン': 'VN', 'ハノイ': 'VN',
+    'プノンペン': 'KH', '台北': 'TW', '上海': 'CN', '韓国・江陵': 'KR', 'ドバイ': 'AE',
+    'デュッセルドルフ': 'DE', 'ロサンゼルス': 'US'
+  };
+  const addressCountry = countryMap[shop.city] || undefined;
+  const postalAddress = { '@type': 'PostalAddress', addressLocality: shop.city, streetAddress: primaryAddress };
+  if (addressCountry) postalAddress.addressCountry = addressCountry;
 
   const localBusiness = {
     '@context': 'https://schema.org',
@@ -105,7 +113,7 @@ function buildHead(shop, id, slug) {
     url: canonicalUrl,
     image: shop.heroImage,
     description: shop.conceptMeta || shop.concept,
-    address: { '@type': 'PostalAddress', addressLocality: shop.city, streetAddress: primaryAddress },
+    address: postalAddress,
     areaServed: shop.city
   };
   if (shop.contact && shop.contact.phone) localBusiness.telephone = shop.contact.phone;
@@ -136,7 +144,7 @@ function buildHead(shop, id, slug) {
     hiringOrganization: { '@type': 'Organization', name: shop.name, sameAs: canonicalUrl },
     jobLocation: {
       '@type': 'Place',
-      address: { '@type': 'PostalAddress', addressLocality: shop.city, streetAddress: primaryAddress }
+      address: postalAddress
     },
     directApply: false,
     url: canonicalUrl
