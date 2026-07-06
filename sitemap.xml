@@ -58,6 +58,7 @@
   <!-- News Articles -->
   <!-- News Articles -->
   <!-- News Articles -->
+  <!-- News Articles -->
   <url><loc>https://kaigaiq.com/news/2026-07-04-yen-162-h1-recap-2026.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-06-24-overseas-nightwork-tax-basics.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-06-12-rainy-season-guide-sea.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -104,6 +105,8 @@
 
 
 
+
+  <!-- Area Landing Pages -->
   <!-- Area Landing Pages -->
   <!-- Area Landing Pages -->
   <!-- Area Landing Pages -->
@@ -119,6 +122,7 @@
   <url><loc>https://kaigaiq.com/area/losangeles.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kaigaiq.com/area/dusseldorf.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kaigaiq.com/area/dubai.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
 
 
 
