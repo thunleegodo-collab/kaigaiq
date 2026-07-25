@@ -40,6 +40,7 @@ const slugMap = {
   '円安162円時代の海外ナイトワーク：2026年上半期の振り返りと夏の展望': 'yen-162-h1-recap-2026',
   '海外ナイトワークと税金の基礎知識：住民票・非居住者・確定申告はどうなる？': 'overseas-nightwork-tax-basics',
   '雨季の東南アジア渡航ガイド：バンコク・ホーチミンの気候対策と体調管理': 'rainy-season-guide-sea',
+  '夏〜秋の短期出稼ぎガイド：8〜9月入店の逆算スケジュールと契約チェックリスト': 'summer-autumn-short-term-guide',
 };
 
 const articles = [];
@@ -220,10 +221,14 @@ for (const article of articles) {
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
 let sitemap = fs.readFileSync(sitemapPath, 'utf8');
 sitemap = sitemap.replace(/\n\s*<url><loc>https:\/\/kaigaiq\.com\/news\/[^<]+<\/loc>[\s\S]*?<\/url>/g, '');
+// 旧「News Articles」コメントも除去しないとビルドのたびに重複累積する
+sitemap = sitemap.replace(/\n\s*<!-- News Articles -->/g, '');
 const newsEntries = generated.map(g =>
   `  <url><loc>https://kaigaiq.com/news/${g.filename}</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`
 ).join('\n');
 sitemap = sitemap.replace(/(\s*<!-- Area Landing Pages -->)/, `\n  <!-- News Articles -->\n${newsEntries}\n$1`);
+// 除去跡に残る連続空行を1行に畳む
+sitemap = sitemap.replace(/\n{3,}/g, '\n\n');
 fs.writeFileSync(sitemapPath, sitemap);
 console.log(`\n✓ sitemap.xml updated with ${generated.length} news article URLs`);
 
