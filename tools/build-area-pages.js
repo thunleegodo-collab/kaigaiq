@@ -249,9 +249,13 @@ for (const [cityName, conf] of Object.entries(CITIES)) {
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
 let sitemap = fs.readFileSync(sitemapPath, 'utf8');
 sitemap = sitemap.replace(/\n\s*<url><loc>https:\/\/kaigaiq\.com\/area\/[^<]+<\/loc>[\s\S]*?<\/url>/g, '');
+// 旧「Area Landing Pages」コメントも除去しないとビルドのたびに重複累積する
+sitemap = sitemap.replace(/\n\s*<!-- Area Landing Pages -->/g, '');
 const areaEntries = generatedCities.map(c =>
   `  <url><loc>https://kaigaiq.com/area/${c.slug}.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>`
 ).join('\n');
 sitemap = sitemap.replace(/(\s*<!-- Shop Pages \(pre-rendered SSG\) -->)/, `\n  <!-- Area Landing Pages -->\n${areaEntries}\n$1`);
+// 除去跡に残る連続空行を1行に畳む
+sitemap = sitemap.replace(/\n{3,}/g, '\n\n');
 fs.writeFileSync(sitemapPath, sitemap);
 console.log(`\n✓ sitemap.xml updated with ${generatedCities.length} area URLs`);
