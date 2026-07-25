@@ -244,21 +244,37 @@ for (const id of ids) {
   console.log(`✓ ${id} → /shop/${slug}.html`);
 }
 
+// --- sitemap.xml の店舗URL更新 ---
+// 店舗ごとの優先度。自社店舗・注力店舗のみ引き上げ、未指定は SHOP_PRIORITY_DEFAULT
+const SHOP_PRIORITY = { bunny: '0.9', rashell: '0.8', 'epic-sg': '0.8', usagi: '0.8', vidamia: '0.8' };
+const SHOP_PRIORITY_DEFAULT = '0.7';
+// sitemap の店舗ブロック先頭に固定表示する slug（残りは shops-data.js の定義順）
+const SHOP_ORDER_FIRST = ['rashell', 'bunny'];
+
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
 let sitemap = fs.readFileSync(sitemapPath, 'utf8');
-const oldEntries = [...sitemap.matchAll(/<url><loc>https:\/\/kaigaiq\.com\/shop\.html\?id=[^<]+<\/loc>[^<]*<changefreq>[^<]+<\/changefreq>[^<]*<priority>[^<]+<\/priority><\/url>\n?/g)];
-oldEntries.forEach(m => { sitemap = sitemap.replace(m[0], ''); });
+// 旧クエリ形式（/shop.html?id=）と前回生成分の /shop/<slug>.html を除去してから再挿入する。
+// 除去を怠ると再実行のたびに重複が積み上がる
+sitemap = sitemap.replace(/\n\s*<url><loc>https:\/\/kaigaiq\.com\/shop\.html\?id=[^<]+<\/loc>[\s\S]*?<\/url>/g, '');
+sitemap = sitemap.replace(/\n\s*<url><loc>https:\/\/kaigaiq\.com\/shop\/[^<]+<\/loc>[\s\S]*?<\/url>/g, '');
+sitemap = sitemap.replace(/\n\s*<!-- Shop Pages[^>]*-->/g, '');
 
-const newShopEntries = ids.map(id => {
-  const slug = slugMap[id];
-  return `  <url><loc>https://kaigaiq.com/shop/${slug}.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`;
-}).join('\n');
-sitemap = sitemap.replace(
-  /(\s*<!-- Shop Pages -->)?(\s*<url><loc>https:\/\/kaigaiq\.com\/shop\.html<\/loc>[\s\S]*?<\/url>)/,
-  (m, c, shopPage) => `${shopPage}\n  <!-- Shop Pages (pre-rendered) -->\n${newShopEntries}`
-);
+const orderedSlugs = [
+  ...SHOP_ORDER_FIRST.filter(s => Object.values(slugMap).includes(s)),
+  ...ids.map(id => slugMap[id]).filter(s => !SHOP_ORDER_FIRST.includes(s))
+];
+const newShopEntries = orderedSlugs.map(slug =>
+  `  <url><loc>https://kaigaiq.com/shop/${slug}.html</loc><changefreq>monthly</changefreq><priority>${SHOP_PRIORITY[slug] || SHOP_PRIORITY_DEFAULT}</priority></url>`
+).join('\n');
+
+// 店舗ブロックは sitemap 末尾に置く。</urlset> を挿入アンカーにすれば他ブロックの構成に依存しない
+if (!/<\/urlset>/.test(sitemap)) {
+  throw new Error('sitemap.xml に </urlset> が見つかりません。店舗URLを挿入できないため中断します');
+}
+sitemap = sitemap.replace(/\n*<\/urlset>/, `\n\n  <!-- Shop Pages (pre-rendered SSG) -->\n${newShopEntries}\n</urlset>`);
+sitemap = sitemap.replace(/\n{3,}/g, '\n\n');
 fs.writeFileSync(sitemapPath, sitemap);
-console.log(`\n✓ sitemap.xml updated with ${ids.length} pre-rendered shop URLs`);
+console.log(`\n✓ sitemap.xml updated with ${orderedSlugs.length} pre-rendered shop URLs`);
 
 const slugMapPath = path.join(ROOT, 'shop-slug-map.json');
 fs.writeFileSync(slugMapPath, JSON.stringify(slugMap, null, 2));
