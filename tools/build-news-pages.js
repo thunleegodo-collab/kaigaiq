@@ -41,6 +41,7 @@ const slugMap = {
   '海外ナイトワークと税金の基礎知識：住民票・非居住者・確定申告はどうなる？': 'overseas-nightwork-tax-basics',
   '雨季の東南アジア渡航ガイド：バンコク・ホーチミンの気候対策と体調管理': 'rainy-season-guide-sea',
   '夏〜秋の短期出稼ぎガイド：8〜9月入店の逆算スケジュールと契約チェックリスト': 'summer-autumn-short-term-guide',
+  '為替アップデート2026年8月：円買い介入でドル円158円台へ、円換算収入はどうなる？': 'yen-intervention-158-update',
 };
 
 const articles = [];
