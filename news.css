@@ -198,7 +198,7 @@
 .news-date-badge {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.4);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
 }
 
 .news-cat-badge {
@@ -364,7 +364,7 @@
   padding: 2px 10px;
   border-radius: 12px;
   color: rgba(255, 255, 255, 0.4);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
 }
 
 /* City Tags */

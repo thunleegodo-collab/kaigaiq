@@ -36,7 +36,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', 'Inter', -apple-system, sans-serif;
+  font-family: 'Noto Sans JP', 'Inter', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -433,7 +433,7 @@ img {
 .stat-num {
   font-size: 2.5rem;
   font-weight: 900;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
   background: var(--gradient-gold);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -498,7 +498,7 @@ img {
   letter-spacing: 0.2em;
   color: var(--primary);
   margin-bottom: 12px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
 }
 
 .section-title {
@@ -817,7 +817,7 @@ img {
 .news-date {
   font-size: 0.78rem;
   color: var(--text-dim);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
 }
 
 .news-category {
@@ -877,7 +877,7 @@ img {
 .new-shop-rank {
   font-size: 1.8rem;
   font-weight: 900;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
   background: var(--gradient-gold);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
