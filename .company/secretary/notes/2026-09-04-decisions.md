@@ -98,3 +98,23 @@ KRWだけ対円で伸びたのは実勢どおり。**両記事とも修正不要
 - 追加した89件のLINEリンクに `target="_blank" rel="noopener"` がない（`shop.js` が生成する
   店舗LINEボタンとは不統一）。挙動上の実害はないため今回は見送り
 - `CLAUDE.md` の「PageSpeed 100達成済み（Google Fonts削除）」がGoogle Fonts読込の実装と乖離
+
+## 7. 公開実績（2026-09-04）
+
+- コミット 696c525（105ファイル・+2,147/-197）→ git push origin main
+- GitHub Pages デプロイ完了を確認
+- 本番反映確認:
+  - 新記事 `/news/2026-09-03-year-end-dekasegi-guide.html` HTTP 200・LINEリンク1件
+  - `/area/korea.html` HTTP 200・LINEリンク1件（従来0件）
+  - `/shop/bunny.html` HTTP 200・LINEリンク3件、`/guide-dekasegi.html` HTTP 200・LINEリンク3件
+  - sitemap.xml 87URL（area 12 / shop 38 / news 26 / その他11）、新記事を収録
+  - 8/7記事に「28年ぶり」「8月3日には一時155円台」および `dateModified":"2026-09-04"` が反映
+- IndexNow: sitemap収録の87URLを `api.indexnow.org` へ送信、HTTP 200（受理）
+
+## 8. 次回に持ち越すオーナー判断
+
+1. **git履歴に残る本名・個人メールの扱い**（履歴書き換え / リポジトリ非公開化 / 現状維持）
+2. **戦略再判断**: IG導線を起動するか、SEOに寄せ直すか（9/3スナップショット §3-(1)）
+3. 韓国コンテンツ拡充（最も転換するページに需要を流す）
+4. GA4 ↔ Search Console のプロパティリンク（オーナー操作・1分）
+5. GSCインデックス登録の次回パス（7/6から停止中）
