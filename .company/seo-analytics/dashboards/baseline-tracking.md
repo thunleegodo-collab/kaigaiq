@@ -11,7 +11,7 @@ status: spec-draft
 
 ## 測定ツール
 - **Google Search Console**（プロパティ: kaigaiq.com）
-  - 必要: オーナー個人アカウント で所有権確認
+  - 必要: オーナー個人アカウントで所有権確認
 - **Google Analytics 4**（測定ID: G-L3F0B833S2）
   - 注意: shop.html / apply.html の GA は `G-HP8686808M` が設定されている。要統一確認
 
