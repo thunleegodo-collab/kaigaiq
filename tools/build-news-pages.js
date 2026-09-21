@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+// OGP・schema.org は絶対URLを要求するため、サイト内パスを絶対URLへ直す
+const absUrl = (u) => !u ? u : (u.indexOf('http') === 0 || u.indexOf('//') === 0 ? u : 'https://kaigaiq.com' + (u.charAt(0) === '/' ? u : '/' + u));
+
 const ROOT = path.resolve(__dirname, '..');
 const NEWS_HTML = path.join(ROOT, 'news.html');
 const NEWS_OUT_DIR = path.join(ROOT, 'news');
@@ -92,7 +95,7 @@ function buildArticlePage(article) {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
     headline: article.title,
-    image: [article.img],
+    image: [absUrl(article.img)],
     datePublished: dateIso,
     dateModified: modifiedIso,
     author: { '@type': 'Organization', name: 'KaigaiQ編集部', url: 'https://kaigaiq.com/about.html' },
@@ -159,14 +162,14 @@ function buildArticlePage(article) {
   <meta property="og:title" content="${esc(article.title)}">
   <meta property="og:description" content="${excerpt}">
   <meta property="og:url" content="${article.url}">
-  <meta property="og:image" content="${esc(article.img)}">
+  <meta property="og:image" content="${esc(absUrl(article.img))}">
   <meta property="og:site_name" content="KaigaiQ">
   <meta property="article:published_time" content="${dateIso}">
   <meta property="article:section" content="${esc(article.cat)}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(article.title)}">
   <meta name="twitter:description" content="${excerpt}">
-  <meta name="twitter:image" content="${esc(article.img)}">
+  <meta name="twitter:image" content="${esc(absUrl(article.img))}">
   <script type="application/ld+json">${JSON.stringify(articleSchema)}</script>
   <script type="application/ld+json">${JSON.stringify(breadcrumb)}</script>
   <link rel="manifest" href="/manifest.json">
