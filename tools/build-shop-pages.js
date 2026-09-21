@@ -102,14 +102,17 @@ function buildHead(shop, id, slug) {
   };
   const schemaType = typeMap[shop.type] || 'LocalBusiness';
   const address = shop.address || (shop.contact && shop.contact.address) || '';
-  const primaryAddress = address.split(/\s*\/\s*/)[0];
+  // 複数店舗は " / "（前後スペース）で区切る。香港式の階数表記 "13/F" を巻き込まないよう境界を厳密にする
+  const primaryAddress = address.split(/\s+\/\s+/)[0];
   const countryMap = {
     '香港': 'HK', 'バンコク': 'TH', 'シンガポール': 'SG', 'ホーチミン': 'VN', 'ハノイ': 'VN',
     'プノンペン': 'KH', '台北': 'TW', '上海': 'CN', '韓国・江陵': 'KR', 'ドバイ': 'AE',
     'デュッセルドルフ': 'DE', 'ロサンゼルス': 'US'
   };
   const addressCountry = countryMap[shop.city] || undefined;
-  const postalAddress = { '@type': 'PostalAddress', addressLocality: shop.city, streetAddress: primaryAddress };
+  // 番地は裏取りできたものだけ出す。空文字を出すと「住所不明」ではなく「空の住所」を主張することになる
+  const postalAddress = { '@type': 'PostalAddress', addressLocality: shop.city };
+  if (primaryAddress) postalAddress.streetAddress = primaryAddress;
   if (addressCountry) postalAddress.addressCountry = addressCountry;
 
   const localBusiness = {

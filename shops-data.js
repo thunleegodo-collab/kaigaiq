@@ -41,86 +41,6 @@ window.KQ_absUrl = function (url) {
 
 window.SHOPS_DATA = {
 
-  "PremiereHK": {
-    name: "CLUB PREMIER 香港",
-    type: "キャバクラ",
-    flag: "🇭🇰",
-    region: "アジア",
-    city: "香港",
-    heroImage: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
-    concept: "日本の東京銀座、札幌、函館、千葉と海外ではシンガポール、バンコク、ベトナムで展開するシティーグループの香港店。香港でワンランク上の月給・バックシステムを実現。",
-    conceptMeta: "香港・銅鑼湾の日系キャバクラ。月収45,000〜200,000HKD（約90〜400万円）の高水準バックシステム、日本人スタッフ常駐・就労ビザ申請代行無料で未経験から海外で稼げる環境。",
-    gallery: [
-      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1559386484-97dfc0e15539?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
-    ],
-    salary: {
-      daily: "1,000 HKD（保証給）",
-      monthly: "月収 45,000〜200,000 HKD（約90万〜400万円以上）",
-      backs: ["ドリンクバック", "場内指名", "本指名", "同伴", "アフター", "ワイン・シャンパン・ボトルバック", "売上折半制"]
-    },
-    benefits: ["日本人スタッフ常駐で英語不要", "就労ビザ申請代行（無料）", "ビザ申請料会社負担", "往復航空チケット支給", "短期勤務可能", "ノルマ・罰金なし", "系列海外店舗での勤務も可能", "日払い要相談", "リゾート休暇"],
-    housing: ["個室", "シェアルーム", "家具完備", "家電完備", "インターネット完備"],
-    visa: ["就労ビザ申請代行（ワーキングホリデー含）", "ビザ申請料会社負担"],
-    hours: "お問い合わせください",
-    address: "#11F, Circle Plaza, 499 Hennessy Road, Causeway Bay, Hong Kong",
-    contact: {
-      line: "junya19850902",
-      phone: "+886912821909",
-      email: "info.premierhongkong@gmail.com"
-    },
-    priceSystem: [
-      { item: "1SET", price: "500 HKD/1h" },
-      { item: "延長料金", price: "250 HKD/0.5h" },
-      { item: "VIPルーム", price: "500 HKD/1h" },
-      { item: "指名料金", price: "150 HKD/1h" },
-      { item: "同伴料金", price: "150 HKD" },
-      { item: "カクテル", price: "100 HKD" },
-      { item: "Service Charge", price: "15%" }
-    ],
-    notes: ["料金システムや営業時間は急遽変更の可能性あり", "来店前に店舗に確認推奨", "連れ出し不可", "客層：日本人9：多国籍1", "在籍国籍比率：日本人10：多国籍0"]
-  },
-
-  "PremiereVN": {
-    name: "CLUB PREMIER ホーチミン",
-    type: "キャバクラ",
-    flag: "🇻🇳",
-    region: "アジア",
-    city: "ホーチミン",
-    heroImage: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
-    concept: "日本の東京銀座、札幌、函館、千葉と海外ではシンガポール、バンコク、香港で展開するシティーグループのベトナム店。豪華内装と広々とした店内で、ベトナム最多の席数と最多在籍を誇る日本人キャバクラ。",
-    conceptMeta: "ホーチミン1区・Le Thanh Ton通りの日系キャバクラ。月収8,100万〜24,000万VND（約50〜150万円）、日払い制度・往復航空券支給・寮完備で短期勤務もOK。",
-    gallery: [
-      "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
-    ],
-    salary: {
-      daily: "250万 VND",
-      monthly: "月収 8,100万〜24,000万 VND（約50万〜150万円）",
-      backs: ["ドリンクバック", "指名バック", "ボトルバック"]
-    },
-    benefits: ["日払い制度有り", "往復航空チケット支給", "短期勤務可能", "ノルマ・罰金一切なし", "系列の海外店舗での勤務可能", "6ヶ月勤務で1週間海外旅行ご招待"],
-    housing: ["個室", "シェアルーム", "家具", "家電", "インターネット"],
-    visa: ["就労ビザ申請代行（無料）", "ビザ申請料会社負担", "ワーキングホリデー申請対応"],
-    hours: "20:00〜2:00",
-    address: "9 D. Le Thanh Ton, Ben Nghe, Quan 1, Thanh pho Ho Chi Minh, Vietnam",
-    contact: {
-      line: "junya19850902",
-      phone: "08038894752（日本から）/ 0902810544（現地）",
-      email: "hinaheimu4@gmail.com"
-    },
-    priceSystem: [
-      { item: "カウンター（ビジター）1SET 60分", price: "490,000ドン" },
-      { item: "ボックス（ビジター）1SET 60分", price: "1,050,000ドン" },
-      { item: "VIPルーム（ビジター）60分", price: "1,400,000ドン" },
-      { item: "同伴料金", price: "700,000ドン" },
-      { item: "本指名料金（1時間に1本）", price: "420,000ドン" }
-    ],
-    notes: ["料金システムや営業時間は急遽変更の可能性あり", "ご来店前に直接店舗にご確認ください", "サービスチャージ10%、VAT10%別途"]
-  },
-
   "JUGEMU": {
     name: "CLUB JUGEMU",
     type: "キャバクラ",
@@ -163,85 +83,6 @@ window.SHOPS_DATA = {
     notes: ["料金システム等は急遽変更になる場合がございます", "別途 10%サービスチャージ、9％GST（消費税）", "連れ出しは不可"]
   },
 
-  "Premier": {
-    name: "CLUB PREMIER シンガポール",
-    type: "キャバクラ",
-    flag: "🇸🇬",
-    region: "アジア",
-    city: "シンガポール",
-    heroImage: "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
-    concept: "東京銀座、札幌、函館、千葉 海外ではシンガポール、バンコク、香港、ベトナムで展開。「1番稼げる給料システムと寮完備、低価格寮費が特徴」",
-    conceptMeta: "シンガポール・Orchard地区Cuppage Plazaの日系キャバクラ。月収8,000〜40,000SGD（約93〜400万円）。ノルマ・罰金なし、ワーキングホリデー対応で未経験からチャレンジ可能。",
-    gallery: [
-      "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
-    ],
-    salary: {
-      daily: "$200〜$1,000",
-      monthly: "月収 8,000〜40,000 SGD（約93万〜400万円以上）",
-      backs: ["指名バック", "ボトルバック", "ドリンクバック", "売上折半制"]
-    },
-    benefits: ["日本人スタッフ常駐で英語不要", "就労ビザ申請代行無料", "短期勤務可能", "ノルマ・罰金なし", "系列海外店舗での勤務可能", "6ヶ月勤務で1週間海外旅行招待", "マツエク・ネイル・フェイシャル・ボディマッサージ招待"],
-    housing: ["メイド常駐", "個室", "シェアルーム", "家具完備", "家電完備", "高速インターネット", "Wi-Fi使い放題", "プール", "ジム"],
-    visa: ["労働ビザ支給", "ワーキングホリデー申請代行", "ビザ申請料会社負担", "往復航空券支給"],
-    hours: "20:00〜02:00",
-    address: "5 Koek Rd, #03-14/16 Cuppage Plaza, Singapore 228796",
-    contact: {
-      line: "junya19850902",
-      phone: "+6580281681",
-      email: "contact@premier-singapore.com"
-    },
-    priceSystem: [
-      { item: "60分セット", price: "$100" },
-      { item: "TAX", price: "24%" }
-    ],
-    notes: ["料金システムは急遽変更の可能性あり", "来店前に直接店舗に確認推奨", "連れ出し不可", "18歳未満の閲覧禁止"]
-  },
-
-  "Laputa": {
-    name: "Club Premier BKK",
-    type: "キャバクラ",
-    flag: "🇹🇭",
-    region: "アジア",
-    city: "バンコク",
-    heroImage: "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
-    concept: "日本の東京銀座、札幌、函館、千葉 海外ではシンガポール、香港、ベトナムでキャバクラ、飲食店を展開するシティーグループのバンコク店。",
-    conceptMeta: "バンコク・スクンビットSoi53の日系キャバクラ。月収12〜35万バーツ（約50〜150万円）、日給保証3,500B〜、最大70%スライドバック制。日本人スタッフ常駐・寮完備で短期勤務もOK。",
-    gallery: [
-      "https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format"
-    ],
-    salary: {
-      daily: "3,500 THB以上",
-      monthly: "月収 120,000〜350,000バーツ（約50万〜150万円）",
-      backs: ["ドリンクバック 100B〜150B", "場内指名 200B", "本指名 300B", "同伴 1,000B", "小計バック100万でスライド、最大70%バック", "ワイン・シャンパンバック 20％＋売上折半制"]
-    },
-    benefits: ["日給保証", "日本人スタッフ常駐で外国語不要", "往復航空チケット支給", "短期勤務可能", "ノルマ・罰金なし", "系列海外店舗での勤務可能", "6ヶ月勤務で1週間海外旅行招待制度"],
-    housing: ["個室", "シェアルーム", "家具", "家電", "インターネット"],
-    visa: ["ビザサポートあり"],
-    hours: "20:00〜2:00",
-    address: "9:53 Community Mall, 3rd floor, 124 Sukhumvit 53 Alley, Bangkok 10110",
-    contact: {
-      line: "junya19850902",
-      phone: "+66979955433",
-      email: "junya.0902.junya@gmail.com"
-    },
-    priceSystem: [
-      { item: "カウンター（ビジター）60分", price: "500B" },
-      { item: "カウンター（メンバー）60分", price: "300B" },
-      { item: "BOX（ビジター）60分", price: "1,000B" },
-      { item: "BOX（メンバー）60分", price: "700B" },
-      { item: "VIPルーム（ビジター）60分", price: "2,000B" },
-      { item: "VIPルーム（メンバー）60分", price: "1,500B" },
-      { item: "同伴", price: "1,000B" },
-      { item: "本指名", price: "600B" },
-      { item: "場内", price: "400B" }
-    ],
-    notes: ["料金システムは急遽変更になる場合あり", "日本携帯からの問い合わせ推奨"]
-  },
-
   "Nyx": {
     name: "Nyx Japanese Lounge",
     type: "ラウンジ",
@@ -265,12 +106,6 @@ window.SHOPS_DATA = {
     housing: ["寮あり"],
     visa: [],
     hours: "20:30〜27:00",
-    address: "19/F, Circle Plaza, 499 Hennessy Road, Causeway Bay, Hong Kong",
-    contact: {
-      line: "Smy0917",
-      phone: "+85253403569",
-      email: "smy0917@gmail.com"
-    },
     priceSystem: [
       { item: "テーブルチャージ", price: "60分/$500 HKD" },
       { item: "自動延長", price: "30分/$200 HKD" },
@@ -343,12 +178,6 @@ window.SHOPS_DATA = {
     housing: ["寮完備（店舗から徒歩5分以内）", "香港の中心部で家賃無料"],
     visa: [],
     hours: "20:30〜2:30",
-    address: "3/F., Mody House, 30 Mody Road, Tsim Sha Tsui, Kowloon, Hong Kong",
-    contact: {
-      line: "@384ranfn",
-      phone: "+85246834252",
-      email: "hina771109@gmail.com"
-    },
     priceSystem: [
       { item: "テーブルチャージ60min", price: "500 HKD" },
       { item: "延長30min", price: "160 HKD" }
@@ -379,12 +208,6 @@ window.SHOPS_DATA = {
     housing: ["寮あり（新築、完全一人部屋、家具家電付き）", "家賃: 150,000 VND/日", "水道光熱費: 100,000 VND/日", "寮費無料キャンペーン実施中（滞在条件あり）"],
     visa: ["45日以内の滞在はVISA不要", "45日以上3ヶ月未満はVISA必要", "e-VISA即座取得可能"],
     hours: "20:00〜25:00（日曜定休）",
-    address: "12 Ng. 47 P. Linh Lang, Cong Vi, Ba Dinh, Ha Noi",
-    contact: {
-      line: "@505oqhkx",
-      phone: "+84867970510",
-      email: "haozhangyou75@gmail.com"
-    },
     priceSystem: [
       { item: "チャージ制（メンバー）60分", price: "350,000 VND" },
       { item: "チャージ制（ビジター）60分", price: "450,000 VND" },
@@ -419,12 +242,6 @@ window.SHOPS_DATA = {
     housing: ["住居サポートあり", "語学学校サポートあり"],
     visa: ["台湾での労働ビザ取得支援"],
     hours: "20:30〜25:00",
-    address: "台北市中山區林森北路119巷17號",
-    contact: {
-      line: "j.0519",
-      phone: "+88625211909",
-      email: "jun.0519.t@gmail.com"
-    },
     priceSystem: [
       { item: "飲み放題1SET 90分", price: "1,800元" },
       { item: "飲み放題延長 60分", price: "1,000元" },
@@ -503,12 +320,6 @@ window.SHOPS_DATA = {
     housing: ["寮費無料", "1人部屋希望時は1日170元自己負担", "寮とお店の送迎無料"],
     visa: [],
     hours: "21:00〜2:00",
-    address: "中国上海市長寧区延安西路2088号禧瑞広場 B106室",
-    contact: {
-      line: "plusone8888",
-      phone: "+8615189847518",
-      email: "miyabi_hana@163.com"
-    },
     priceSystem: [
       { item: "カバチャージ", price: "150元" },
       { item: "指名料", price: "600元" }
@@ -539,10 +350,6 @@ window.SHOPS_DATA = {
     housing: ["キレイなコンドミニアム", "プール・ジム・サウナ完備", "1人部屋あり", "1ヶ月以上滞在で寮費無料（2人部屋のみ）"],
     visa: ["長期の方にはビザサポートあり"],
     hours: "20:00〜1:00（毎日営業）",
-    address: "2Fl, 118 Young Pl Alley, Khlong Tan Nuea, Watthana, Bangkok 10110",
-    contact: {
-      phone: "+66611747305"
-    },
     priceSystem: [
       { item: "Table charge", price: "350 baht" },
       { item: "Ladies drink", price: "160 baht〜" }
@@ -573,12 +380,6 @@ window.SHOPS_DATA = {
     housing: ["完全個室の高級コンド寮", "プール・ジム付き"],
     visa: ["ビジネス1年VISA無料（規定あり）", "VISAランの必要なし"],
     hours: "20:00〜2:00",
-    address: "37A, St 306, Sangkat Boeung Keng Kang1, Phnom Penh",
-    contact: {
-      line: "kohh02040204",
-      phone: "+855-87-636-944",
-      email: "pca02040204@gmail.com"
-    },
     priceSystem: [
       { item: "カウンターセット（ビジター60分）", price: "$15" },
       { item: "テーブルセット（ビジター60分）", price: "$30" },
@@ -648,12 +449,6 @@ window.SHOPS_DATA = {
     housing: ["寮完備（完全一人部屋）", "家具家電付き", "家賃 $10/日", "水道光熱費 $4/日", "条件により無料"],
     visa: ["VISA支給 規定有り", "25日以上勤務で$200", "50日以上勤務で$400", "75日以上勤務で$500", "90日以上勤務で$600"],
     hours: "20:00〜2:00",
-    address: "#14E0, Pasteur N51, Chatomuk Commune, Doun Penh District, Phnom Penh",
-    contact: {
-      line: "@505oqhkx",
-      phone: "+855969548583",
-      email: "ymobile2017@icloud.com"
-    },
     priceSystem: [
       { item: "Set（メンバー90min）", price: "$40" },
       { item: "Set（ビジター60min）", price: "$40" },
@@ -693,12 +488,6 @@ window.SHOPS_DATA = {
     housing: ["寮完備", "1人1部屋", "ジム・プール付き", "週2回清掃サービス", "家具家電完備"],
     visa: ["VISA取得延長サポート"],
     hours: "20:00〜1:30（日曜定休）",
-    address: "1F, No.20 St.302 BKK1 Phnom Penh Cambodia",
-    contact: {
-      line: "raito0423",
-      phone: "+85593443721",
-      email: "refuto0423@gmail.com"
-    },
     priceSystem: [
       { item: "Set（メンバー 80min ボトル有）", price: "$40" },
       { item: "Set（ビジター 60min ボトル無）", price: "$40" },
@@ -736,12 +525,6 @@ window.SHOPS_DATA = {
     housing: ["寮あり", "2〜3月寮費無料キャンペーン", "最大2ヶ月寮費無料"],
     visa: ["ビザ申請料会社負担"],
     hours: "月-木曜・土曜 20-26時 / 金曜 20-27時 / 日曜 20-24時",
-    address: "Bismarckstr.29, 40210 Dusseldorf",
-    contact: {
-      line: "ryis1515",
-      phone: "+49-211-8681-9990",
-      email: "nozomikaraoke29@gmail.com"
-    },
     priceSystem: [
       { item: "22:00まで", price: "€25" },
       { item: "22:00-24:00", price: "€35" },
@@ -817,12 +600,6 @@ window.SHOPS_DATA = {
     housing: ["1人部屋高級コンドミニアム", "ジム・プール・サウナ付き"],
     visa: ["就労ビザ申請代行あり", "ビザ申請料会社負担"],
     hours: "20:00〜3:00",
-    address: "15A/29 Le Thanh Ton, Ben Nghe, Quan 1, Ho Chi Minh City, Vietnam",
-    contact: {
-      line: "@300nfagu",
-      phone: "+6585760735",
-      email: "epic.pte@gmail.com"
-    },
     priceSystem: [
       { item: "cover charge", price: "3,000円/60min" },
       { item: "指名料", price: "1,500円" },
@@ -854,12 +631,6 @@ window.SHOPS_DATA = {
     housing: ["寮支給（週1掃除つき）", "プノンペン中心地高級コンドミニアム"],
     visa: ["VISAサポートあり", "航空券支給（期間・地域により片道or往復）", "就労ビザ申請代行あり", "ビザ申請料会社負担"],
     hours: "20:00〜25:00（日曜定休）",
-    address: "16 Eo Street 228, Village 4, Sangkat Chatomuk, Khan Duan Penh, Phnom Penh, Cambodia",
-    contact: {
-      line: "@thevilla",
-      phone: "+85581287871",
-      email: "thevillapp@gmail.com"
-    },
     priceSystem: [
       { item: "Cover Charge", price: "US$50/Per" },
       { item: "Private space reservation (Minimum spend)", price: "$600〜" }
@@ -895,13 +666,6 @@ window.SHOPS_DATA = {
     housing: ["寮あり", "インターネット使い放題"],
     visa: ["ビザ申請料会社負担", "往復航空券支給"],
     hours: "20時〜3時（シフトにより早上がりOK）",
-    address: "6F, 14 Sindaehak-gil, Gangneung, Gangwon-do, South Korea",
-    mapQuery: "14 Sindaehak-gil, Gangneung, Gangwon-do, South Korea",
-    contact: {
-      line: "dotehi",
-      phone: "+821057802173",
-      email: "uiyong0728@gmail.com"
-    },
     priceSystem: [
       { item: "チャージ（100分）", price: "300,000ウォン" },
       { item: "延長（100分）", price: "300,000ウォン" },
@@ -1013,14 +777,6 @@ window.SHOPS_DATA = {
     housing: ["お問い合わせください"],
     visa: ["お問い合わせください"],
     hours: "21:00〜2:00（日曜定休）",
-    address: "138 Robinson Rd, #02-04 Oxley Tower 2, Singapore",
-    mapQuery: "138 Robinson Road, Oxley Tower, Singapore",
-    contact: {
-      line: "ayana-0330",
-      phone: "+65 81335007",
-      email: "dmnd-p@hotmail.com",
-      instagram: "@lounge_usagi__singapore"
-    },
     priceSystem: [
       { item: "1時間（飲み放題）", price: "$80" },
       { item: "延長1時間", price: "$60" },
@@ -1053,10 +809,6 @@ window.SHOPS_DATA = {
     housing: ["コンド家賃無料", "プール付き", "ジム付き"],
     visa: ["自己負担"],
     hours: "20:00〜1:00（日曜定休）",
-    address: "House No.52, Street 282, Sangkat Boeung Keng Kang I, Khan Chamkamorn, Phnom Penh, Cambodia",
-    contact: {
-      phone: "+855 86 220 507"
-    },
     priceSystem: [
       { item: "テーブルチャージ", price: "$15" },
       { item: "割材", price: "$3" },
@@ -1195,10 +947,6 @@ window.SHOPS_DATA = {
     housing: ["寮完備"],
     visa: ["ビザサポートあり"],
     hours: "20:00〜1:00",
-    address: "バンコク",
-    contact: {
-      line: "@544ypwcw"
-    },
     priceSystem: [],
     notes: ["料金システムは店舗にお問い合わせください"]
   },
@@ -1226,10 +974,6 @@ window.SHOPS_DATA = {
     housing: [],
     visa: [],
     hours: "営業時間はお問い合わせください",
-    address: "バンコク",
-    contact: {
-      phone: "+666431411371"
-    },
     priceSystem: [],
     notes: ["詳細は店舗にお問い合わせください"]
   },
@@ -1292,10 +1036,6 @@ window.SHOPS_DATA = {
     housing: [],
     visa: [],
     hours: "20:00〜1:00",
-    address: "バンコク",
-    contact: {
-      phone: "+6680286950"
-    },
     priceSystem: [],
     notes: ["詳細は店舗にお問い合わせください"]
   },
@@ -1323,10 +1063,6 @@ window.SHOPS_DATA = {
     housing: ["高級寮完備"],
     visa: ["ビザサポートあり"],
     hours: "20:00〜1:00",
-    address: "バンコク",
-    contact: {
-      phone: "+66955984101"
-    },
     priceSystem: [],
     notes: ["バンコク最高級店", "詳細は店舗にお問い合わせください"]
   },
@@ -1354,10 +1090,6 @@ window.SHOPS_DATA = {
     housing: [],
     visa: [],
     hours: "20:00〜1:00",
-    address: "バンコク",
-    contact: {
-      phone: "+66-64-123-2225"
-    },
     priceSystem: [],
     notes: ["詳細は店舗にお問い合わせください"]
   },
@@ -1385,10 +1117,6 @@ window.SHOPS_DATA = {
     housing: [],
     visa: [],
     hours: "営業時間はお問い合わせください",
-    address: "バンコク",
-    contact: {
-      phone: "+66966604820"
-    },
     priceSystem: [],
     notes: ["詳細は店舗にお問い合わせください"]
   },
@@ -1416,10 +1144,6 @@ window.SHOPS_DATA = {
     housing: [],
     visa: [],
     hours: "20:00〜1:00",
-    address: "バンコク",
-    contact: {
-      phone: "+66957588019"
-    },
     priceSystem: [],
     notes: ["詳細は店舗にお問い合わせください"]
   },
@@ -1448,10 +1172,6 @@ window.SHOPS_DATA = {
     housing: [],
     visa: [],
     hours: "営業時間はお問い合わせください",
-    address: "バンコク",
-    contact: {
-      phone: "+66908984242"
-    },
     priceSystem: [],
     notes: ["詳細は店舗にお問い合わせください"]
   },

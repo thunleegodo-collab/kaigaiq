@@ -256,6 +256,14 @@ function renderShop(shop) {
   if (emailBtn) emailBtn.style.display = 'none';
   if (phoneBtn) phoneBtn.style.display = 'none';
 
+  const hasAnyContact = !!(shop.contact && (shop.contact.line || shop.contact.phone || shop.contact.email || shop.contact.website));
+  const contactHeading = document.getElementById('shopContactHeading');
+  const contactDivider = document.getElementById('shopContactDivider');
+  // 連絡先が一つも無いと見出しだけが残って未完成に見えるため、まとめて隠す
+  if (!hasAnyContact) {
+    if (contactHeading) contactHeading.style.display = 'none';
+    if (contactDivider) contactDivider.style.display = 'none';
+  }
   if (shop.contact) {
     if (shop.contact.line) {
       document.getElementById('contactLine').style.display = '';
@@ -316,8 +324,14 @@ function renderShop(shop) {
   // Map
   const address = shop.address || (shop.contact && shop.contact.address) || '';
   const mapContainer = document.getElementById('shopMap');
-  if ((address || shop.name) && mapContainer) {
-    const primaryAddress = address.split(/\s*\/\s*/)[0];
+  const mapSection = document.getElementById('shopMapSection');
+  // 住所を裏取りできていない店舗では地図を出さない。店名検索にフォールバックすると
+  // 検索側の推測した場所をピン表示してしまい、所在を裏取りせずに主張することになる
+  if (!address && mapSection) {
+    mapSection.style.display = 'none';
+  } else if (address && mapContainer) {
+    // 複数店舗は " / "（前後スペース）で区切る。香港式の階数表記 "13/F" を巻き込まないよう境界を厳密にする
+    const primaryAddress = address.split(/\s+\/\s+/)[0];
     const isCityOnly = primaryAddress.length < 15;
     const queryStr = shop.mapQuery
       ? shop.mapQuery
@@ -375,7 +389,8 @@ function injectShopJsonLd(shop, shopId, canonicalUrl) {
     'address': {
       '@type': 'PostalAddress',
       'addressLocality': shop.city,
-      'streetAddress': primaryAddress
+      // 番地は裏取りできたものだけ出す（空文字は「空の住所」の主張になる）
+      ...(primaryAddress ? { 'streetAddress': primaryAddress } : {})
     },
     'areaServed': shop.city
   };
@@ -414,7 +429,7 @@ function injectShopJsonLd(shop, shopId, canonicalUrl) {
       'address': {
         '@type': 'PostalAddress',
         'addressLocality': shop.city,
-        'streetAddress': primaryAddress
+        ...(primaryAddress ? { 'streetAddress': primaryAddress } : {})
       }
     },
     'directApply': false,

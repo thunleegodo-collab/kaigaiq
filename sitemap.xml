@@ -99,11 +99,7 @@
   <!-- Shop Pages (pre-rendered SSG) -->
   <url><loc>https://kaigaiq.com/shop/rashell.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://kaigaiq.com/shop/bunny.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://kaigaiq.com/shop/premierehk.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop/premierevn.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/shop/jugemu.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop/premier.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaigaiq.com/shop/laputa.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/shop/nyx.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/shop/pjdubai.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/shop/dolcenotte.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
