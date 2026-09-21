@@ -298,13 +298,16 @@ function initKaigaiQ() {
     const card = el.closest('.area-card');
     const flag = card?.querySelector('.area-card-flag')?.textContent.trim() || '';
     const name = card?.querySelector('h3')?.textContent.trim() || '';
-    return name ? `${flag} ${name} エリアのイメージ写真` : '';
+    return name ? `${flag} ${name} エリアのイメージ画像` : '';
   });
   labelBg('.new-shop-img.lazy-bg', el => {
     const card = el.closest('.new-shop-item');
     const name = card?.querySelector('.new-shop-info h3')?.textContent.trim() || '';
     const meta = card?.querySelector('.new-shop-info p')?.textContent.trim() || '';
-    return name ? `${name}（${meta}）の店舗写真` : '';
+    if (!name) return '';
+    // 店舗から提供された写真のみ「店舗写真」と表示する（判定は shops-data.js の許可リスト）
+    const isShopPhoto = window.KQ_isShopPhoto || function () { return false; };
+    return `${name}（${meta}）の${isShopPhoto(el.dataset.bg) ? '店舗写真' : 'イメージ画像'}`;
   });
   labelBg('.job-card-img.lazy-bg', el => {
     const card = el.closest('.job-card');

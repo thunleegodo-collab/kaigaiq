@@ -8,10 +8,13 @@ const SHOP_TEMPLATE_PATH = path.join(ROOT, 'shop.html');
 const SHOP_OUT_DIR = path.join(ROOT, 'shop');
 
 const dataSrc = fs.readFileSync(SHOPS_DATA_PATH, 'utf8');
-const sandbox = { window: {} };
+const sandbox = { window: {}, URL };  // shops-data.js のホスト判定が URL を使うため渡す
 vm.createContext(sandbox);
 vm.runInContext(dataSrc, sandbox);
 const SHOPS_DATA = sandbox.window.SHOPS_DATA;
+// 画像の出所判定は shops-data.js 側の許可リストを共有する（ブラウザ側と同じ判定を使う）
+const isShopPhoto = sandbox.window.KQ_isShopPhoto;
+const absUrl = sandbox.window.KQ_absUrl;
 
 const template = fs.readFileSync(SHOP_TEMPLATE_PATH, 'utf8');
 
@@ -82,7 +85,10 @@ function buildHead(shop, id, slug) {
   const title = `${shop.name}｜${shop.city}${shop.type}求人 - ${salaryClause} | KaigaiQ`;
   const desc = `${shop.flag} ${shop.city}の${shop.type}「${shop.name}」のキャスト求人情報。${conceptShort}。${salaryClause}、${benefitsTop}。`;
   const canonicalUrl = `https://kaigaiq.com/shop/${slug}.html`;
-  const ogImage = shop.heroImage || (shop.gallery && shop.gallery[0]) || 'https://kaigaiq.com/icons/icon-512.svg';
+  // 店舗提供写真のみ og:image に使う。ストック素材はSNSプレビューで
+  // 「その店の写真」と受け取られるため、サイトロゴへ退避する
+  const ogCandidate = [shop.heroImage, shop.gallery && shop.gallery[0]].find(u => isShopPhoto(u));
+  const ogImage = ogCandidate ? absUrl(ogCandidate) : 'https://kaigaiq.com/icons/ogp-default.png';
 
   const typeMap = {
     'キャバクラ': 'NightClub',
@@ -111,7 +117,9 @@ function buildHead(shop, id, slug) {
     '@type': schemaType,
     name: shop.name,
     url: canonicalUrl,
-    image: shop.heroImage,
+    // 店舗提供写真のときだけ image を出す。schema.org の image は「その物を写した画像」の主張になるため、
+    // ストック素材では省略する（省略可のプロパティ）
+    ...(isShopPhoto(shop.heroImage) ? { image: absUrl(shop.heroImage) } : {}),
     description: shop.conceptMeta || shop.concept,
     address: postalAddress,
     areaServed: shop.city

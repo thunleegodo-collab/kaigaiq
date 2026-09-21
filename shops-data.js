@@ -2,6 +2,43 @@
 // KaigaiQ - All Shops Data
 // ========================================
 
+// ========================================
+// 画像の出所判定（全ページ・ビルドスクリプト共通）
+// ----------------------------------------
+// 店舗から提供された写真と確認できる出所だけを許可リストで持つ。
+// 既定は「イメージ画像」側。新しい出所（AI生成画像の自前ホスティング等）が増えても、
+// ここに明示的に追加しない限り「店舗写真」とは表示されない。
+// 店舗から写真の提供を受けたら、その出所をこの配列に追加する。
+// ========================================
+window.KQ_SHOP_PHOTO_PATHS = [
+  '/shop-images/'               // 自前ホスティング（提供を受けて預かったもの）
+];
+window.KQ_SHOP_PHOTO_HOSTS = [
+  'clubline23-bangkok.com',     // 店舗公式サイト（掲載承諾済み）
+  'rashell-japan-bar.com'       // 店舗公式サイト（掲載承諾済み）
+];
+
+// パスは先頭一致、ホストは完全一致でアンカーする（部分一致だと外部URLを取り違えるため）
+window.KQ_isShopPhoto = function (url) {
+  if (!url) return false;
+  for (var i = 0; i < window.KQ_SHOP_PHOTO_PATHS.length; i++) {
+    if (url.indexOf(window.KQ_SHOP_PHOTO_PATHS[i]) === 0) return true;
+  }
+  try {
+    var host = new URL(url, 'https://kaigaiq.com').hostname;
+    return window.KQ_SHOP_PHOTO_HOSTS.indexOf(host) >= 0;
+  } catch (e) {
+    return false;
+  }
+};
+
+// OGP・schema.org は絶対URLを要求するため、サイト内パスを絶対URLへ直す
+window.KQ_absUrl = function (url) {
+  if (!url) return url;
+  if (url.indexOf('http') === 0 || url.indexOf('//') === 0) return url;
+  return 'https://kaigaiq.com' + (url.charAt(0) === '/' ? url : '/' + url);
+};
+
 window.SHOPS_DATA = {
 
   "PremiereHK": {
