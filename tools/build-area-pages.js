@@ -4,10 +4,13 @@ const vm = require('vm');
 
 const ROOT = path.resolve(__dirname, '..');
 const dataSrc = fs.readFileSync(path.join(ROOT, 'shops-data.js'), 'utf8');
-const sandbox = { window: {} };
+const sandbox = { window: {}, URL };  // shops-data.js のホスト判定が URL を使うため渡す
 vm.createContext(sandbox);
 vm.runInContext(dataSrc, sandbox);
 const SHOPS_DATA = sandbox.window.SHOPS_DATA;
+// 画像の出所判定は shops-data.js 側の許可リストを共有する（ブラウザ側と同じ判定を使う）
+const isShopPhoto = sandbox.window.KQ_isShopPhoto;
+const absUrl = sandbox.window.KQ_absUrl;
 
 const slugMap = JSON.parse(fs.readFileSync(path.join(ROOT, 'shop-slug-map.json'), 'utf8'));
 
@@ -56,7 +59,10 @@ function buildAreaPage(cityName, conf, shops) {
   const canonicalUrl = `https://kaigaiq.com/area/${conf.slug}.html`;
   const title = `${cityName}のキャバクラ・ラウンジ求人【${shops.length}店掲載】夜職の海外出稼ぎ・月収相場 | KaigaiQ`;
   const desc = `${conf.flag} ${cityName}（${conf.en}）の海外キャバクラ・ラウンジ求人を${shops.length}店掲載。夜職・キャバ嬢の海外出稼ぎ先として人気のエリア。${conf.intro.slice(0, 70)}`;
-  const ogImage = (shops[0] && shops[0].heroImage) || 'https://kaigaiq.com/icons/icon-512.svg';
+  // 店舗提供写真のみ代表画像に使う。ストック素材をエリアの代表画像として出すと
+  // SNSプレビューで「その店の写真」と受け取られるため、サイトロゴへ退避する
+  const ownPhoto = shops.map(s => s.heroImage).find(u => isShopPhoto(u));
+  const ogImage = ownPhoto ? absUrl(ownPhoto) : 'https://kaigaiq.com/icons/ogp-default.png';
 
   const shopCards = shops.map(s => {
     const slug = slugMap[s.id];
@@ -67,7 +73,7 @@ function buildAreaPage(cityName, conf, shops) {
     const benefits = (s.benefits || []).slice(0, 2).join('・');
     return `
         <a href="/shop/${slug}.html" class="area-shop-card">
-          <div class="area-shop-img" role="img" aria-label="${s.name}の店舗写真" style="background-image:url('${img}')"></div>
+          <div class="area-shop-img" role="img" aria-label="${isShopPhoto(img) ? `${s.name}の店舗写真` : `${s.city}の${s.type}のイメージ画像`}" style="background-image:url('${img}')"></div>
           <div class="area-shop-info">
             <h3>${s.name}</h3>
             <p class="area-shop-type">${s.type}</p>

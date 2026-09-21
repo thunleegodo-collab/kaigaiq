@@ -979,7 +979,10 @@
         var slug = slugify(id);
         var premiumBadge = s.premium ? '<span class="all-shop-premium-badge">PREMIUM</span>' : '';
         var premiumClass = s.premium ? ' all-shop-card-premium' : '';
-        var ariaLabel = s.name + '（' + s.flag + ' ' + s.city + '・' + s.type + '）の店舗写真';
+        var cardImg = (s.gallery && s.gallery[0]) ? s.gallery[0] : s.heroImage;
+        // 店舗から提供された写真のみ「店舗写真」と表示する（判定は shops-data.js の許可リスト）
+        var isShopPhoto = window.KQ_isShopPhoto || function () { return false; };
+        var ariaLabel = s.name + '（' + s.flag + ' ' + s.city + '・' + s.type + '）の' + (isShopPhoto(cardImg) ? '店舗写真' : 'イメージ画像');
         return '<a href="/shop/' + slug + '.html" class="all-shop-card fade-in' + premiumClass + '" data-shop-id="' + id + '" aria-label="' + s.name + ' の店舗ページへ">' +
           '<div class="all-shop-img" role="img" aria-label="' + ariaLabel + '" style="background-image:url(\'' + (s.gallery && s.gallery[0] ? s.gallery[0] : s.heroImage) + '\')">' + premiumBadge + '</div>' +
           '<div class="all-shop-body">' +

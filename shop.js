@@ -2,6 +2,11 @@
 // Shop Detail Page - Dynamic Rendering
 // ========================================
 
+// 画像の出所判定・絶対URL化は shops-data.js と共有する。
+// 読み込み順の事故（shops-data.js が未取得）でもページ全体が壊れないよう、既定を安全側に倒す。
+const isShopPhoto = window.KQ_isShopPhoto || function () { return false; };
+const absUrl = window.KQ_absUrl || function (u) { return u; };
+
 // 店舗ID → 静的ページURL（tools/build-shop-pages.js の slugify / SLUG_OVERRIDES と同期）
 const SHOP_SLUG_OVERRIDES = { epicSG: 'epic-sg' };
 function shopPageUrl(id) {
@@ -64,7 +69,10 @@ function renderShop(shop) {
   const title = `${shop.name}｜${shop.city}${shop.type}求人 - ${salaryClause} | KaigaiQ`;
   const desc = `${shop.flag} ${shop.city}の${shop.type}「${shop.name}」のキャスト求人情報。${conceptShort}。${salaryClause}、${benefitsTop}。`;
   const canonicalUrl = `https://kaigaiq.com${shopPageUrl(shopId)}`;
-  const ogImage = shop.heroImage || (shop.gallery && shop.gallery[0]) || 'https://kaigaiq.com/icons/icon-512.svg';
+  // 店舗提供写真のときだけ og:image に使う。ストック素材は「その店の写真」と受け取られるため
+  // サイト既定のOGP画像へ退避する（ビルド時 tools/build-shop-pages.js と同じ判断）
+  const ogCandidate = [shop.heroImage, shop.gallery && shop.gallery[0]].find(u => isShopPhoto(u));
+  const ogImage = ogCandidate ? absUrl(ogCandidate) : 'https://kaigaiq.com/icons/ogp-default.png';
 
   document.getElementById('pageTitle').textContent = title;
   const setMeta = (id, val) => { const el = document.getElementById(id); if (el) el.setAttribute('content', val); };
@@ -100,9 +108,12 @@ function renderShop(shop) {
   // Gallery
   const galleryGrid = document.getElementById('shopGalleryGrid');
   if (shop.gallery && shop.gallery.length > 0) {
+    // 店舗から提供された写真のみ「店内写真」と表示する（判定は shops-data.js の許可リスト）
     galleryGrid.innerHTML = shop.gallery.map((img, i) =>
-      `<div class="gallery-item" data-index="${i}"><img src="${img}" alt="${shop.name} 店内写真 ${i + 1}枚目（${shop.city}・${shop.type}）" loading="lazy" decoding="async"></div>`
+      `<div class="gallery-item" data-index="${i}"><img src="${img}" alt="${isShopPhoto(img) ? `${shop.name} 店内写真 ${i + 1}枚目（${shop.city}・${shop.type}）` : `${shop.city}の${shop.type}のイメージ画像 ${i + 1}枚目`}" loading="lazy" decoding="async"></div>`
     ).join('');
+    const galleryHeading = document.querySelector('#shopGallery h2');
+    if (galleryHeading) galleryHeading.textContent = shop.gallery.some(isShopPhoto) ? '店内写真' : 'イメージ画像';
   } else {
     document.getElementById('shopGallery').style.display = 'none';
   }
@@ -357,7 +368,9 @@ function injectShopJsonLd(shop, shopId, canonicalUrl) {
     '@type': schemaType,
     'name': shop.name,
     'url': canonicalUrl,
-    'image': shop.heroImage,
+    // 店舗提供写真のときだけ image を出す。schema.org の image は「その物を写した画像」の主張になるため、
+    // ストック素材では省略する（省略可のプロパティ）
+    ...(isShopPhoto(shop.heroImage) ? { 'image': absUrl(shop.heroImage) } : {}),
     'description': shop.conceptMeta || shop.concept,
     'address': {
       '@type': 'PostalAddress',
