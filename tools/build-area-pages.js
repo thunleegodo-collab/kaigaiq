@@ -105,6 +105,28 @@ function buildAreaPage(cityName, conf, shops) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="bxECX6P4sHUXqpweZYxY_JlXS6HvMRzqHsiejpXr_f8" />
+  <!-- 内部トラフィック除外: ?noga=1 でこのブラウザの計測を停止（?noga=0 で解除）。停止中はコンソールに出る -->
+  <script>
+    (function () {
+      try {
+        var m = location.search.match(/[?&]noga=([^&]*)/);
+        if (m) {
+          if (m[1] === '0') localStorage.removeItem('kq_noga');
+          else localStorage.setItem('kq_noga', '1');
+        }
+        if (localStorage.getItem('kq_noga') === '1') {
+          window['ga-disable-G-HP8686808M'] = true;
+          console.log('[KaigaiQ] GA4計測 停止中（?noga=0 で解除）');
+        } else if (m) {
+          console.log('[KaigaiQ] GA4計測 有効');
+        }
+      } catch (e) {
+        if (location.search.indexOf('noga') > -1) {
+          console.warn('[KaigaiQ] オプトアウトを保存できません（localStorage不可）。計測は有効のままです');
+        }
+      }
+    })();
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HP8686808M"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
