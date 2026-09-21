@@ -13,10 +13,10 @@
 window.KQ_SHOP_PHOTO_PATHS = [
   '/shop-images/'               // 自前ホスティング（提供を受けて預かったもの）
 ];
-window.KQ_SHOP_PHOTO_HOSTS = [
-  'clubline23-bangkok.com',     // 店舗公式サイト（掲載承諾済み）
-  'rashell-japan-bar.com'       // 店舗公式サイト（掲載承諾済み）
-];
+// 店舗公式サイトからの直接読み込み（ホットリンク）は 2026-09-21 に解消し、
+// 提供を受けた写真は /shop-images/ 配下へ預かる方式に統一した。
+// 今後やむを得ず外部ホストを参照する場合のみ、ここにホスト名を追加する。
+window.KQ_SHOP_PHOTO_HOSTS = [];
 
 // パスは先頭一致、ホストは完全一致でアンカーする（部分一致だと外部URLを取り違えるため）
 window.KQ_isShopPhoto = function (url) {
@@ -1241,16 +1241,13 @@ window.SHOPS_DATA = {
     region: "アジア",
     city: "バンコク",
     premium: true,
-    heroImage: "https://clubline23-bangkok.com/images/interior/interior2.webp",
+    heroImage: "/shop-images/bunny/interior4.webp",
     concept: "バンコク・Asok（アソーク）駅徒歩圏、スクンビットSoi23の日本人オーナー直営プレミアムカラオケラウンジ「Club LINE23 Bangkok」。2014年オープン以来10年以上にわたり、バンコク駐在員・出張中の日本人ビジネスマンに愛されてきた老舗店舗です。VIP完全個室・最新カラオケ機材・多言語スタッフ（日本語／英語／タイ語）常駐で接待利用にも対応、正式領収書発行可で法人利用も安心。日本式の細やかな接客でくつろぎの時間を提供しています。\n\n【キャスト募集】日給2,000B〜、寮完備・ビザサポート・ノルマなし・日本人スタッフ常駐で未経験者から経験者まで歓迎。バンコクの中心地でナイトワーク業界デビューを目指す方も、海外で安心して働ける環境です。公式サイト：clubline23-bangkok.com",
     conceptMeta: "バンコク・Asok駅徒歩圏／スクンビットSoi23の日本人経営プレミアムカラオケラウンジ（2014年〜10年以上の実績）。VIP完全個室・多言語スタッフ・正式領収書発行可。日給2,000B〜、寮完備・ノルマなし・ビザサポート・日本人スタッフ常駐で未経験OK。",
     gallery: [
-      "https://clubline23-bangkok.com/images/interior/interior1.webp",
-      "https://clubline23-bangkok.com/images/interior/interior3.webp",
-      "https://clubline23-bangkok.com/images/interior/interior4.webp",
-      "https://clubline23-bangkok.com/images/interior/interior5.webp",
-      "https://clubline23-bangkok.com/images/interior/interior6.webp",
-      "https://clubline23-bangkok.com/images/others/others4.webp"
+      "/shop-images/bunny/interior3.webp",
+      "/shop-images/bunny/interior5.webp",
+      "/shop-images/bunny/interior6.webp"
     ],
     salary: {
       daily: "2,000B",
@@ -1465,16 +1462,16 @@ window.SHOPS_DATA = {
     flag: "🇭🇰",
     region: "アジア",
     city: "香港",
-    heroImage: "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3175-1.jpg",
+    heroImage: "/shop-images/rashell/IMG_3175-1.jpg",
     concept: "香港・銅鑼湾（コーズウェイベイ）に2店舗を構える日本人キャスト在籍のジャパニーズバー。世界中のVIPが集まる香港で、現地で外国語を学びながら将来の夢の実現に向けた資金作りが可能。近隣諸国への旅行も楽しめる環境。在籍キャストはほぼ100%日本人女性。",
     conceptMeta: "香港・銅鑼湾の日本人キャスト在籍のジャパニーズバー。月給HK$35,000〜、ノルマ・罰金なし、ドリンク／本指名／場内指名／同伴／シャンパン・ワインバック。寮完備、客層は日本人50%／香港人40%／外国人10%。",
     gallery: [
-      "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3175-1.jpg",
-      "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3164.jpg",
-      "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3165.jpg",
-      "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3167.jpg",
-      "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3169-2.jpg",
-      "https://rashell-japan-bar.com/wp-content/uploads/2023/03/IMG_3171-2.jpg"
+      "/shop-images/rashell/IMG_3175-1.jpg",
+      "/shop-images/rashell/IMG_3164.jpg",
+      "/shop-images/rashell/IMG_3165.jpg",
+      "/shop-images/rashell/IMG_3167.jpg",
+      "/shop-images/rashell/IMG_3169-2.jpg",
+      "/shop-images/rashell/IMG_3171-2.jpg"
     ],
     salary: {
       daily: "時給制＋バック制",
