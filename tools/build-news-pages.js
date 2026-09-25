@@ -19,6 +19,20 @@ function esc(s) {
   return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+// 本文冒頭から meta description を作る。160字を超えるときは語の途中で切らず、
+// 160字以内の最後の文末（。！？）で切る。文末が手前すぎる（80字未満）ときは
+// 最後の読点で切って「…」を付ける。
+function summarize(text, max = 160) {
+  const t = String(text || '').split('||')[0].trim();
+  if (t.length <= max) return t;
+  const head = t.slice(0, max);
+  const end = Math.max(head.lastIndexOf('。'), head.lastIndexOf('！'), head.lastIndexOf('？'));
+  if (end >= 80) return head.slice(0, end + 1);
+  const comma = head.slice(0, max - 1).lastIndexOf('、');
+  if (comma >= 80) return head.slice(0, comma) + '…';
+  return head.slice(0, max - 1) + '…';
+}
+
 const slugMap = {
   '2026年 海外キャバクラ業界の最新トレンド：東南アジアを中心に急成長': 'asia-industry-trend',
   '円安継続で日本人キャストへの追い風加速 - 2026年春・海外キャバクラ業界トレンド': 'yen-tailwind-2026',
@@ -104,7 +118,7 @@ function buildArticlePage(article) {
       name: 'KaigaiQ',
       logo: { '@type': 'ImageObject', url: 'https://kaigaiq.com/icons/icon-512.svg' }
     },
-    description: article.full.split('||')[0].trim().slice(0, 160),
+    description: summarize(article.full),
     mainEntityOfPage: { '@type': 'WebPage', '@id': article.url },
     articleSection: article.cat
   };
@@ -117,7 +131,7 @@ function buildArticlePage(article) {
       { '@type': 'ListItem', position: 3, name: article.title, item: article.url }
     ]
   };
-  const excerpt = esc(article.full.split('||')[0].trim().slice(0, 160));
+  const excerpt = esc(summarize(article.full));
 
   return `<!DOCTYPE html>
 <html lang="ja">
@@ -272,14 +286,15 @@ for (const article of articles) {
 }
 
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
-let sitemap = fs.readFileSync(sitemapPath, 'utf8');
+// core.autocrlf 環境ではチェックアウト時に CRLF になるため、LF に揃えてから編集する
+let sitemap = fs.readFileSync(sitemapPath, 'utf8').replace(/\r\n/g, '\n');
 sitemap = sitemap.replace(/\n\s*<url><loc>https:\/\/kaigaiq\.com\/news\/[^<]+<\/loc>[\s\S]*?<\/url>/g, '');
 // 旧「News Articles」コメントも除去しないとビルドのたびに重複累積する
 sitemap = sitemap.replace(/\n\s*<!-- News Articles -->/g, '');
 const newsEntries = generated.map(g =>
   `  <url><loc>https://kaigaiq.com/news/${g.filename}</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`
 ).join('\n');
-sitemap = sitemap.replace(/(\s*<!-- Area Landing Pages -->)/, `\n  <!-- News Articles -->\n${newsEntries}\n$1`);
+sitemap = sitemap.replace(/(\s*<!-- Area Landing Pages -->)/, `\n  <!-- News Articles -->\n${newsEntries}$1`);
 // 除去跡に残る連続空行を1行に畳む
 sitemap = sitemap.replace(/\n{3,}/g, '\n\n');
 fs.writeFileSync(sitemapPath, sitemap);
