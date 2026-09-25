@@ -19,6 +19,7 @@ const CITIES = {
     intro: '世界中のVIPが集まる国際都市・香港。日本人キャストの需要が高く、米ドルペッグのHKDで給与の円換算メリットも大きいエリアです。銅鑼湾（コーズウェイベイ）・尖沙咀（チムサーチョイ）に日系ラウンジ・バーが集中。月収HK$35,000〜80,000（約70〜160万円）が標準レンジ。',
     keywords: '香港 キャバクラ,香港 ラウンジ,香港 日本人,銅鑼湾 求人,コーズウェイベイ' },
   'バンコク': { slug: 'bangkok', flag: '🇹🇭', en: 'Bangkok', region: 'アジア',
+    cityImage: '/images/city/bangkok-01-elevated-rail-night.webp', cityImageAlt: 'バンコクの夜のイメージ',
     intro: 'タイ・バンコクは東南アジア最大の日系ナイトワークエリア。スクンビット通り（Soi23・33・55等）に12店舗以上の日本式キャバクラ・ラウンジ・ガールズバーが集中。物価が安く実質手取りが大きいのが魅力。月収12〜35万バーツ（約55〜160万円）、業界最高水準店舗あり。',
     keywords: 'バンコク キャバクラ,バンコク ラウンジ,スクンビット 求人,タイ 日本人キャスト' },
   'シンガポール': { slug: 'singapore', flag: '🇸🇬', en: 'Singapore', region: 'アジア',
@@ -62,7 +63,14 @@ function buildAreaPage(cityName, conf, shops) {
   // 店舗提供写真のみ代表画像に使う。ストック素材をエリアの代表画像として出すと
   // SNSプレビューで「その店の写真」と受け取られるため、サイトロゴへ退避する
   const ownPhoto = shops.map(s => s.heroImage).find(u => isShopPhoto(u));
-  const ogImage = ownPhoto ? absUrl(ownPhoto) : 'https://kaigaiq.com/icons/ogp-default.png';
+  // 都市イメージ（AI生成・.company/image-production のカード経由）があればエリアの代表画像はそちらを使う。
+  // 特定の1店の写真をエリア全体の代表にしないため、店舗写真より優先する
+  const ogImage = conf.cityImage ? absUrl(conf.cityImage)
+    : ownPhoto ? absUrl(ownPhoto) : 'https://kaigaiq.com/icons/ogp-default.png';
+  // 上1/3に見出しが乗るため、上を濃く・下も店舗一覧へ馴染ませる暗幕を重ねる
+  const heroStyle = conf.cityImage
+    ? ` style="background:linear-gradient(180deg,rgba(10,10,15,0.78) 0%,rgba(10,10,15,0.55) 45%,rgba(10,10,15,0.92) 100%),url('${conf.cityImage}') center/cover no-repeat;"`
+    : '';
 
   const shopCards = shops.map(s => {
     const slug = slugMap[s.id];
@@ -154,7 +162,11 @@ function buildAreaPage(cityName, conf, shops) {
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${title}">
   <meta name="twitter:description" content="${desc}">
-  <meta name="twitter:image" content="${ogImage}">
+  <meta name="twitter:image" content="${ogImage}">${conf.cityImage ? `
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="${conf.cityImageAlt}">
+  <meta name="twitter:image:alt" content="${conf.cityImageAlt}">` : ''}
   <script type="application/ld+json">${JSON.stringify(breadcrumbLd)}</script>
   <script type="application/ld+json">${JSON.stringify(itemListLd)}</script>
   <link rel="manifest" href="/manifest.json">
@@ -213,7 +225,7 @@ function buildAreaPage(cityName, conf, shops) {
     <a href="/">ホーム</a> ＞ <a href="/#areas">${conf.region}</a> ＞ ${cityName}
   </nav>
 
-  <section class="area-hero">
+  <section class="area-hero"${heroStyle}>
     <span class="area-hero-flag" aria-hidden="true">${conf.flag}</span>
     <h1>${cityName}のキャバクラ・ラウンジ求人</h1>
     <p class="area-hero-sub">${conf.intro}</p>
@@ -294,7 +306,8 @@ for (const [cityName, conf] of Object.entries(CITIES)) {
 }
 
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
-let sitemap = fs.readFileSync(sitemapPath, 'utf8');
+// core.autocrlf 環境ではチェックアウト時に CRLF になるため、LF に揃えてから編集する
+let sitemap = fs.readFileSync(sitemapPath, 'utf8').replace(/\r\n/g, '\n');
 sitemap = sitemap.replace(/\n\s*<url><loc>https:\/\/kaigaiq\.com\/area\/[^<]+<\/loc>[\s\S]*?<\/url>/g, '');
 // 旧「Area Landing Pages」コメントも除去しないとビルドのたびに重複累積する
 sitemap = sitemap.replace(/\n\s*<!-- Area Landing Pages -->/g, '');
