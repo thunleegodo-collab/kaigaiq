@@ -59,6 +59,7 @@ const slugMap = {
   '雨季の東南アジア渡航ガイド：バンコク・ホーチミンの気候対策と体調管理': 'rainy-season-guide-sea',
   '夏〜秋の短期出稼ぎガイド：8〜9月入店の逆算スケジュールと契約チェックリスト': 'summer-autumn-short-term-guide',
   '為替アップデート2026年8月：円買い介入でドル円158円台へ、円換算収入はどうなる？': 'yen-intervention-158-update',
+  '【バンコク】連日の大雨で全50区が「災害地域」に：冠水の状況と、滞在中・渡航前に確認したいこと（9月27日時点）': 'bangkok-flood-2026-09',
   '年末年始の海外出稼ぎガイド：10〜12月入店の逆算スケジュールと繁忙期の注意点': 'year-end-dekasegi-guide',
 };
 
@@ -248,7 +249,7 @@ function buildArticlePage(article) {
         <span class="date">${esc(article.date)}</span>
       </div>
       <h1 class="news-detail-title">${esc(article.title)}</h1>
-      <div class="news-detail-img" role="img" aria-label="${esc(article.title)} の記事画像" style="background-image:url('${esc(article.img)}')"></div>
+      <div class="news-detail-img" role="img" aria-label="${esc(article.title)} の${article.img.indexOf('/images/') === 0 ? 'イメージ画像' : '記事画像'}" style="background-image:url('${esc(article.img)}')"></div>
     </div>
   </section>
 
