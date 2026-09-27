@@ -56,6 +56,7 @@
     <priority>0.8</priority>
   </url>
   <!-- News Articles -->
+  <url><loc>https://kaigaiq.com/news/2026-09-27-silver-week-2026-asia-ranking.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-09-27-bangkok-flood-2026-09.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-09-03-year-end-dekasegi-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kaigaiq.com/news/2026-08-07-yen-intervention-158-update.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
