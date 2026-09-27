@@ -174,23 +174,6 @@ function renderShop(shop) {
     document.getElementById('shopHousing').style.display = 'none';
   }
 
-  // Visa: 配列 or 文字列に対応
-  if (shop.visa) {
-    const visaArr = Array.isArray(shop.visa) ? shop.visa : [shop.visa];
-    if (visaArr.length > 0 && visaArr[0]) {
-      document.getElementById('visaInfo').innerHTML = visaArr.map(v =>
-        `<div class="visa-item">
-          <span class="visa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span class="visa-text">${v}</span>
-        </div>`
-      ).join('');
-    } else {
-      document.getElementById('shopVisa').style.display = 'none';
-    }
-  } else {
-    document.getElementById('shopVisa').style.display = 'none';
-  }
-
   // Price system: 配列 [{item,price}] or ネストオブジェクトに対応
   if (shop.priceSystem) {
     const priceTable = document.getElementById('priceTable');

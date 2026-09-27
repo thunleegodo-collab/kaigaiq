@@ -67,6 +67,17 @@ const slugMap = {
 const modifiedMap = {
   // 為替介入の日付・回数・28年ぶり・8/3の155円台を追記（2026-09-04）
   'yen-intervention-158-update': '2026-09-04',
+  // ビザに関する記述をぼかす・シンガポールの制度終了を追記（2026-09-25〜26）
+  '2025-recap-2026-outlook': '2026-09-26',
+  'vietnam-visa-2026': '2026-09-26',
+  'singapore-visa-update': '2026-09-26',
+  'epic-vietnam-launch': '2026-09-26',
+  'essential-tips-before-overseas': '2026-09-26',
+  'hk-experience-1500k': '2026-09-26',
+  'thailand-deregulation-2026': '2026-09-26',
+  'asia-industry-trend': '2026-09-26',
+  'summer-autumn-short-term-guide': '2026-09-26',
+  'year-end-dekasegi-guide': '2026-09-26',
 };
 
 const articles = [];

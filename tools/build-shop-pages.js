@@ -263,7 +263,8 @@ const SHOP_PRIORITY_DEFAULT = '0.7';
 const SHOP_ORDER_FIRST = ['rashell', 'bunny'];
 
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
-let sitemap = fs.readFileSync(sitemapPath, 'utf8');
+// core.autocrlf 環境ではチェックアウト時に CRLF になるため、LF に揃えてから編集する
+let sitemap = fs.readFileSync(sitemapPath, 'utf8').replace(/\r\n/g, '\n');
 // 旧クエリ形式（/shop.html?id=）と前回生成分の /shop/<slug>.html を除去してから再挿入する。
 // 除去を怠ると再実行のたびに重複が積み上がる
 sitemap = sitemap.replace(/\n\s*<url><loc>https:\/\/kaigaiq\.com\/shop\.html\?id=[^<]+<\/loc>[\s\S]*?<\/url>/g, '');

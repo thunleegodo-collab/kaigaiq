@@ -49,7 +49,7 @@ window.SHOPS_DATA = {
     city: "シンガポール",
     heroImage: "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "お店の名前に（寿限無）じゅげむを付けた理由はご来店頂いたお客様に寿（めでたい）事が限り無く続きますようにという思いを込めてつけさせて頂きました。",
-    conceptMeta: "シンガポール・Cuppage Plazaの日系キャバクラ「寿限無」。月収90万円〜、ドリンク／アフターバック制、就労ビザ申請代行・往復航空券支給・プール/ジム完備の個室寮で生活面も充実。",
+    conceptMeta: "シンガポール・Cuppage Plazaの日系キャバクラ「寿限無」。月収90万円〜、ドリンク／アフターバック制、往復航空券支給・プール/ジム完備の個室寮で生活面も充実。",
     gallery: [
       "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -60,9 +60,9 @@ window.SHOPS_DATA = {
       monthly: "月収 90万円〜",
       backs: ["ドリンクバック", "アフターバック"]
     },
-    benefits: ["無料のまかない弁当付き", "未経験の方歓迎", "充実の営業サポート体制", "就労ビザの申請を無料で代行", "ビザ申請料は会社負担（全額）", "往復の航空券を支給", "お試し短期勤務も可能", "ノルマは一切なし", "系列のマツエク・ホワイトニングが初回完全無料", "SNS部門の給与あり"],
+    benefits: ["無料のまかない弁当付き", "未経験の方歓迎", "充実の営業サポート体制", "往復の航空券を支給", "お試し短期勤務も可能", "ノルマは一切なし", "系列のマツエク・ホワイトニングが初回完全無料", "SNS部門の給与あり"],
     housing: ["プール完備", "ジム付き", "個室寮", "WiFi", "家具", "家電", "アクセス良好"],
-    visa: ["就労ビザの申請を無料で代行", "ビザ申請料も会社負担（全額）"],
+    visa: [],
     hours: "20:30〜2:30",
     address: "5 Koek Rd, #04-12/13 Cuppage Plaza, Singapore 228796",
     contact: {
@@ -193,7 +193,7 @@ window.SHOPS_DATA = {
     city: "ハノイ",
     heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "ガールズバーとスナックの中間のような雰囲気で、日本の最新カラオケ完備。客層の9割は日本人で語学不要。",
-    conceptMeta: "ハノイ・Ba Dinhの日系ガールズバー＆スナック。客層9割が日本人で語学不要、時給300,000VND〜、日払いOK、寮無料キャンペーン中、45日未満はVISA不要で即勤務可能。",
+    conceptMeta: "ハノイ・Ba Dinhの日系ガールズバー＆スナック。客層9割が日本人で語学不要、時給300,000VND〜、日払いOK、寮無料キャンペーン中。",
     gallery: [
       "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -206,7 +206,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["日払いOK", "未経験者大歓迎", "送迎あり", "交通費支給", "ペナルティなし", "ノルマなし", "お酒飲めなくても大丈夫", "お友達と一緒OK", "日本人スタッフ", "自由出勤", "英会話レッスンあり", "インターネット使い放題", "外国語話せなくても大丈夫"],
     housing: ["寮あり（新築、完全一人部屋、家具家電付き）", "家賃: 150,000 VND/日", "水道光熱費: 100,000 VND/日", "寮費無料キャンペーン実施中（滞在条件あり）"],
-    visa: ["45日以内の滞在はVISA不要", "45日以上3ヶ月未満はVISA必要", "e-VISA即座取得可能"],
+    visa: [],
     hours: "20:00〜25:00（日曜定休）",
     priceSystem: [
       { item: "チャージ制（メンバー）60分", price: "350,000 VND" },
@@ -227,7 +227,7 @@ window.SHOPS_DATA = {
     city: "台北",
     heroImage: "https://images.unsplash.com/photo-1578736641330-3155e606cd40?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日式スナック。マネージャーが優しくサポート。スタッフ間の雰囲気が良く、ビジネスオーナーや良識あるお客さんが多い。働きやすい環境。",
-    conceptMeta: "台北・中山區林森北路の日式スナック。日給350元保証、ドリンク1杯100元・テキーラ300元バック。住居サポート・台湾労働ビザ取得支援、未経験・体験入店（給与支給）OK。",
+    conceptMeta: "台北・中山區林森北路の日式スナック。日給350元保証、ドリンク1杯100元・テキーラ300元バック。住居サポート、未経験・体験入店（給与支給）OK。",
     gallery: [
       "https://images.unsplash.com/photo-1527261834078-9b37d35a4a32?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -240,7 +240,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["未経験者大歓迎", "交通費支給", "お酒飲めなくても大丈夫", "外国語話せなくても大丈夫", "ノルマ・アフターなし", "体験入店あり（給与支給）"],
     housing: ["住居サポートあり", "語学学校サポートあり"],
-    visa: ["台湾での労働ビザ取得支援"],
+    visa: [],
     hours: "20:30〜25:00",
     priceSystem: [
       { item: "飲み放題1SET 90分", price: "1,800元" },
@@ -263,7 +263,7 @@ window.SHOPS_DATA = {
     city: "シンガポール",
     heroImage: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "ラウンジとガールズバーの良さを兼ね備えた、居心地の良い空間。",
-    conceptMeta: "シンガポール・Orchard Plazaの日系キャバクラ＆ラウンジ。月収90万円〜、平均年齢28歳・未経験率40%。就労ビザ申請代行・往復航空券支給で安心して渡航可能。",
+    conceptMeta: "シンガポール・Orchard Plazaの日系キャバクラ＆ラウンジ。月収90万円〜、平均年齢28歳・未経験率40%。往復航空券支給で安心して渡航可能。",
     gallery: [
       "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -274,9 +274,9 @@ window.SHOPS_DATA = {
       monthly: "月収 90万円〜",
       backs: ["ドリンクバック", "アフターバック"]
     },
-    benefits: ["未経験者歓迎", "送迎あり", "交通費支給", "ノルマなし", "食事あり", "お友達と一緒OK", "日本人スタッフ", "外国語話せなくても大丈夫"],
+    benefits: ["未経験者歓迎", "送迎あり", "交通費支給", "ノルマなし", "食事あり", "お友達と一緒OK", "日本人スタッフ", "外国語話せなくても大丈夫", "往復航空券支給"],
     housing: ["寮完備", "インターネット使い放題"],
-    visa: ["就労ビザ申請代行あり", "ビザ申請料会社負担", "往復航空券支給"],
+    visa: [],
     hours: "21:00〜3:00",
     address: "150 Orchard Rd, #03-21 Orchard Plaza, Singapore 238841",
     contact: {
@@ -348,7 +348,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["未経験OK", "30代OK", "私服OK", "お酒飲めなくてもOK", "ノルマ無し", "最低給料保証あり", "売上スライド制", "売り半可能"],
     housing: ["キレイなコンドミニアム", "プール・ジム・サウナ完備", "1人部屋あり", "1ヶ月以上滞在で寮費無料（2人部屋のみ）"],
-    visa: ["長期の方にはビザサポートあり"],
+    visa: [],
     hours: "20:00〜1:00（毎日営業）",
     priceSystem: [
       { item: "Table charge", price: "350 baht" },
@@ -365,7 +365,7 @@ window.SHOPS_DATA = {
     city: "プノンペン",
     heroImage: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "鰻料理と和食の優雅な融合とキャバクラエンターテイメントが織りなす世界初の体験。",
-    conceptMeta: "プノンペン・BKK1地区の日系キャバクラ。月収$2,000〜$7,200、ボトル・シャンパンバック10〜20%、完全個室の高級コンド寮、航空券支給・空港迎え・1年VISA無料。",
+    conceptMeta: "プノンペン・BKK1地区の日系キャバクラ。月収$2,000〜$7,200、ボトル・シャンパンバック10〜20%、完全個室の高級コンド寮、航空券支給・空港迎えあり。",
     gallery: [
       "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -376,9 +376,9 @@ window.SHOPS_DATA = {
       monthly: "月収 $2,000〜$7,200",
       backs: ["ドリンク $2〜4", "ボトルバック 10〜20%", "シャンパンバック 10〜20%", "同伴バック $5", "本指名 $9/1本", "場内指名 $4/1本"]
     },
-    benefits: ["ホテル・コンドミニアム完備", "航空券支給", "空港迎え", "VISA支給", "SIMカード貸し出し", "ミネラルウォーター支給", "薬支給", "生活支援", "口座開設援助", "月1回の食事会", "国内外旅行規定あり", "食事あり", "英語・カンボジア語レッスン", "通訳サポート", "トゥクトゥク費用"],
+    benefits: ["ホテル・コンドミニアム完備", "航空券支給", "空港迎え", "SIMカード貸し出し", "ミネラルウォーター支給", "薬支給", "生活支援", "口座開設援助", "月1回の食事会", "国内外旅行規定あり", "食事あり", "英語・カンボジア語レッスン", "通訳サポート", "トゥクトゥク費用"],
     housing: ["完全個室の高級コンド寮", "プール・ジム付き"],
-    visa: ["ビジネス1年VISA無料（規定あり）", "VISAランの必要なし"],
+    visa: [],
     hours: "20:00〜2:00",
     priceSystem: [
       { item: "カウンターセット（ビジター60分）", price: "$15" },
@@ -434,7 +434,7 @@ window.SHOPS_DATA = {
     city: "プノンペン",
     heroImage: "https://images.unsplash.com/photo-1626072778346-0ab6604d39c4?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本人客が海外カンボジアで安心して楽しめるキャバクラ。全キャストが日本人女性。",
-    conceptMeta: "プノンペン・Doun Penhの日系キャバクラ。全キャスト日本人女性、月収$2,000〜（過去最高$8,000）、シャンパンバック20%、寮完備・往復航空券支給・VISA手当あり。",
+    conceptMeta: "プノンペン・Doun Penhの日系キャバクラ。全キャスト日本人女性、月収$2,000〜（過去最高$8,000）、シャンパンバック20%、寮完備・往復航空券支給。",
     gallery: [
       "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -445,9 +445,9 @@ window.SHOPS_DATA = {
       monthly: "月収 $2,000〜（過去最高$8,000）",
       backs: ["ドリンク $2〜4", "ボトルバック 10%", "シャンパンバック 20%", "同伴バック $5", "同伴売上バック 10%", "本指名 $5/本", "場内指名 $5/本"]
     },
-    benefits: ["ビザ申請料会社負担", "往復航空券支給", "空港迎え", "SIMカード貸し出し", "ミネラルウォーター支給", "医薬品支給", "生活支援", "携帯電話貸し出し", "銀行口座開設援助", "月1回の食事会"],
+    benefits: ["往復航空券支給", "空港迎え", "SIMカード貸し出し", "ミネラルウォーター支給", "医薬品支給", "生活支援", "携帯電話貸し出し", "銀行口座開設援助", "月1回の食事会"],
     housing: ["寮完備（完全一人部屋）", "家具家電付き", "家賃 $10/日", "水道光熱費 $4/日", "条件により無料"],
-    visa: ["VISA支給 規定有り", "25日以上勤務で$200", "50日以上勤務で$400", "75日以上勤務で$500", "90日以上勤務で$600"],
+    visa: [],
     hours: "20:00〜2:00",
     priceSystem: [
       { item: "Set（メンバー90min）", price: "$40" },
@@ -484,9 +484,9 @@ window.SHOPS_DATA = {
       monthly: "月収 $2,000〜$6,000",
       backs: ["ドリンク $2〜", "ボトル 10%", "シャンパン・ワイン 20%", "指名 $5"]
     },
-    benefits: ["往復航空券支給", "VISA延長サポート", "海外研修旅行有り", "銀行口座開設サポート（新規入店者は無料）"],
+    benefits: ["往復航空券支給", "海外研修旅行有り", "銀行口座開設サポート（新規入店者は無料）"],
     housing: ["寮完備", "1人1部屋", "ジム・プール付き", "週2回清掃サービス", "家具家電完備"],
-    visa: ["VISA取得延長サポート"],
+    visa: [],
     hours: "20:00〜1:30（日曜定休）",
     priceSystem: [
       { item: "Set（メンバー 80min ボトル有）", price: "$40" },
@@ -510,7 +510,7 @@ window.SHOPS_DATA = {
     city: "デュッセルドルフ",
     heroImage: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "接待時、仲間内で楽しむ時、お一人様で軽く一杯などその場に合わせて楽しめる。最新カラオケ機器導入。",
-    conceptMeta: "ドイツ・デュッセルドルフの日系キャバクラ。月収約100万円（週末中心勤務）、最新カラオケ機器導入、寮あり（最大2ヶ月無料キャンペーン）、ビザ申請料会社負担、未経験OK。",
+    conceptMeta: "ドイツ・デュッセルドルフの日系キャバクラ。月収約100万円（週末中心勤務）、最新カラオケ機器導入、寮あり（最大2ヶ月無料キャンペーン）、未経験OK。",
     gallery: [
       "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -523,7 +523,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["系列レストランで社割有"],
     housing: ["寮あり", "2〜3月寮費無料キャンペーン", "最大2ヶ月寮費無料"],
-    visa: ["ビザ申請料会社負担"],
+    visa: [],
     hours: "月-木曜・土曜 20-26時 / 金曜 20-27時 / 日曜 20-24時",
     priceSystem: [
       { item: "22:00まで", price: "€25" },
@@ -541,7 +541,7 @@ window.SHOPS_DATA = {
     city: "シンガポール",
     heroImage: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "日本人オーナーママが経営する安心できるアットホームな店。温かく親しみやすい空間づくりを大切にしている。2025年3月に新店舗へ移転、リニューアルオープン。",
-    conceptMeta: "シンガポール・Cuppage Plazaの日系ラウンジ「Emerald ピアジェ」。月収$8,000〜$15,000以上、就労ビザ申請代行・往復航空券・海外旅行保険会社負担、高級寮完備。2025年3月リニューアル。",
+    conceptMeta: "シンガポール・Cuppage Plazaの日系ラウンジ「Emerald ピアジェ」。月収$8,000〜$15,000以上、往復航空券・海外旅行保険会社負担、高級寮完備。2025年3月リニューアル。",
     gallery: [
       "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -552,9 +552,9 @@ window.SHOPS_DATA = {
       monthly: "月収 $8,000〜$15,000以上",
       backs: ["同伴バック", "指名バック", "アフターバック", "ドリンクバック", "ショットバック", "シャンパンバック", "SNS協力バック"]
     },
-    benefits: ["未経験者大歓迎", "レンタル衣装", "ヘアメイク", "ペナルティなし", "ノルマなし", "お酒が飲めなくてもOK", "友人と一緒に応募可能", "日本人スタッフ", "外国語不要"],
+    benefits: ["未経験者大歓迎", "レンタル衣装", "ヘアメイク", "ペナルティなし", "ノルマなし", "お酒が飲めなくてもOK", "友人と一緒に応募可能", "日本人スタッフ", "外国語不要", "海外旅行保険会社負担", "往復航空券支給"],
     housing: ["寮あり（個室・シェアルーム）", "高級寮完備", "プール・ジム・BBQピット・リラクゼーションスペース完備", "家具・家電・インターネット・キッチン用品完備"],
-    visa: ["就労ビザ申請代行（無料）", "ワーキングホリデー対応", "ビザ申請料会社負担", "海外旅行保険会社負担", "往復航空券支給"],
+    visa: [],
     hours: "20:30〜26:00",
     address: "5 Koek Road #B2-22/23/24 Cuppage Plaza Singapore 228796",
     contact: {
@@ -598,7 +598,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["日払いOK", "未経験者大歓迎", "交通費支給", "ペナルティなし", "ノルマなし", "お友達と一緒OK", "日本人スタッフ", "外国語話せなくても大丈夫"],
     housing: ["1人部屋高級コンドミニアム", "ジム・プール・サウナ付き"],
-    visa: ["就労ビザ申請代行あり", "ビザ申請料会社負担"],
+    visa: [],
     hours: "20:00〜3:00",
     priceSystem: [
       { item: "cover charge", price: "3,000円/60min" },
@@ -627,9 +627,9 @@ window.SHOPS_DATA = {
       monthly: "月収 US$4,000〜US$15,000",
       backs: ["場内/本指名 $25/人", "同伴 $50/人", "売上額に応じて10%〜40%バック", "海外客&シャンパン系はさらに高バック"]
     },
-    benefits: ["初月保証 US$2,000/月〜", "語学手当 $100/月（1言語）", "売上ボーナス US$100〜US$1,000", "各種イベントボーナス", "有給2日/月（3ヶ月以上勤務）", "インターネットあり", "飲料水/トイレットペーパー支給"],
+    benefits: ["初月保証 US$2,000/月〜", "語学手当 $100/月（1言語）", "売上ボーナス US$100〜US$1,000", "各種イベントボーナス", "有給2日/月（3ヶ月以上勤務）", "インターネットあり", "飲料水/トイレットペーパー支給", "航空券支給（期間・地域により片道or往復）"],
     housing: ["寮支給（週1掃除つき）", "プノンペン中心地高級コンドミニアム"],
-    visa: ["VISAサポートあり", "航空券支給（期間・地域により片道or往復）", "就労ビザ申請代行あり", "ビザ申請料会社負担"],
+    visa: [],
     hours: "20:00〜25:00（日曜定休）",
     priceSystem: [
       { item: "Cover Charge", price: "US$50/Per" },
@@ -646,7 +646,7 @@ window.SHOPS_DATA = {
     city: "韓国・江陵",
     heroImage: "/shop-images/okinawa/hero.jpg",
     concept: "韓国屈指の観光地・江陵にあるカラオケラウンジ「Lounge OKINAWA」。CUBIC・SAPPHIRE・RUBY・SILVER・ROXなど複数の個室を備え、観光地立地で海産物・観光も楽しめる海外生活。",
-    conceptMeta: "韓国・江陵市のカラオケラウンジ「Lounge OKINAWA」（旧Ozl）。日給20,000円の最低保証、複数個室完備、観光地立地で海産物・観光も楽しめる海外生活。送迎・寮・往復航空券支給・ビザ申請料会社負担、自由出勤OK。",
+    conceptMeta: "韓国・江陵市のカラオケラウンジ「Lounge OKINAWA」（旧Ozl）。日給20,000円の最低保証、複数個室完備、観光地立地で海産物・観光も楽しめる海外生活。送迎・寮・往復航空券支給、自由出勤OK。",
     gallery: [
       "/shop-images/okinawa/01-entrance.jpg",
       "/shop-images/okinawa/02-main-room.jpg",
@@ -662,9 +662,9 @@ window.SHOPS_DATA = {
       monthly: "500,000〜800,000ウォン",
       backs: []
     },
-    benefits: ["日払いOK", "未経験者大歓迎", "送迎あり", "交通費支給", "ノルマなし", "お酒飲めなくても大丈夫", "お友達と一緒OK", "自由出勤", "外国語話せなくても大丈夫"],
+    benefits: ["日払いOK", "未経験者大歓迎", "送迎あり", "交通費支給", "ノルマなし", "お酒飲めなくても大丈夫", "お友達と一緒OK", "自由出勤", "外国語話せなくても大丈夫", "往復航空券支給"],
     housing: ["寮あり", "インターネット使い放題"],
-    visa: ["ビザ申請料会社負担", "往復航空券支給"],
+    visa: [],
     hours: "20時〜3時（シフトにより早上がりOK）",
     priceSystem: [
       { item: "チャージ（100分）", price: "300,000ウォン" },
@@ -695,7 +695,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["自由な服装OK（カジュアル可）", "ノルマなし", "ブッキング・指名制度なし", "未経験OK", "短期OK"],
     housing: ["お問い合わせください"],
-    visa: ["お問い合わせください"],
+    visa: [],
     hours: "お問い合わせください",
     address: "5 KOEK ROAD, #05-01, Cuppage Plaza, Singapore 228796",
     mapQuery: "5 Koek Road, Cuppage Plaza, Singapore 228796",
@@ -735,7 +735,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["寮無料（徒歩5分）", "食事支給", "往復航空券支給", "ノルマなし", "未経験OK", "日払いOK"],
     housing: ["寮無料", "店舗から徒歩5分"],
-    visa: ["お問い合わせください"],
+    visa: [],
     hours: "20:00〜3:00（日曜定休）",
     address: "13/F Shun Hei Causeway Bay Centre, 492 Lockhart Road, Hong Kong",
     mapQuery: "492 Lockhart Road, Causeway Bay, Hong Kong",
@@ -775,7 +775,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["食事あり", "往復航空券支給", "労災保険", "入院保険", "未経験OK", "英語苦手OK", "急募中"],
     housing: ["お問い合わせください"],
-    visa: ["お問い合わせください"],
+    visa: [],
     hours: "21:00〜2:00（日曜定休）",
     priceSystem: [
       { item: "1時間（飲み放題）", price: "$80" },
@@ -807,7 +807,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["20歳以上で飲める方歓迎", "英語や中国語の日常会話可能な方優遇", "飲めなくても話せなくても大丈夫"],
     housing: ["コンド家賃無料", "プール付き", "ジム付き"],
-    visa: ["自己負担"],
+    visa: [],
     hours: "20:00〜1:00（日曜定休）",
     priceSystem: [
       { item: "テーブルチャージ", price: "$15" },
@@ -839,7 +839,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["ベトナム最大条件（最高給与帯）", "6日休日支給", "柔軟な休暇制度", "高額バック制度", "渡航費支給（条件なし、完全支給）", "日払い制度"],
     housing: ["個室", "家具", "家電", "インターネット"],
-    visa: ["就労ビザ取得および申請代行無料", "往復航空チケット支給"],
+    visa: [],
     hours: "20時〜1時",
     address: "26B Le Thanh Ton, Ben Nghe, Quan 1, Ho Chi Minh City",
     contact: {
@@ -885,11 +885,10 @@ window.SHOPS_DATA = {
       "インフィニティプール付き",
       "サウナ・フィットネスジム完備",
       "渡航からフルサポート",
-      "長期ビザサポートあり",
       "日本人スタッフ常駐"
     ],
     housing: "ホテル経営の高級タワマンコンドミニアム（サウナ・フィットネスジム・インフィニティプール完備）",
-    visa: "長期滞在・ビザ変更も全面サポート",
+    visa: [],
     priceSystem: {
       counterBar: {
         member: "500THB（ボトルキープ制）",
@@ -932,7 +931,7 @@ window.SHOPS_DATA = {
     city: "バンコク",
     heroImage: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1200&h=600&fit=crop&fm=webp&q=75&auto=format",
     concept: "バンコクの高級ラウンジ。洗練されたサービスと豪華な空間を提供。高収入を目指せる環境。",
-    conceptMeta: "バンコクの日系高級ラウンジ。月収150,000〜300,000バーツ（約70〜140万円）、未経験者歓迎、日本人スタッフ常駐で外国語不要、ノルマなし、寮完備・ビザサポートあり。",
+    conceptMeta: "バンコクの日系高級ラウンジ。月収150,000〜300,000バーツ（約70〜140万円）、未経験者歓迎、日本人スタッフ常駐で外国語不要、ノルマなし、寮完備。",
     gallery: [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
       "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=400&h=300&fit=crop&fm=webp&q=75&auto=format",
@@ -945,7 +944,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["未経験者歓迎", "ノルマなし", "日本人スタッフ", "外国語不要"],
     housing: ["寮完備"],
-    visa: ["ビザサポートあり"],
+    visa: [],
     hours: "20:00〜1:00",
     priceSystem: [],
     notes: ["料金システムは店舗にお問い合わせください"]
@@ -986,8 +985,8 @@ window.SHOPS_DATA = {
     city: "バンコク",
     premium: true,
     heroImage: "/shop-images/bunny/interior4.webp",
-    concept: "バンコク・Asok（アソーク）駅徒歩圏、スクンビットSoi23の日本人オーナー直営プレミアムカラオケラウンジ「Club LINE23 Bangkok」。2014年オープン以来10年以上にわたり、バンコク駐在員・出張中の日本人ビジネスマンに愛されてきた老舗店舗です。VIP完全個室・最新カラオケ機材・多言語スタッフ（日本語／英語／タイ語）常駐で接待利用にも対応、正式領収書発行可で法人利用も安心。日本式の細やかな接客でくつろぎの時間を提供しています。\n\n【キャスト募集】日給2,000B〜、寮完備・ビザサポート・ノルマなし・日本人スタッフ常駐で未経験者から経験者まで歓迎。バンコクの中心地でナイトワーク業界デビューを目指す方も、海外で安心して働ける環境です。公式サイト：clubline23-bangkok.com",
-    conceptMeta: "バンコク・Asok駅徒歩圏／スクンビットSoi23の日本人経営プレミアムカラオケラウンジ（2014年〜10年以上の実績）。VIP完全個室・多言語スタッフ・正式領収書発行可。日給2,000B〜、寮完備・ノルマなし・ビザサポート・日本人スタッフ常駐で未経験OK。",
+    concept: "バンコク・Asok（アソーク）駅徒歩圏、スクンビットSoi23の日本人オーナー直営プレミアムカラオケラウンジ「Club LINE23 Bangkok」。2014年オープン以来10年以上にわたり、バンコク駐在員・出張中の日本人ビジネスマンに愛されてきた老舗店舗です。VIP完全個室・最新カラオケ機材・多言語スタッフ（日本語／英語／タイ語）常駐で接待利用にも対応、正式領収書発行可で法人利用も安心。日本式の細やかな接客でくつろぎの時間を提供しています。\n\n【キャスト募集】日給2,000B〜、寮完備・ノルマなし・日本人スタッフ常駐で未経験者から経験者まで歓迎。バンコクの中心地でナイトワーク業界デビューを目指す方も、海外で安心して働ける環境です。公式サイト：clubline23-bangkok.com",
+    conceptMeta: "バンコク・Asok駅徒歩圏／スクンビットSoi23の日本人経営プレミアムカラオケラウンジ（2014年〜10年以上の実績）。VIP完全個室・多言語スタッフ・正式領収書発行可。日給2,000B〜、寮完備・ノルマなし・日本人スタッフ常駐で未経験OK。",
     gallery: [
       "/shop-images/bunny/interior3.webp",
       "/shop-images/bunny/interior5.webp",
@@ -1000,7 +999,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["未経験者歓迎", "日本人スタッフ", "ノルマなし"],
     housing: ["寮完備"],
-    visa: ["ビザサポートあり"],
+    visa: [],
     hours: "20:00〜1:00",
     address: "126, 4 Soi Sukhumvit 23, Khlong Toei Nuea, Watthana, Bangkok 10110",
     contact: {
@@ -1061,7 +1060,7 @@ window.SHOPS_DATA = {
     },
     benefits: ["業界最高水準の給与", "未経験者歓迎", "日本人スタッフ", "ノルマなし", "ペナルティなし"],
     housing: ["高級寮完備"],
-    visa: ["ビザサポートあり"],
+    visa: [],
     hours: "20:00〜1:00",
     priceSystem: [],
     notes: ["バンコク最高級店", "詳細は店舗にお問い合わせください"]
@@ -1198,9 +1197,9 @@ window.SHOPS_DATA = {
       monthly: "月給 HK$35,000〜",
       backs: ["ドリンクバック", "本指名", "場内指名", "同伴", "小計", "アフター", "シャンパン・ワインバック"]
     },
-    benefits: ["給与前渡しOK", "未経験者対応", "お酒飲めなくてもOK", "語学不問（英語・中国語話者優遇）", "ノルマ・罰金なし", "シフト調整可能", "短期勤務OK（1週間〜）", "食事代支給（出勤日HK$60）", "渡航費支給（1ヶ月以上で片道、3ヶ月以上で往復HK$3,000まで）"],
+    benefits: ["給与前渡しOK", "未経験者対応", "お酒飲めなくてもOK", "語学不問（英語・中国語話者優遇）", "ノルマ・罰金なし", "シフト調整可能", "短期勤務OK（1週間〜）", "食事代支給（出勤日HK$60）", "渡航費支給（1ヶ月以上で片道、3ヶ月以上で往復HK$3,000まで）", "渡航・アパート案内サポートあり"],
     housing: ["寮完備（店舗から徒歩5分のプライベートルーム）", "共用バス・トイレ・キッチン", "サービスアパートメント相談可"],
-    visa: ["渡航・アパート案内サポートあり"],
+    visa: [],
     hours: "20:30〜3:00（日曜定休）",
     address: "16F Circle Plaza, 499 Hennessy Road, Causeway Bay, Hong Kong / 11F Allways Center, 468 Jaffe Road, Causeway Bay, Hong Kong",
     contact: {

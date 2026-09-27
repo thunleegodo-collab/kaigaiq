@@ -4,3 +4,8 @@
 
 # 一時的なトリアージ用ディレクトリ
 _downloads_triage_*/
+
+# ローカル専用の運用ドキュメント（公開しない）
+CLAUDE.md
+QA_CHECKLIST.md
+.claude/
