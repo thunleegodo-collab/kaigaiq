@@ -859,67 +859,109 @@ window.SHOPS_DATA = {
   // --- Bangkok shops ---
 
   "BARON": {
-    name: "Lounge BARON",
-    type: "ラウンジ",
-    flag: "🇹🇭",
-    region: "asia",
-    city: "バンコク",
-    heroImage: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=800&h=500&fit=crop&fm=webp&q=75&auto=format",
-    concept: "スクンビット33に位置する日本式Members Lounge & BAR。日本人女性50％・タイ人美女50％のハイブリッドスタイルで、バンコクに暮らす日本人のオアシスとして人気。1階カウンターのGirls Bar、2階ダーツ＆ソファラウンジ（カラオケ完備）、3階完全個室VIPルームの3フロア構成。会員制BARとしても展開しており、接待利用にも対応。領収書発行可能、会員様には無料配車サービスあり。2周年を迎えた実績あるラウンジ。",
-    conceptMeta: "バンコク・スクンビット33の日本式メンバーズラウンジ＆BAR。月収10〜30万バーツ以上、3フロア構成（Girls Bar/ダーツラウンジ/VIP個室）、高級タワマン寮（プール・サウナ・ジム）。",
-    gallery: [
-      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop&fm=webp&q=75&auto=format",
-      "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&h=400&fit=crop&fm=webp&q=75&auto=format"
-    ],
-    salary: {
-      daily: "月収10〜30万バーツ以上可能",
-      back: "ドリンクバック250THB〜 / ボトルバック / 指名500THB / 場内指名300THB / 同伴1,000THB",
-      bonus: "条件次第で日給保証あり・早期渡航で条件優遇"
+    "name": "Lounge BARON",
+    "type": "日本人キャバクラ・ラウンジ（日本式）",
+    "flag": "🇹🇭",
+    "region": "asia",
+    "city": "バンコク",
+    "area": "スクンビット33（BTSプロンポン駅から徒歩5分）",
+    "heroImage": "/images/city/bangkok-01-elevated-rail-night.webp",
+    "concept": "バンコクで日本人が多く集まるエリア、スクンビット33。Lounge BARON は、日本人キャストが在籍する日本式キャバクラ・ラウンジです。お客様は日系企業の駐在員や出張で訪れる方が中心で、落ち着いた雰囲気のなか、日本語で接客できます。1F カウンター、2F ダーツ＆ソファラウンジ（カラオケ完備）、3F VIP個室、4F リニューアルラウンジ（最大20名）の4フロア。日本人スタッフが常駐し、予約から会計まで日本語で対応しているので、海外が初めての方も安心して働けます。",
+    "conceptMeta": "バンコク・スクンビット33（BTSプロンポン駅から徒歩5分）の日本式キャバクラ・ラウンジ。4フロア構成、プール・ジム付きコンドミニアム寮、日本人スタッフ常駐で未経験・日本語のみでOK。",
+    "gallery": [],
+    "salary": {
+      "daily": "日給 2,000〜8,000THB（平均日給 3,500THB）",
+      "backs": [
+        "本指名バック20%以上",
+        "同伴バック700THB",
+        "ドリンクバック100THB・150THB",
+        "その他各種バック制度あり"
+      ],
+      "bonus": "売上・勤務状況に応じたスライド制。詳しい給与表は面接時にご案内します"
     },
-    benefits: [
-      "日本人ママ常駐",
-      "未経験OK",
-      "英語・中国語話者優遇",
-      "高級タワマン寮完備",
-      "インフィニティプール付き",
-      "サウナ・フィットネスジム完備",
-      "渡航からフルサポート",
-      "日本人スタッフ常駐"
+    "benefits": [
+      "未経験の方も歓迎",
+      "日本語だけで働けます（タイ語・英語は不要）",
+      "日本人スタッフ・マネージャーが常駐",
+      "アプリ管理で売上成績や給料がスマホで簡単確認可能",
+      "プール・ジム付きのコンドミニアム寮",
+      "渡航前の準備から、入国・SIMやWifi・住まい・生活の立ち上げまでわかりやすくサポート",
+      "滞在・VISAは提携の専門コンサルタントが日本語で個別相談可能",
+      "長期滞在予定の方は航空券サポートや長期VISA取得も可能！",
+      "週休2日以上可能・連休で観光や海外旅行も可能"
     ],
-    housing: "ホテル経営の高級タワマンコンドミニアム（サウナ・フィットネスジム・インフィニティプール完備）",
-    visa: [],
-    priceSystem: {
-      counterBar: {
-        member: "500THB（ボトルキープ制）",
-        visitor: "800THB（フリードリンク）"
+    "housing": "プール・フィットネスジム付きのタワーマンション（コンドミニアム）。お店から通いやすい場所にあります。",
+    "visa": [],
+    "priceSystem": [
+      {
+        "item": "セット",
+        "price": "60分セット制（自動延長30分毎）"
       },
-      sofaLounge: {
-        member: "1,000THB（ボトルキープ制）",
-        visitor: "1,500THB（フリードリンク）"
+      {
+        "item": "1F カウンター・ガールズバー",
+        "price": "Member ฿500 / Visitor ฿800（1名・60分）"
       },
-      vipRoom: {
-        member: "1,500THB（ボトルキープ制）",
-        visitor: "2,000THB（フリードリンク）"
+      {
+        "item": "2F ソファラウンジ",
+        "price": "Member ฿1,000 / Visitor ฿1,300（1名・60分）"
       },
-      vipClub: {
-        sofaLounge: "1,500THB/1P（オールインクルーシブ）",
-        vipKaraoke: "2,000THB/1P（オールインクルーシブ）",
-        bar: "600THB/1P（オールインクルーシブ）"
+      {
+        "item": "3F VIPルーム",
+        "price": "Member ฿1,500 / Visitor ฿2,000（1名・60分）"
       },
-      membership: {
-        gold: "30,000THB",
-        platinum: "100,000THB（3名以上来店でシャンパン1本プレゼント）"
+      {
+        "item": "同伴",
+        "price": "฿1,000"
       },
-      tax: "VAT 7% / サービス料 10%"
-    },
-    contact: {
-      line: "https://lin.ee/3Jo1FOi",
-      lineRecruitment: "https://lin.ee/3WZcb5p",
-      instagram: "https://www.instagram.com/lounge.baron/",
-      address: "4, 24 Sukhumvit 33 Alley, Khlong Tan Nuea, Watthana, Bangkok 10110",
-      website: "https://lounge-baron.com",
-      hours: "19:00〜LAST（25時以降はBAR会員制）"
+      {
+        "item": "本指名",
+        "price": "฿500（60分・以降30分毎 ฿250）"
+      },
+      {
+        "item": "場内指名",
+        "price": "฿300（60分・以降30分毎 ฿150）"
+      },
+      {
+        "item": "アフター",
+        "price": "฿700（30分毎・概算）"
+      },
+      {
+        "item": "税・サービス料",
+        "price": "表示価格にサービス料10%・VAT7%が加算されます"
+      }
+    ],
+    "notes": [
+      "最新の料金・会計例は店舗の公式サイト（lounge-baron.com/system）をご確認ください"
+    ],
+    "links": [
+      {
+        "label": "求人サイト（キャスト募集）",
+        "url": "https://recruit.lounge-baron.com/cast"
+      },
+      {
+        "label": "求人サイト（スタッフ募集）",
+        "url": "https://recruit.lounge-baron.com/staff"
+      },
+      {
+        "label": "お客様向け公式サイト",
+        "url": "https://lounge-baron.com/"
+      },
+      {
+        "label": "料金システム",
+        "url": "https://lounge-baron.com/system"
+      },
+      {
+        "label": "Instagram（店舗）",
+        "url": "https://www.instagram.com/lounge.baron/"
+      }
+    ],
+    "contact": {
+      "line": "https://lin.ee/3Jo1FOi",
+      "lineRecruitment": "https://lin.ee/3WZcb5p",
+      "instagram": "https://www.instagram.com/baron.recruit/",
+      "address": "4/24 Sukhumvit 33 Alley, Khlong Tan Nuea, Watthana, Bangkok 10110",
+      "website": "https://recruit.lounge-baron.com/",
+      "hours": "20:00〜（最終入店 25:00）"
     }
   },
 

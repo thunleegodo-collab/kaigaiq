@@ -59,9 +59,11 @@ function renderShop(shop) {
 
   // SEO meta injection
   let rawSalary = (shop.salary && (shop.salary.monthly || shop.salary.daily)) || '';
+  // 日給のみの店を「月収」と表示しないよう、元の表記（なければ項目名）から単位を決める
+  const salaryLabel = /^日給/.test(String(rawSalary)) || (shop.salary && !shop.salary.monthly && !/^(月収|月給)/.test(String(rawSalary))) ? '日給' : '月収';
   rawSalary = String(rawSalary).replace(/^(月収|月給|日給)\s*/, '');
   const isPlaceholder = !rawSalary || /問い合わせ|相談|お問合せ/.test(rawSalary);
-  const salaryClause = isPlaceholder ? '未経験OK・寮完備' : `月収${rawSalary}`;
+  const salaryClause = isPlaceholder ? '未経験OK・寮完備' : `${salaryLabel}${rawSalary}`;
   const benefitsTop = (shop.benefits && shop.benefits.length > 0)
     ? shop.benefits.slice(0, 3).join('・')
     : 'サポート充実';
@@ -95,7 +97,7 @@ function renderShop(shop) {
   const heroEl = document.getElementById('shopHeroBg');
   heroEl.style.backgroundImage = `url('${shop.heroImage}')`;
   heroEl.setAttribute('role', 'img');
-  heroEl.setAttribute('aria-label', `${shop.name}（${shop.flag} ${shop.city}・${shop.type}）のヒーロー画像`);
+  heroEl.setAttribute('aria-label', `${shop.name}（${shop.flag} ${shop.city}・${shop.type}）の${isShopPhoto(shop.heroImage) ? 'ヒーロー画像' : 'イメージ画像'}`);
   document.getElementById('shopName').textContent = shop.name;
   document.getElementById('shopNameBreadcrumb').textContent = shop.name;
   document.getElementById('shopBadge').textContent = shop.type;
@@ -225,7 +227,7 @@ function renderShop(shop) {
 
   // Sidebar — hours/address はトップレベル or contact 内のどちらにも対応
   document.getElementById('sidebarType').textContent = shop.type;
-  document.getElementById('sidebarArea').textContent = `${shop.flag} ${shop.city}`;
+  document.getElementById('sidebarArea').textContent = `${shop.flag} ${shop.city}${shop.area ? '・' + shop.area : ''}`;
   document.getElementById('sidebarHours').textContent = shop.hours || (shop.contact && shop.contact.hours) || '-';
   document.getElementById('sidebarAddress').textContent = shop.address || (shop.contact && shop.contact.address) || '-';
 
@@ -302,6 +304,16 @@ function renderShop(shop) {
         urlEl.innerHTML = `<a href="${href}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;">${handle}</a>`;
       }
     }
+  }
+
+  // 店舗から依頼のあった追加リンク（求人サイト・料金ページ等）。{label, url} の配列
+  const linksEl = document.getElementById('contactLinks');
+  if (linksEl && Array.isArray(shop.links) && shop.links.length > 0) {
+    linksEl.style.display = '';
+    document.getElementById('contactLinksList').innerHTML = shop.links.map(l => {
+      const display = l.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+      return `<li><span class="contact-label">${l.label}</span><a href="${l.url}" target="_blank" rel="noopener noreferrer" class="contact-value small" style="color:inherit;text-decoration:none;display:block;">${display}</a></li>`;
+    }).join('');
   }
 
   // Map

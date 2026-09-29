@@ -52,7 +52,7 @@ const SALARY_STRUCT = {
   Usagi: { currency: 'SGD', min: 170, unit: 'DAY' },
   Room282: { currency: 'USD', min: 1500, unit: 'MONTH' },
   UNIVERSE: { currency: 'JPY', min: 800000, unit: 'MONTH' },
-  BARON: { currency: 'THB', min: 100000, max: 300000, unit: 'MONTH' },
+  BARON: { currency: 'THB', min: 2000, max: 8000, unit: 'DAY' },
   Leone: { currency: 'THB', min: 150000, max: 300000, unit: 'MONTH' },
   BUNNY: { currency: 'THB', min: 2000, unit: 'DAY' },
   banksy: { currency: 'THB', min: 2000, unit: 'DAY' },
@@ -75,9 +75,11 @@ function escHtml(s) {
 
 function buildHead(shop, id, slug) {
   let rawSalary = (shop.salary && (shop.salary.monthly || shop.salary.daily)) || '';
+  // 日給のみの店を「月収」と表示しないよう、元の表記（なければ項目名）から単位を決める
+  const salaryLabel = /^日給/.test(String(rawSalary)) || (shop.salary && !shop.salary.monthly && !/^(月収|月給)/.test(String(rawSalary))) ? '日給' : '月収';
   rawSalary = String(rawSalary).replace(/^(月収|月給|日給)\s*/, '');
   const isPlaceholder = !rawSalary || /問い合わせ|相談|お問合せ/.test(rawSalary);
-  const salaryClause = isPlaceholder ? '未経験OK・寮完備' : `月収${rawSalary}`;
+  const salaryClause = isPlaceholder ? '未経験OK・寮完備' : `${salaryLabel}${rawSalary}`;
   const benefitsTop = (shop.benefits && shop.benefits.length > 0)
     ? shop.benefits.slice(0, 3).join('・')
     : 'サポート充実';
@@ -93,6 +95,7 @@ function buildHead(shop, id, slug) {
   const typeMap = {
     'キャバクラ': 'NightClub',
     'ラウンジ': 'NightClub',
+    '日本人キャバクラ・ラウンジ（日本式）': 'NightClub',
     'ガールズバー': 'BarOrPub',
     'スナック': 'BarOrPub',
     'Bar': 'BarOrPub',

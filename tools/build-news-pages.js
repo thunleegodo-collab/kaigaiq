@@ -80,6 +80,9 @@ const modifiedMap = {
   'asia-industry-trend': '2026-09-26',
   'summer-autumn-short-term-guide': '2026-09-26',
   'year-end-dekasegi-guide': '2026-09-26',
+  // 掲載店からの修正依頼に合わせて店舗情報を更新（2026-09-30）
+  'bangkok-baron-popularity': '2026-09-30',
+  'bangkok-emperor-club-salary': '2026-09-30',
 };
 
 const articles = [];

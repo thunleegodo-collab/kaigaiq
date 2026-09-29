@@ -87,6 +87,7 @@ function buildAreaPage(cityName, conf, shops) {
     const slug = slugMap[s.id];
     const img = (s.gallery && s.gallery[0]) || s.heroImage;
     let salary = (s.salary && (s.salary.monthly || s.salary.daily)) || '';
+    const salaryLabel = /^日給/.test(String(salary)) || (s.salary && !s.salary.monthly && !/^(月収|月給)/.test(String(salary))) ? '日給' : '月収';
     salary = String(salary).replace(/^(月収|月給|日給)\s*/, '');
     if (!salary || /問い合わせ|相談/.test(salary)) salary = '未経験OK';
     const benefits = (s.benefits || []).slice(0, 2).join('・');
@@ -96,7 +97,7 @@ function buildAreaPage(cityName, conf, shops) {
           <div class="area-shop-info">
             <h3>${s.name}</h3>
             <p class="area-shop-type">${s.type}</p>
-            <p class="area-shop-salary">月収 ${salary}</p>
+            <p class="area-shop-salary">${salaryLabel} ${salary}</p>
             ${benefits ? `<p class="area-shop-benefits">${benefits}</p>` : ''}
           </div>
         </a>`;
