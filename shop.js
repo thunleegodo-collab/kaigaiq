@@ -123,7 +123,9 @@ function renderShop(shop) {
   // Salary
   if (shop.salary) {
     if (shop.salary.daily) {
-      document.getElementById('salaryDaily').textContent = shop.salary.daily;
+      // 見出しは「給与」なので、単位の書かれていない日給の値には「日給」を補う
+      const d = String(shop.salary.daily);
+      document.getElementById('salaryDaily').textContent = /^(日給|時給|月収|月給)/.test(d) ? d : '日給 ' + d;
     }
     if (shop.salary.monthly) {
       document.getElementById('salaryMonthly').textContent = shop.salary.monthly;
