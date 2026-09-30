@@ -311,18 +311,6 @@
   gap: 12px;
 }
 
-/* 寮情報が1項目（長文の説明）のときは枠いっぱいに広げ、読みやすい文字サイズにする */
-.housing-item:only-child {
-  grid-column: 1 / -1;
-  align-items: flex-start;
-  padding: 18px 20px;
-}
-
-.housing-item:only-child .housing-text {
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
 .housing-item {
   display: flex;
   align-items: center;
@@ -335,6 +323,23 @@
 
 .housing-icon {
   font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* 寮情報が1項目のときは枠いっぱいに広げる */
+.housing-item:only-child {
+  grid-column: 1 / -1;
+}
+
+/* 長い説明文（shop.js が付与）は読みやすい文字サイズ・行間にする */
+.housing-item--long {
+  align-items: flex-start;
+  padding: 18px 20px;
+}
+
+.housing-item--long .housing-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
 }
 
 .housing-text {

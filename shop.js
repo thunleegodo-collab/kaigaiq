@@ -169,7 +169,7 @@ function renderShop(shop) {
     const housingArr = Array.isArray(shop.housing) ? shop.housing : [shop.housing];
     if (housingArr.length > 0 && housingArr[0]) {
       document.getElementById('housingFeatures').innerHTML = housingArr.map((h, i) =>
-        `<div class="housing-item"><span class="housing-icon">${housingIcons[i % housingIcons.length]}</span><span class="housing-text">${h}</span></div>`
+        `<div class="housing-item${String(h).length > 20 ? ' housing-item--long' : ''}"><span class="housing-icon">${housingIcons[i % housingIcons.length]}</span><span class="housing-text">${h}</span></div>`
       ).join('');
     } else {
       document.getElementById('shopHousing').style.display = 'none';
