@@ -865,10 +865,18 @@ window.SHOPS_DATA = {
     "region": "asia",
     "city": "バンコク",
     "area": "スクンビット33（BTSプロンポン駅から徒歩5分）",
-    "heroImage": "/images/city/bangkok-01-elevated-rail-night.webp",
+    "heroImage": "/shop-images/baron/06-3f-vip-room.webp",
     "concept": "バンコクで日本人が多く集まるエリア、スクンビット33。Lounge BARON は、日本人キャストが在籍する日本式キャバクラ・ラウンジです。お客様は日系企業の駐在員や出張で訪れる方が中心で、落ち着いた雰囲気のなか、日本語で接客できます。1F カウンター、2F ダーツ＆ソファラウンジ（カラオケ完備）、3F VIP個室、4F リニューアルラウンジ（最大20名）の4フロア。日本人スタッフが常駐し、予約から会計まで日本語で対応しているので、海外が初めての方も安心して働けます。",
     "conceptMeta": "バンコク・スクンビット33（BTSプロンポン駅から徒歩5分）の日本式キャバクラ・ラウンジ。4フロア構成、プール・ジム付きコンドミニアム寮、日本人スタッフ常駐で未経験・日本語のみでOK。",
-    "gallery": [],
+    "gallery": [
+      "/shop-images/baron/01-entrance.webp",
+      "/shop-images/baron/02-1f-bar-counter.webp",
+      "/shop-images/baron/03-2f-sofa-lounge-a.webp",
+      "/shop-images/baron/04-2f-sofa-lounge-b.webp",
+      "/shop-images/baron/05-2f-darts-lounge.webp",
+      "/shop-images/baron/06-3f-vip-room.webp",
+      "/shop-images/baron/07-4f-renewal-lounge.webp"
+    ],
     "salary": {
       "daily": "日給 2,000〜8,000THB（平均日給 3,500THB）",
       "backs": [
