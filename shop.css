@@ -307,8 +307,20 @@
 /* --- Housing --- */
 .housing-features {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 12px;
+}
+
+/* 寮情報が1項目（長文の説明）のときは枠いっぱいに広げ、読みやすい文字サイズにする */
+.housing-item:only-child {
+  grid-column: 1 / -1;
+  align-items: flex-start;
+  padding: 18px 20px;
+}
+
+.housing-item:only-child .housing-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
 }
 
 .housing-item {
