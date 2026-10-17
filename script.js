@@ -41,6 +41,8 @@ function initKaigaiQ() {
   const counters = document.querySelectorAll('.stat-num');
   const animateCounters = () => {
     counters.forEach(counter => {
+      // data-target の無い欄（開設年など）は数え上げずにそのまま表示する
+      if (!counter.dataset.target) return;
       const target = +counter.dataset.target;
       const duration = 1500;
       const start = performance.now();
