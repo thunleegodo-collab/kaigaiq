@@ -83,6 +83,8 @@ const modifiedMap = {
   // 掲載店からの修正依頼に合わせて店舗情報を更新（2026-09-30）
   'bangkok-baron-popularity': '2026-09-30',
   'bangkok-emperor-club-salary': '2026-09-30',
+  // エリア数の表記を実数（12都市）に修正（2026-10-18）
+  'yen-162-h1-recap-2026': '2026-10-18',
 };
 
 const articles = [];
